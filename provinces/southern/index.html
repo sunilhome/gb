@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<title>දකුණු පළාත - දිස්ත්‍රික්ක</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    font-size: 26px;
+    background: #f6f6f6;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 40px;
+    color: #222;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 1 columns for districts */
+    gap: 25px;
+    width: 30%;
+}
+
+.district {
+    background: white;
+    border-radius: 18px;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 52px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.district:hover {
+    background: #ffe6cc;
+    transform: scale(1.04);
+    box-shadow: 0 0 15px #999;
+}
+</style>
+</head>
+
+<body>
+
+<h1>දකුණු පළාත - දිස්ත්‍රික්ක</h1>
+<div class="container">
+    <div class="grid">
+        <div class="district">ගාල්ල</div>
+        <div class="district">මාතර</div>
+        <div class="district">හම්බන්තොට</div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <title>ශ්‍රී ලංකාවේ පළාත්</title>
+
+    <style>
+        /* ===== PAGE BACKGROUND ===== */
+        body {
+            font-family: Arial, sans-serif;
+            background: #e0f0ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ===== MAIN TITLE ===== */
+        h1 {
+            text-align: center;
+            font-size: 60px;        /* ← CHANGE TITLE FONT HERE */
+            margin-top: 60px;
+            color: #222;
+        }
+
+        /* ===== CONTAINER TO CENTER GRID ===== */
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 140px;
+        }
+
+        /* ===== GRID 3×3 ===== */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            width: 70%;    /* ← WIDTH CONTROL */
+        }
+
+        /* ===== PROVINCE BUTTON STYLE ===== */
+        .province {
+            background: white;
+            border-radius: 18px;
+            padding: 35px 0;
+            text-align: center;
+            font-size: 40px;        /* ← CHANGE PROVINCE FONT SIZE HERE */
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        /* ===== HOVER EFFECT ===== */
+        .province:hover {
+            background: #b8dfff;
+            transform: scale(1.04);
+            box-shadow: 0 0 15px #999;
+        }
+     
+    /* ===== REMOVE LINK UNDERLINE ===== */
+    a {
+        text-decoration: none; 
+        color: inherit;
+    }
+
+   </style>
+
+</head>
+<body>
+
+    <h1>ශ්‍රී ලංකාවේ පළාත්</h1>
+
+    <div class="container">
+        <div class="grid">
+
+            <!-- 9 PROVINCES (Sinhala) -->
+         
+<a href="provinces/northern/index.html" class="province">උතුරු පළාත</a>
+<a href="provinces/southern/index.html" class="province">දකුණු පළාත</a>
+<a href="provinces/western/index.html" class="province">බස්නාහිර පළාත</a>
+<a href="provinces/eastern/index.html" class="province">නැගෙනහිර පළාත</a>
+<a href="provinces/central/index.html" class="province">මධ්‍යම පළාත</a>
+<a href="provinces/sabaragamuwa/index.html" class="province">සබරගමුව පළාත</a>
+<a href="provinces/northcentral/index.html" class="province">උතුරු මැද පළාත</a>
+<a href="provinces/northwestern/index.html" class="province">වයඹ පළාත</a>
+<a href="provinces/uva/index.html" class="province">උව පළාත</a>
+
+
+
+        </div>
+    </div>
+
+</body>
+</html>
