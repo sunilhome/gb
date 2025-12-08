@@ -1,93 +1,94 @@
 <!DOCTYPE html>
 <html lang="si">
 <head>
-    <meta charset="UTF-8">
-    <title>ශ්‍රී ලංකාවේ පළාත්</title>
+<meta charset="UTF-8">
+<title>මහනුවර - සිද්ධස්ථාන</title>
 
-    <style>
-        /* ===== PAGE BACKGROUND ===== */
-        body {
-            font-family: Arial, sans-serif;
-            background: #e0f0ff;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+    margin: 0;
+    padding: 0;
+}
 
-        /* ===== MAIN TITLE ===== */
-        h1 {
-            text-align: center;
-            font-size: 60px;        /* ← CHANGE TITLE FONT HERE */
-            margin-top: 60px;
-            color: #222;
-        }
+h1 {
+    text-align: center;
+    font-size: 50px;  
+    margin-top: 40px;
+    color: #222;
+}
 
-        /* ===== CONTAINER TO CENTER GRID ===== */
-        .container {
-            display: flex;
-            justify-content: center;
-            margin-top: 140px;
-        }
+.back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    background: #ffe6cc;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-        /* ===== GRID 3×3 ===== */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            width: 70%;    /* ← WIDTH CONTROL */
-        }
+.back-button:hover {
+    background: #ffcc99;
+    transform: scale(1.05);
+}
 
-        /* ===== PROVINCE BUTTON STYLE ===== */
-        .province {
-            background: white;
-            border-radius: 18px;
-            padding: 35px 0;
-            text-align: center;
-            font-size: 40px;        /* ← CHANGE PROVINCE FONT SIZE HERE */
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-            box-shadow: 0 0 10px #ccc;
-        }
+/* Container for temples */
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
 
-        /* ===== HOVER EFFECT ===== */
-        .province:hover {
-            background: #b8dfff;
-            transform: scale(1.04);
-            box-shadow: 0 0 15px #999;
-        }
-     
-    /* ===== REMOVE LINK UNDERLINE ===== */
-    a {
-        text-decoration: none; 
-        color: inherit;
-    }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 10px; 
+    width: 92%;
+}
 
-   </style>
+.temple {
+    background: white;
+    border-radius: 12px;
+    padding: 3px 15px;
+    text-align: left;
+    font-size: 32px; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px #ccc;
+}
 
+.temple:hover {
+    background: #ffe6cc;
+    transform: scale(1.03);
+    box-shadow: 0 0 12px #999;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+</style>
 </head>
 <body>
 
-    <h1>ශ්‍රී ලංකාවේ පළාත්</h1>
+<h1>මහනුවර දිස්ත්‍රික්කයේ සිද්ධස්ථාන</h1>
 
-    <div class="container">
-        <div class="grid">
+<!-- Back button -->
+<button onclick="history.back()" class="back-button">පෙර පිටුවට</button>
 
-            <!-- 9 PROVINCES (Sinhala) -->
-         
-<a href="provinces/northern/index.html" class="province">උතුරු පළාත</a>
-<a href="provinces/southern/index.html" class="province">දකුණු පළාත</a>
-<a href="provinces/western/index.html" class="province">බස්නාහිර පළාත</a>
-<a href="provinces/eastern/index.html" class="province">නැගෙනහිර පළාත</a>
-<a href="provinces/central/index.html" class="province">මධ්‍යම පළාත</a>
-<a href="provinces/sabaragamuwa/index.html" class="province">සබරගමුව පළාත</a>
-<a href="provinces/northcentral/index.html" class="province">උතුරු මැද පළාත</a>
-<a href="provinces/northwestern/index.html" class="province">වයඹ පළාත</a>
-<a href="provinces/uva/index.html" class="province">උව පළාත</a>
-
-
-
-        </div>
+<div class="container">
+    <div class="grid">
+        <!-- Add your temples here manually -->
+        <a href="temple-1/index.html" class="temple">ශ්‍රී දළදා මාළිගාව</a>
+        <a href="temple-2/index.html" class="temple">ගඩලාදෙනිය විහාරය</a>
+      
     </div>
+</div>
 
 </body>
 </html>
