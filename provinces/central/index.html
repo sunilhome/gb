@@ -2,9 +2,7 @@
 <html lang="si">
 <head>
 <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>මධ්‍යම පළාත - දිස්ත්‍රික්ක</title>
 
 <style>
@@ -31,7 +29,7 @@ h1 {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); /* 1 columns for districts */
+    grid-template-columns: repeat(1, 1fr); /* 1 column for districts */
     gap: 25px;
     width: 30%;
 }
@@ -46,6 +44,7 @@ h1 {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 0 10px #ccc;
+    white-space: nowrap;  /* Prevent word breaking on phone */
 }
 
 .district:hover {
@@ -69,42 +68,41 @@ a {
     cursor: pointer;
     margin: 30px;
     transition: 0.3s;
-    white-space: nowrap;      /* 🔑 prevent word breaking */
-
+    white-space: nowrap;
 }
 
 .back-button:hover {
     background: #ffcc99;
     transform: scale(1.05);
 }
-        /* ===== MOBILE RESPONSIVE ===== */
-        @media (max-width: 700px) {
 
-            h1 {
-                font-size: 36px;
-                margin-top: 40px;
-            }
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 700px) {
 
-            .container {
-                margin-top: 60px;
-            }
+    h1 {
+        font-size: 36px;
+        margin-top: 40px;
+    }
 
-            .grid {
-                grid-template-columns: repeat(1, 1fr); /* 1 column on phone */
-                width: 100%;
-            }
+    .container {
+        margin-top: 60px;
+    }
 
-            .province {
-                font-size: 26px;
-                padding: 22px 10px;
-            }
-        }
+    .grid {
+        width: 90%;  /* full width on phone */
+    }
 
+    .district {
+        font-size: 28px;  /* smaller font on phone */
+        padding: 18px 10px; /* reduce padding */
+    }
 
-
-
-
-
+    .back-button {
+        font-size: 22px;
+        padding: 12px 24px;
+        margin: 20px;
+    }
+}
 </style>
 </head>
 
@@ -114,12 +112,12 @@ a {
 
 <div class="container">
     <div class="grid">
-    <a href="kandy/index.html" class="district">මහනුවර</a>
-      <a href="matale/index.html" class="district">මාතලේ</a>
-      <a href="nuwara-eliya/index.html" class="district">නුවරඑළිය</a>
-
+        <a href="kandy/index.html" class="district">මහනුවර</a>
+        <a href="matale/index.html" class="district">මාතලේ</a>
+        <a href="nuwara-eliya/index.html" class="district">නුවරඑළිය</a>
     </div>
 </div>
+
 <!-- Back Button -->
 <button onclick="history.back()" class="back-button">පෙර පිටුවට</button>
 
