@@ -6,10 +6,10 @@
     <!-- 🔑 VERY IMPORTANT FOR MOBILE -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ශ්‍රී ලංකාවේ පළාත්</title>
+    <title>ශ්‍රී ලංකාවේ සිද්ධස්ථාන</title>
+
 
     <style>
-        /* ===== PAGE BACKGROUND ===== */
         body {
             font-family: Arial, sans-serif;
             background: #e0f0ff;
@@ -25,12 +25,25 @@
             color: #222;
         }
 
+        /* ===== TOP DESCRIPTION SECTION ===== */
+        .description {
+            max-width: 70%;
+            margin: 40px auto 0 auto;
+            background: white;
+            padding: 25px 30px;
+            border-radius: 18px;
+            font-size: 24px;
+            line-height: 1.6;
+            box-shadow: 0 0 10px #ccc;
+            color: #333;
+        }
+
         /* ===== CONTAINER TO CENTER GRID ===== */
         .container {
             display: flex;
             justify-content: center;
-            margin-top: 140px;
-            padding: 0 15px;   /* phone safe padding */
+            margin-top: 80px;
+            padding: 0 15px;
         }
 
         /* ===== GRID ===== */
@@ -41,7 +54,7 @@
             width: 70%;
         }
 
-        /* ===== PROVINCE BUTTON STYLE ===== */
+        /* ===== PROVINCE BUTTON ===== */
         .province {
             background: white;
             border-radius: 18px;
@@ -52,20 +65,34 @@
             cursor: pointer;
             transition: 0.3s;
             box-shadow: 0 0 10px #ccc;
-            white-space: nowrap;      /* 🔑 prevent word breaking */
+            white-space: nowrap;
         }
 
-        /* ===== HOVER EFFECT ===== */
         .province:hover {
             background: #b8dfff;
             transform: scale(1.04);
             box-shadow: 0 0 15px #999;
         }
 
-        /* ===== REMOVE LINK UNDERLINE ===== */
         a {
             text-decoration: none;
             color: inherit;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #000;
+            margin-top: 80px;
+            padding: 30px 15px;
+        }
+
+        .footer-content {
+            max-width: 70%;
+            margin: auto;
+            color: #fff;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
         }
 
         /* ===== MOBILE RESPONSIVE ===== */
@@ -76,12 +103,18 @@
                 margin-top: 40px;
             }
 
+            .description {
+                max-width: 100%;
+                font-size: 18px;
+                margin-top: 25px;
+            }
+
             .container {
-                margin-top: 60px;
+                margin-top: 50px;
             }
 
             .grid {
-                grid-template-columns: repeat(1, 1fr); /* 1 column on phone */
+                grid-template-columns: repeat(1, 1fr);
                 width: 100%;
             }
 
@@ -89,15 +122,27 @@
                 font-size: 26px;
                 padding: 22px 10px;
             }
+
+            .footer-content {
+                max-width: 100%;
+                font-size: 16px;
+            }
         }
-
     </style>
-
 </head>
+
 <body>
 
     <h1>ශ්‍රී ලංකාවේ පළාත්</h1>
 
+    <!-- 🔹 DESCRIPTION SECTION -->
+    <div class="description">
+        ශ්‍රී ලංකාව පළාත් 9කට වෙන් කර ඇත. මෙම වෙබ් අඩවිය මඟින්
+        එක් එක් පළාත, එහි දිස්ත්‍රික්ක, සහ ආගමික හා සංස්කෘතික
+        වැදගත් ස්ථාන පිළිබඳ තොරතුරු ලබා ගැනීමට ඔබට හැකිය.
+    </div>
+
+    <!-- 🔹 PROVINCE GRID -->
     <div class="container">
         <div class="grid">
 
@@ -113,6 +158,14 @@
 
         </div>
     </div>
+
+    <!-- 🔹 FOOTER -->
+    <footer>
+        <div class="footer-content">
+            © 2025 Sunil Home Project<br>
+            ශ්‍රී ලංකාවේ සංස්කෘතික හා ආගමික උරුමය සුරැකීමට
+        </div>
+    </footer>
 
 </body>
 </html>
