@@ -2,6 +2,9 @@
 <html lang="si">
 <head>
 <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>මධ්‍යම පළාත - දිස්ත්‍රික්ක</title>
 
 <style>
@@ -66,12 +69,37 @@ a {
     cursor: pointer;
     margin: 30px;
     transition: 0.3s;
+    white-space: nowrap;      /* 🔑 prevent word breaking */
+
 }
 
 .back-button:hover {
     background: #ffcc99;
     transform: scale(1.05);
 }
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 700px) {
+
+            h1 {
+                font-size: 36px;
+                margin-top: 40px;
+            }
+
+            .container {
+                margin-top: 60px;
+            }
+
+            .grid {
+                grid-template-columns: repeat(1, 1fr); /* 1 column on phone */
+                width: 100%;
+            }
+
+            .province {
+                font-size: 26px;
+                padding: 22px 10px;
+            }
+        }
+
 
 
 
