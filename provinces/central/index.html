@@ -1,128 +1,205 @@
 <!DOCTYPE html>
 <html lang="si">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>මධ්‍යම පළාත - දිස්ත්‍රික්ක</title>
+    <meta charset="UTF-8">
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    font-size: 26px;
-    background: #e0f0ff;
-    margin: 0;
-    padding: 0;
-}
+    <!-- 🔑 VERY IMPORTANT FOR MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-h1 {
-    text-align: center;
-    font-size: 60px;
-    margin-top: 40px;
-    color: #222;
-}
+    <title>ශ්‍රී ලංකාවේ සිද්ධස්ථාන</title>
 
-.container {
-    display: flex;
-    justify-content: center;
-    margin-top: 140px;
-}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #c0dfff; /* slightly darker blue */
+            margin: 0;
+            padding: 0;
+        }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* 1 column for districts */
-    gap: 25px;
-    width: 30%;
-}
+        /* ===== TITLE BOX ===== */
+        .title-box {
+            width: 70%;
+            margin: 40px auto 0;
+            background: #000099; /* middle blue */
+            border-radius: 18px;
+            box-shadow: 0 0 15px #555; /* extra shadow for title box */
+            text-align: center;
+        }
 
-.district {
-    background: white;
-    border-radius: 18px;
-    padding: 30px 0;
-    text-align: center;
-    font-size: 52px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px #ccc;
-    white-space: nowrap;  /* Prevent word breaking on phone */
-}
+        .title-box h1 {
+            margin: 0;                 
+            padding: 18px 10px;        
+            font-size: 42px;
+            color: white;
+            white-space: nowrap;
+            text-shadow: 2px 2px 6px #333; /* extra drop shadow for heading */
+        }
 
-.district:hover {
-    background: #b8dfff;
-    transform: scale(1.04);
-    box-shadow: 0 0 15px #999;
-}
+        /* ===== TOP DESCRIPTION SECTION ===== */
+        .description {
+            max-width: 70%;
+            margin: 25px auto 0;
+            background: white;
+            padding: 25px 30px;
+            border-radius: 18px;
+            font-size: 24px;
+            line-height: 1.6;
+            box-shadow: 0 0 10px #ccc;
+            color: #333;
+        }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+        /* ===== CONTAINER TO CENTER GRID ===== */
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            padding: 0 15px;
+        }
 
-/* ===== BACK BUTTON ===== */
-.back-button {
-    background: #ffe6cc;
-    border: none;
-    border-radius: 12px;
-    padding: 15px 30px;
-    font-size: 28px;
-    cursor: pointer;
-    margin: 30px;
-    transition: 0.3s;
-    white-space: nowrap;
-}
+        /* ===== GRID ===== */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            width: 70%;
+        }
 
-.back-button:hover {
-    background: #ffcc99;
-    transform: scale(1.05);
-}
+        /* ===== PROVINCE BUTTON ===== */
+        .province {
+            background: white;
+            border-radius: 18px;
+            padding: 18px 10px;       /* reduced height */
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 12px #999; /* extra drop shadow */
+            white-space: nowrap;
+            display: flex;
+            align-items: center;       /* vertical center */
+            justify-content: center;   /* horizontal center */
+            height: 120px;             /* uniform height */
+        }
 
-/* ===== MOBILE RESPONSIVE ===== */
-@media (max-width: 700px) {
-.back-button {
-display: none;
-}
- 
-  h1 {
-    font-size: 34px;
-        margin-top: 40px;
-    }
+        .province:hover {
+            background: #b8dfff;
+            transform: scale(1.04);
+            box-shadow: 0 6px 18px #777; /* slightly stronger shadow on hover */
+        }
 
-    .container {
-        margin-top: 60px;
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    .grid {
-        width: 90%;  /* full width on phone */
-    }
+        /* ===== FOOTER ===== */
+        footer {
+            background: #000;
+            margin-top: 35px;
+            padding: 15px 15px;
+        }
 
-    .district {
-        font-size: 26px;  /* smaller font on phone */
-        padding: 18px 10px; /* reduce padding */
-    }
+        .footer-content {
+            max-width: 70%;
+            margin: auto;
+            color: #fff;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.3;
+        }
 
-    .back-button {
-        font-size: 22px;
-        padding: 12px 24px;
-        margin: 20px;
-    }
-}
-</style>
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 700px) {
+
+            .title-box {
+                width: 90%;
+            }
+
+            .title-box h1 {
+                font-size: 26px;
+                padding: 14px 8px;
+                white-space: nowrap;
+                text-shadow: 1px 1px 4px #333;
+            }
+            .description {
+            display: none;
+            }
+
+            
+
+            .description {
+                max-width: 85%;
+                font-size: 18px;
+                margin-top: 22px;
+                padding: 10px 10px;
+            }
+
+            .container {
+                margin-top: 50px;
+            }
+
+            .grid {
+                grid-template-columns: repeat(1, 1fr);
+                width: 100%;
+            }
+
+            .province {
+                font-size: 26px;
+                padding: 12px 10px;
+                height: 30px;
+                box-shadow: 0 3px 10px #999;
+            }
+
+            .province:hover {
+                box-shadow: 0 4px 14px #777;
+            }
+
+            .footer-content {
+                max-width: 100%;
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<h1>මධ්‍යම පළාත - දිස්ත්‍රික්ක</h1>
-
-<div class="container">
-    <div class="grid">
-        <a href="kandy/index.html" class="district">මහනුවර</a>
-        <a href="matale/index.html" class="district">මාතලේ</a>
-        <a href="nuwara-eliya/index.html" class="district">නුවරඑළිය</a>
+    <!-- 🔹 TITLE BOX -->
+    <div class="title-box">
+        <h1>ශ්‍රී ලංකාවේ සිද්ධස්ථාන</h1>
     </div>
-</div>
 
-<!-- Back Button -->
-<button onclick="history.back()" class="back-button">පෙර පිටුවට</button>
+    <!-- 🔹 DESCRIPTION SECTION -->
+    <div class="description">
+        ශ්‍රී ලංකාවේ පිහිටි පූජනීය බෞද්ධ සිද්ධස්ථාන පිළිබඳ
+        විස්තර මෙම වෙබ් අඩවියෙන් ඔබට ලබා ගත හැක.
+    </div>
+
+    <!-- 🔹 PROVINCE GRID -->
+    <div class="container">
+        <div class="grid">
+
+            <a href="provinces/northern/index.html" class="province">උතුරු පළාත</a>
+            <a href="provinces/southern/index.html" class="province">දකුණු පළාත</a>
+            <a href="provinces/western/index.html" class="province">බස්නාහිර පළාත</a>
+            <a href="provinces/eastern/index.html" class="province">නැගෙනහිර පළාත</a>
+            <a href="provinces/central/index.html" class="province">මධ්‍යම පළාත</a>
+            <a href="provinces/sabaragamuwa/index.html" class="province">සබරගමුව පළාත</a>
+            <a href="provinces/northcentral/index.html" class="province">උතුරු මැද පළාත</a>
+            <a href="provinces/northwestern/index.html" class="province">වයඹ පළාත</a>
+            <a href="provinces/uva/index.html" class="province">උව පළාත</a>
+
+        </div>
+    </div>
+
+    <!-- 🔹 FOOTER -->
+    <footer>
+        <div class="footer-content">
+            © 2025 Sunil Home Project<br>
+            ශ්‍රී ලංකාවේ සංස්කෘතික හා ආගමික උරුමය සුරැකීමට
+        </div>
+    </footer>
 
 </body>
 </html>
