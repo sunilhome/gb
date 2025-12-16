@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <title>ශ්‍රී දළදා මාළිගාව</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f6f6f6;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 60px;
+            margin-top: 40px;
+            color: #222;
+        }
+
+        .main-image {
+            width: 70%;
+            max-width: 900px;
+            border-radius: 20px;
+            margin-top: 40px;
+            box-shadow: 0 0 15px #aaa;
+        }
+
+        .button-row {
+            margin-top: 50px;
+        }
+
+        .action-btn {
+            background: #ddeeff;
+            padding: 20px 40px;
+            font-size: 28px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            margin: 15px;
+            transition: 0.3s;
+        }
+
+        .action-btn:hover {
+            background: #bbd7ff;
+            transform: scale(1.05);
+        }
+
+        .back-button {
+            background: #ffe6cc;
+            padding: 18px 35px;
+            font-size: 26px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ✳️ HEADING -->
+    <h1>ශ්‍රී දළදා මාළිගාව</h1>
+
+    <!-- ✳️ MAIN IMAGE -->
+    <img src="main.jpg" class="main-image">
+
+    <!-- ✳️ TEMPLE NAME FOR AUTO LINKS -->
+    <script>
+        var temple = "Sri Dalada Maligawa";   // ← CHANGE ONLY THIS
+    </script>
+
+    <!-- ✳️ BUTTONS -->
+    <div class="button-row">
+        <button class="action-btn"
+            onclick="window.open('https://www.google.com/maps/search/' + temple, '_blank')">
+            සිතියම
+        </button>
+
+        <button class="action-btn"
+            onclick="window.open('https://www.google.com/search?tbm=isch&q=' + temple, '_blank')">
+            ඡායාරූප
+        </button>
+
+        <button class="action-btn"
+            onclick="window.open('https://www.youtube.com/results?search_query=' + temple, '_blank')">
+            වීඩියෝ
+        </button>
+    </div>
+
+    <!-- ✳️ BACK -->
+    <button onclick="history.back()" class="back-button">පෙර පිටුව</button>
+
+</body>
+</html>

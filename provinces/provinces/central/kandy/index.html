@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<title>මහනුවර - සිද්ධස්ථාන</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;  
+    margin-top: 40px;
+    color: #222;
+}
+
+.back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    background: #ffe6cc;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background: #ffcc99;
+    transform: scale(1.05);
+}
+
+/* Container for temples */
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 10px; 
+    width: 92%;
+}
+
+.temple {
+    background: white;
+    border-radius: 12px;
+    padding: 3px 15px;
+    text-align: left;
+    font-size: 32px; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px #ccc;
+}
+
+.temple:hover {
+    background: #ffe6cc;
+    transform: scale(1.03);
+    box-shadow: 0 0 12px #999;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+</style>
+</head>
+<body>
+
+<h1>මහනුවර දිස්ත්‍රික්කයේ සිද්ධස්ථාන</h1>
+
+<!-- Back button -->
+<button onclick="history.back()" class="back-button">පෙර පිටුවට</button>
+
+<div class="container">
+    <div class="grid">
+        <!-- Add your temples here manually -->
+        <a href="temple-1/index.html" class="temple">ශ්‍රී දළදා මාළිගාව</a>
+        <a href="temple-2/index.html" class="temple">ගඩලාදෙනිය විහාරය</a>
+      
+    </div>
+</div>
+
+</body>
+</html>
