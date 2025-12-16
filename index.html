@@ -8,27 +8,56 @@
 
     <title>ශ්‍රී ලංකාවේ සිද්ධස්ථාන</title>
 
-
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #e0f0ff;
+            background: #c0dfff; /* slightly darker blue */
             margin: 0;
             padding: 0;
         }
 
-        /* ===== MAIN TITLE ===== */
-        h1 {
+        /* ===== TITLE BOX ===== */
+        .title-box {
+            width: 70%;
+            margin: 40px auto 0;
+            background: #000099; /* */
+            border-radius: 18px;
+            box-shadow: 0 0 15px #555; /* extra shadow for title box */
             text-align: center;
-            font-size: 60px;
-            margin-top: 60px;
-            color: #222;
+        }
+        /*=======dis-box=========*/
+ 	.des-box1{
+           
+           width: 70%;
+            margin: 40px auto 0;
+            background: #000099; /* */
+            border-radius: 18px;
+            box-shadow: 0 0 15px #555; /* extra shadow for title box */
+            text-align: center;
+}
+       .des-box1 h2 {
+            margin: 0;                 
+            padding: 18px 10px;        
+            font-size: 42px;
+            color: white;
+            white-space: nowrap;
+            text-shadow: 2px 2px 6px #333; /* extra drop shadow for heading */
+        }
+
+
+        .title-box h1 {
+            margin: 0;                 
+            padding: 18px 10px;        
+            font-size: 42px;
+            color: white;
+            white-space: nowrap;
+            text-shadow: 2px 2px 6px #333; /* extra drop shadow for heading */
         }
 
         /* ===== TOP DESCRIPTION SECTION ===== */
         .description {
             max-width: 70%;
-            margin: 40px auto 0 auto;
+            margin: 25px auto 0;
             background: white;
             padding: 25px 30px;
             border-radius: 18px;
@@ -42,7 +71,7 @@
         .container {
             display: flex;
             justify-content: center;
-            margin-top: 80px;
+            margin-top: 50px;
             padding: 0 15px;
         }
 
@@ -58,32 +87,32 @@
         .province {
             background: white;
             border-radius: 18px;
-            padding: 35px 10px;
+            padding: 18px 10px;       /* reduced height */
             text-align: center;
-            font-size: 40px;
+            font-size: 36px;
             font-weight: bold;
             cursor: pointer;
             transition: 0.3s;
-            box-shadow: 0 0 10px #ccc;
+            box-shadow: 0 4px 12px #999; /* extra drop shadow */
             white-space: nowrap;
+            display: flex;
+            align-items: center;       /* vertical center */
+            justify-content: center;   /* horizontal center */
+            height: 120px;             /* uniform height */
         }
 
         .province:hover {
-            background: #b8dfff;
-            transform: scale(1.04);
-            box-shadow: 0 0 15px #999;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+              background: #9fd0ff;        /* brighter pop color */
+    transform: scale(1.05);     /* slightly more pop */
+    box-shadow: 0 6px 20px #666; /* stronge*/        
+}
+      
 
         /* ===== FOOTER ===== */
         footer {
             background: #000;
-            margin-top: 80px;
-            padding: 30px 15px;
+            margin-top: 35px;
+            padding: 15px 15px;
         }
 
         .footer-content {
@@ -92,21 +121,49 @@
             color: #fff;
             text-align: center;
             font-size: 18px;
-            line-height: 1.6;
+            line-height: 1.3;
         }
+              /* ===== REMOVE LINK UNDERLINE ===== */
+       .province {
+                  text-decoration: none;
+                  color: inherit;
+       }
+
 
         /* ===== MOBILE RESPONSIVE ===== */
         @media (max-width: 700px) {
 
-            h1 {
-                font-size: 36px;
-                margin-top: 40px;
+            .title-box {
+                width: 90%;
             }
 
+            .title-box h1 {
+                font-size: 26px;
+                padding: 14px 8px;
+                white-space: nowrap;
+                text-shadow: 1px 1px 4px #333;
+            }
+            
+           .des-box1 {
+             width: 90%;
+            }
+            
+            .des-box1 h2 {
+            font-size: 26px;
+                padding: 14px 8px;
+                white-space: nowrap;
+                text-shadow: 1px 1px 4px #333;
+            }
+            
             .description {
-                max-width: 100%;
+                display: none;
+            }
+            
+               .description {
+                max-width: 85%;
                 font-size: 18px;
-                margin-top: 25px;
+                margin-top: 22px;
+                padding: 10px 10px;
             }
 
             .container {
@@ -120,9 +177,14 @@
 
             .province {
                 font-size: 26px;
-                padding: 22px 10px;
+                padding: 12px 10px;
+                height: 30px;
+                box-shadow: 0 3px 10px #999;
             }
 
+            .province:hover {
+              box-shadow: 0 5px 16px #777;           
+            }
             .footer-content {
                 max-width: 100%;
                 font-size: 16px;
@@ -133,13 +195,15 @@
 
 <body>
 
-    <h1>ශ්‍රී ලංකාවේ පළාත්</h1>
+    <!-- 🔹 TITLE BOX -->
+    <div class="title-box">
+        <h1>ශ්‍රී ලංකාවේ සිද්ධස්ථාන</h1>
+    </div>
 
     <!-- 🔹 DESCRIPTION SECTION -->
     <div class="description">
-        ශ්‍රී ලංකාව පළාත් 9කට වෙන් කර ඇත. මෙම වෙබ් අඩවිය මඟින්
-        එක් එක් පළාත, එහි දිස්ත්‍රික්ක, සහ ආගමික හා සංස්කෘතික
-        වැදගත් ස්ථාන පිළිබඳ තොරතුරු ලබා ගැනීමට ඔබට හැකිය.
+        ශ්‍රී ලංකාවේ පිහිටි පූජනීය බෞද්ධ සිද්ධස්ථාන පිළිබඳ
+        විස්තර මෙම වෙබ් අඩවියෙන් ඔබට ලබා ගත හැක.
     </div>
 
     <!-- 🔹 PROVINCE GRID -->
@@ -158,6 +222,21 @@
 
         </div>
     </div>
+    
+        <div class="des-box1">
+        
+   <h2>- විශේෂාංග -</h2>
+      </div>
+
+   <div class="container">
+        <div class="grid">
+
+            <a href="provinces/southern/index.html" class="province">රතන සූත්‍රය</a>
+            <a href="provinces/western/index.html" class="province">කරණීයමෙත්ත සූත්‍රය</a>
+            <a href="provinces/eastern/index.html" class="province">මහා මංගල සූත්‍රය</a>
+       </div>
+    </div>
+  
 
     <!-- 🔹 FOOTER -->
     <footer>
