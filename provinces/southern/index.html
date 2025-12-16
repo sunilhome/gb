@@ -6,7 +6,9 @@
 <title>ශ්‍රී ලංකාවේ සිද්ධස්ථාන</title>
 
 <style>
-
+* {
+    box-sizing: border-box;
+}
 body {
 
 
@@ -80,11 +82,11 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); /* 1 column for districts */
+    grid-template-columns: repeat(1, 1fr);
     gap: 25px;
     width: 35%;
+    margin: 0 auto;   /* ✅ FIX */
 }
-
   /* ===== DISTRICT  BUTTON ===== */
         .district {
             background: white;
@@ -187,12 +189,11 @@ body {
         margin-bottom: 35px;
     }
 
-    .grid {
-                grid-template-columns: repeat(1, 1fr);
-                width: 90%;
-
-    }
-
+     .grid {
+     grid-template-columns: repeat(1, 1fr);
+        width: 90%;
+        margin: 0 auto;   /* ✅ VERY IMPORTANT */
+   } 
   .district {
         font-size: 26px;
         padding: 14px 10px;
