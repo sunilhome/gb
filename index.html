@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ශ්‍රී ලංකාවේ සිද්ධස්ථාන</title>
+
+<style>
+/* ===== BASIC PAGE STYLE ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: #c0dfff;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== TITLE & FEATURE BOX ===== */
+.title-box, .des-box1 {
+    width: 70%;
+    margin: 40px auto 0;
+    background: #000099;
+    border-radius: 18px;
+    box-shadow: 0 0 15px #555;
+    text-align: center;
+}
+
+.title-box h1,
+.des-box1 h2 {
+    margin: 0;
+    padding: 18px 10px;
+    font-size: 42px;
+    color: white;
+    text-shadow: 2px 2px 6px #333;
+}
+
+/* ===== DESCRIPTION ===== */
+.description {
+    max-width: 70%;
+    margin: 25px auto 0;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 18px;
+    font-size: 24px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+/* ===== GRID LAYOUT ===== */
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 70%;
+}
+
+/* ===== PROVINCE & FEATURE BUTTONS ===== */
+.province {
+    width: 90%;
+    background: white;
+    border: 1px solid black;   /* permanent black outline */
+    border-radius: 18px;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 4px 12px #999;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.province:hover {
+    background: #9fd0ff;
+    transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: black;
+    margin-top: 35px;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+/* ===== MOBILE ==================================================================== */
+@media (max-width: 700px) {
+ body {
+        padding-top: 10px;
+    }
+.title-box {
+    width: 90%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.title-box h1 {
+    font-size: 26px;
+    margin: 0;
+    text-shadow: 2px 2px 6px #333;
+}
+
+.des-box1 h2 {
+    font-size: 26px;
+    margin: 0;         
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 15px;
+    justify-items: center;
+}
+
+.province {
+    font-size: 26px;
+    height: 45px;
+    width: 90%;
+    text-align: center;
+    text-shadow: 2px 2px 6px #333;
+}
+
+.des-box1 {
+    width: 90%;
+    height:55px;
+    margin-top:40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+    display: none;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== TITLE ===== -->
+<div class="title-box">
+    <h1>ශ්‍රී ලංකාවේ සිද්ධස්ථාන</h1>
+</div>
+
+<!-- ===== DESCRIPTION ===== -->
+<div class="description">
+    ශ්‍රී ලංකාවේ පිහිටි පූජනීය බෞද්ධ සිද්ධස්ථාන පිළිබඳ
+    විස්තර මෙම වෙබ් අඩවියෙන් ඔබට ලබා ගත හැක.
+</div>
+
+<!-- ===== PROVINCES ===== -->
+<div class="container">
+    <div class="grid">
+        <a href="provinces/northern/index.html" class="province">උතුරු පළාත</a>
+        <a href="provinces/southern/index.html" class="province">දකුණු පළාත</a>
+        <a href="provinces/western/index.html" class="province">බස්නාහිර පළාත</a>
+        <a href="provinces/eastern/index.html" class="province">නැගෙනහිර පළාත</a>
+        <a href="provinces/central/index.html" class="province">මධ්‍යම පළාත</a>
+        <a href="provinces/uva/index.html" class="province">උව පළාත</a>
+    </div>
+</div>
+
+<!-- ===== FEATURES ===== -->
+<div class="des-box1">
+    <h2>- විශේෂාංග -</h2>
+</div>
+<div class="container">
+    <div class="grid">
+
+        <!-- AUDIO BUTTONS -->
+        <button class="province" id="btnRathana">▶️ රතන සූත්‍රය</button>
+        <button class="province" id="btnKaraniya">▶️ කරණීයමෙත්ත සූත්‍රය</button>
+        <button class="province" id="btnMangala">▶️ මහා මංගල සූත්‍රය</button>
+
+    </div>
+</div>
+
+<!-- ===== AUDIO FILES ===== -->
+<audio id="rathana" src="assets/audio/rathana.mp3"></audio>
+<audio id="karaniya" src="assets/audio/karaniya.mp3"></audio>
+<audio id="mangala" src="assets/audio/mangala.mp3"></audio>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    © 2025 Sunil Home Project<br>
+    ශ්‍රී ලංකාවේ සංස්කෘතික හා ආගමික උරුමය සුරැකීමට
+</footer>
+
+<!-- ===== JS FOR AUDIO CONTROL ===== -->
+<script>
+const audios = {
+    btnRathana: document.getElementById('rathana'),
+    btnKaraniya: document.getElementById('karaniya'),
+    btnMangala: document.getElementById('mangala')
+};
+
+const buttons = {
+    btnRathana: document.getElementById('btnRathana'),
+    btnKaraniya: document.getElementById('btnKaraniya'),
+    btnMangala: document.getElementById('btnMangala')
+};
+
+const labels = {
+    btnRathana: 'රතන සූත්‍රය',
+    btnKaraniya: 'කරණීයමෙත්ත සූත්‍රය',
+    btnMangala: 'මහා මංගල සූත්‍රය'
+};
+
+function stopAll() {
+    for (let key in audios) {
+        audios[key].pause();
+        audios[key].currentTime = 0;
+        buttons[key].textContent = '▶️ ' + labels[key];
+    }
+}
+
+function toggleAudio(key) {
+    if (audios[key].paused) {
+        stopAll();
+        audios[key].play();
+        buttons[key].textContent = '⏸️ ' + labels[key];
+    } else {
+        stopAll();
+    }
+}
+
+buttons.btnRathana.onclick = () => toggleAudio('btnRathana');
+buttons.btnKaraniya.onclick = () => toggleAudio('btnKaraniya');
+buttons.btnMangala.onclick = () => toggleAudio('btnMangala');
+</script>
+</body>
+</html>
