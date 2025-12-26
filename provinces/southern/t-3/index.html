@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Lanka Buddhist Temples</title>
+
+<style>
+/* ===== MOBILE-FIRST BASE ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: #c0dfff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Title boxes */
+.title-box1, .title-box2 {
+    width: 95%;
+    margin: 30px auto 0;
+    background: #000099;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,.5);
+}
+
+.title-box1 h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.title-box2 h1 {
+    margin: 0;
+    padding: 8px;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Main image */
+.main-image {
+    display: block;
+    width: 95%;
+    margin: 20px auto;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    box-shadow: 0 8px 30px rgba(0,0,0,.5);
+}
+
+/* Navigation buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 95%;
+}
+
+.nav-btn {
+    flex: 1;
+    padding: 10px 0;
+    margin: 0 5px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* Action buttons */
+.button-box {
+    width: 95%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    padding: 10px 5px;
+}
+
+.footer-content {
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+/* Larger screens (optional) */
+@media (min-width: 700px) {
+    .title-box1 h1 { font-size: 36px; padding: 18px; }
+    .title-box2 h1 { font-size: 28px; padding: 15px; }
+    .action-btn { font-size: 28px; padding: 18px 0; }
+    .nav-btn { font-size: 18px; padding: 12px 0; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Headings -->
+<div class="title-box1"><h1 id="title-si"></h1></div>
+<div class="title-box2"><h1 id="title-en"></h1></div>
+
+<!-- Main image -->
+<img src="main.jpg" class="main-image" alt="Buddhist Temple">
+
+<!-- Navigation buttons -->
+<div class="nav-buttons">
+    <button class="nav-btn" id="prevBtn">◀ Previous</button>
+    <button class="nav-btn" id="nextBtn">Next ▶</button>
+</div>
+
+<!-- Action buttons -->
+<div class="button-box">
+    <button class="action-btn" onclick="window.open('https://www.google.com/maps/search/' + temple)">සිතියම/Maps</button>
+    <button class="action-btn" onclick="window.open('https://www.google.com/search?tbm=isch&q=' + temple)">ඡායාරූප/Photos</button>
+    <button class="action-btn" onclick="window.open('https://www.youtube.com/results?search_query=' + temple)">වීඩියෝ/Videos</button>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        © Project By: Sunil Ranasinghe<br>
+        ශ්‍රී ලංකාවේ සංස්කෘතික හා ආගමික උරුමය සුරැකීමට<br>
+        Concept: Sampath Ranasinghe<br>
+        Data: Danesh Ranasinghe
+    </div>
+</footer>
+
+<!-- Headings and temple variable -->
+<script>
+fetch("info.txt")
+.then(res => res.text())
+.then(data => {
+    const lines = data.split("\n");
+    const info = {};
+    lines.forEach(line => {
+        const parts = line.split("=");
+        if(parts.length === 2) info[parts[0].trim()] = parts[1].trim();
+    });
+    document.getElementById("title-si").textContent = info.si || "";
+    document.getElementById("title-en").textContent = info.en || "";
+    window.temple = info.var || "";
+});
+</script>
+
+<!-- Navigation script -->
+<script>
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+let currentTempleId = "";
+let templeList = [];
+
+/* 1️⃣ Read current temple ID */
+fetch("info.txt")
+  .then(res => res.text())
+  .then(data => {
+    data.split("\n").forEach(line => {
+      const parts = line.split("=");
+      if (parts[0].trim() === "id") {
+        currentTempleId = parts[1].trim();
+      }
+    });
+    loadTemples();
+  })
+  .catch(err => console.error("Error reading info.txt:", err));
+
+/* 2️⃣ Read temples.txt safely */
+function loadTemples() {
+  fetch("../temples.txt")
+    .then(res => res.text())
+    .then(data => {
+      templeList = data
+        .split("\n")
+        .map(line => line.trim())
+        .filter(line => line !== "" && line.includes("|"))
+        .map(line => line.split("|")[0].trim());
+
+      setupNavigation();
+    })
+    .catch(err => console.error("Error reading temples.txt:", err));
+}
+
+/* 3️⃣ Navigation logic */
+function setupNavigation() {
+  const currentIndex = templeList.indexOf(currentTempleId);
+
+  if (currentIndex === -1) {
+    console.error("Temple ID not found:", currentTempleId);
+    prevBtn.style.display = "none";
+    nextBtn.style.display = "none";
+    return;
+  }
+
+  /* Previous button */
+  if (currentIndex > 0) {
+    prevBtn.style.display = "inline-block";
+    prevBtn.onclick = () => {
+      window.location.href = "../" + templeList[currentIndex - 1] + "/index.html";
+    };
+  } else {
+    prevBtn.style.display = "none";
+  }
+
+  /* Next button */
+  if (currentIndex < templeList.length - 1) {
+    nextBtn.style.display = "inline-block";
+    nextBtn.onclick = () => {
+      window.location.href = "../" + templeList[currentIndex + 1] + "/index.html";
+    };
+  } else {
+    nextBtn.style.display = "none";
+  }
+}
+</script>
+<script>
+/* ===== MOBILE SWIPE NAVIGATION ===== */
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+// Detect touch start
+document.addEventListener("touchstart", function (e) {
+    touchStartX = e.changedTouches[0].screenX;
+}, false);
+
+// Detect touch end
+document.addEventListener("touchend", function (e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+}, false);
+
+// Decide swipe direction
+function handleSwipe() {
+    const swipeDistance = touchEndX - touchStartX;
+
+    // Minimum swipe distance (avoid accidental touch)
+    if (Math.abs(swipeDistance) < 50) return;
+
+    // Swipe RIGHT → Previous
+    if (swipeDistance > 0) {
+        if (prevBtn && prevBtn.style.display !== "none") {
+            prevBtn.click();
+        }
+    }
+
+    // Swipe LEFT → Next
+    else {
+        if (nextBtn && nextBtn.style.display !== "none") {
+            nextBtn.click();
+        }
+    }
+}
+</script>
+
+
+
+</body>
+</html>
+

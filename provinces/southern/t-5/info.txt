@@ -1,0 +1,4 @@
+id=t-5
+si=දුටුගැමුණු විහාරය, ගාල්ල
+en=Dhutugemunu Viharaya
+var=dutugemunu viharaya. galle
