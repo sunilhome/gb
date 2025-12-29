@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ශ්‍රී ලංකාවේ සිද්ධස්ථාන</title>
+
+<style>
+/* ===== BASIC PAGE STYLE ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: #c0dfff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===== TITLE & FEATURE BOX ===== */
+.title-box, .des-box1 {
+    width: 70%;
+    margin: 50px auto 0;
+    background: #000099;
+    border-radius: 18px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 15px #555;
+    text-align: center;
+}
+
+.title-box h1,
+.des-box1 h2 {
+    margin: 0;
+    padding: 18px 10px;
+    font-size: 42px;
+    color: white;
+    text-shadow: 2px 2px 6px #333;
+}
+
+/* ===== DESCRIPTION ===== */
+.description {
+    max-width: 70%;
+    margin: 25px auto 0;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 18px;
+    font-size: 24px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+/* ===== GRID LAYOUT ===== */
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 70%;
+}
+
+.province {
+    display: flex;
+    width: 90%;
+    background: white;
+     border: 3px solid black;
+    border-radius: 18px;
+    font-size: 36px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 4px 12px #999;
+    transition: 0.3s;
+    cursor: pointer;
+	margin-bottom: 15px;
+}
+
+.province:hover {
+    background: #9fd0ff;
+    transform: scale(1.05);
+}
+
+/* ===== AUDIO BUTTONS ===== */
+.province1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 90%;
+    background: white;
+    border: 3px solid black;
+    border-radius: 18px;
+    font-size: 36px;
+    font-weight: bold;
+    height: 120px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px #999;
+    margin-bottom: 15px;
+}
+
+.province1 .icon {
+    text-shadow: 2px 2px 6px #333;
+}
+
+.province1 .label {
+    text-shadow: none;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #000;
+    padding: 10px 15px;
+    margin-top: auto; /* stick to bottom if page short */
+}
+
+.footer-content {
+    max-width: 70%;
+    margin: auto;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+/* ===== MOBILE STYLES ================================================ */
+@media (max-width: 700px) {
+ 
+	
+	.title-box   {
+    width: 90%;
+    display: flex;           /* enable flex */
+    align-items: center;     /* vertical center */
+    justify-content: center; /* horizontal center */
+    border-radius: 18px;
+    text-align: center;
+    height: 50px;            /* keep your height */
+    margin-bottom:25px;
+    margin-top: 65px;
+}
+.des-box1 {
+    width: 90%;
+    display: flex;           /* enable flex */
+    align-items: center;     /* vertical center */
+    justify-content: center; /* horizontal center */
+    border-radius: 18px;
+    text-align: center;
+    height: 50px;  
+      margin-top: 10px;
+  margin-bottom: 15px;
+
+
+}
+	 
+    .title-box h1 {
+        font-size: 26px;
+        text-shadow: none;
+	    }
+
+    .des-box1 h2 {
+      text-shadow: none;
+         font-size: 29px;
+
+}
+.description  {
+display: none;
+}
+    .container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 20px;
+        justify-items: center;
+    }
+
+/* NORMAL */
+.province {
+    font-size: 28px;
+    height: 45px;
+    width: 90%;
+    background: white;
+    border: 3px solid black;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+/* 🖱️ HOVER (PC + touch feedback) */
+.province:hover {
+    background: #9fd0ff;
+    transform: scale(1.03);
+}
+
+/* 👆 ACTIVE (when pressed – MOBILE IMPORTANT) */
+.province:active {
+    background: #4da3ff;
+    transform: scale(0.97);
+    box-shadow: 0 2px 6px #666 inset;
+}
+
+/* NORMAL */
+.province1 {
+   font-size: 23px;
+    height: 45px;
+    width: 90%;
+    background: white;
+    border: 3px solid black;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: black;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+/* 🖱️ HOVER (PC + touch feedback) */
+.province1:hover {
+    background: #9fd0ff;
+    transform: scale(1.03);
+}
+
+/* 👆 ACTIVE (when pressed – MOBILE IMPORTANT) */
+.province1:active {
+    background: #4da3ff;
+    transform: scale(0.97);
+    box-shadow: 0 2px 6px #666 inset;
+}
+
+	/* ===== FOOTER ===== */
+footer {
+    background: #000;
+    padding: 10px 15px;
+    margin-top: auto; /* stick to bottom if page short */
+}
+
+.footer-content {
+    max-width: 100%;
+    margin: auto;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.3;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== TITLE ===== -->
+<div class="title-box">
+    <h1>ශ්‍රී ලංකාවේ සිද්ධස්ථාන</h1>
+</div>
+
+<!-- ===== DESCRIPTION ===== -->
+<div class="description">
+    ශ්‍රී ලංකාවේ පිහිටි පූජනීය බෞද්ධ සිද්ධස්ථාන පිළිබඳ විස්තර මෙම වෙබ් අඩවියෙන් ඔබට ලබා ගත හැක.
+</div>
+
+<!-- ===== PROVINCES ===== -->
+<div class="container">
+    <div class="grid">
+        <a href="provinces/northern/index.html" class="province">උතුරු පළාත</a>
+        <a href="provinces/southern/index.html" class="province">දකුණු පළාත</a>
+        <a href="provinces/western/index.html" class="province">බස්නාහිර පළාත</a>
+        <a href="provinces/eastern/index.html" class="province">නැගෙනහිර පළාත</a>
+        <a href="provinces/central/index.html" class="province">මධ්‍යම පළාත</a>
+           <a href="provinces/sabaragamuwa/index.html" class="province">සබරගමුව පළාත</a>
+            <a href="provinces/northcentral/index.html" class="province">උතුරු මැද පළාත</a>
+            <a href="provinces/northwestern/index.html" class="province">වයඹ පළාත</a>
+        
+        <a href="provinces/uva/index.html" class="province">උව පළාත</a>
+    </div>
+</div>
+
+<!-- ===== FEATURES ===== -->
+<div class="des-box1">
+    <h2>-  විශේෂාංග  -</h2>
+</div>
+
+<!-- ===== AUDIO BUTTONS ===== -->
+<div class="container">
+    <div class="grid">
+        <button class="province1" onclick="playAudio('audio1')">
+            <span class="icon">▶️</span>
+            <span class="label">මහා මංගල සූත්‍රය</span>
+        </button>
+        <audio id="audio1" src="assets/audio/audio1.mp3"></audio>
+		
+
+        <button class="province1" onclick="playAudio('audio2')">
+            <span class="icon">▶️</span>
+            <span class="label">රතන සූත්‍රය</span>
+        </button>
+        <audio id="audio2" src="assets/audio/audio2.mp3"></audio>
+        
+       <button class="province1" onclick="playAudio('audio3')">
+            <span class="icon">▶️</span>
+            <span class="label">කරණීයමෙත්ත සූත්‍රය</span>
+        </button>
+        <audio id="audio3" src="assets/audio/audio3.mp3"></audio>
+
+        <button class="province1" onclick="playAudio('audio4')">
+            <span class="icon">▶️</span>
+            <span class="label">ජය පිරිත</span>
+        </button>
+        <audio id="audio4" src="assets/audio/audio4.mp3"></audio>
+
+        <button class="province1" onclick="playAudio('audio5')">
+            <span class="icon">▶️</span>
+            <span class="label">අංගුලිමාල පිරිත</span>
+        </button>
+        <audio id="audio5" src="assets/audio/audio5.mp3"></audio>
+        
+          <button class="province1" onclick="playAudio('audio3')">
+            <span class="icon">▶️</span>
+            <span class="label">අංගුලිමාල පිරිත</span>
+        </button>
+        <audio id="audio3" src="assets/audio/audio3.mp3"></audio>
+
+        
+        
+    </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="footer-content">
+        © Project By: Sunil Ranasinghe<br>
+        ශ්‍රී ලංකාවේ සංස්කෘතික හා ආගමික උරුමය සුරැකීමට<br>
+        Concept: Sampath Ranasinghe<br>
+        Data: Danesh Ranasinghe
+    </div>
+</footer>
+
+<script>
+function playAudio(id) {
+    const audios = document.querySelectorAll("audio");
+    audios.forEach(audio => {
+        if (audio.id !== id) {
+            audio.pause();
+            audio.currentTime = 0;
+        }
+    });
+    const current = document.getElementById(id);
+    current.paused ? current.play() : (current.pause(), current.currentTime = 0);
+}
+</script>
+
+</body>
+</html>
