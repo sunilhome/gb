@@ -1,4 +1,0 @@
-id=t-4
-si=ශ්‍රී සුදර්මාලය විහාරය
-en=Sri Sudarmalaya Viharaya
-var=sri sudarmalaya temple, galle
