@@ -181,12 +181,12 @@ footer {
     }
 
     .title-box1 h1 {
-        padding: 10px 0;
+        padding: 5px 0;
         font-size: 26px;
     }
 
     .title-box2 h1 {
-        padding: 10px 0;
+        padding: 5px 0;
         font-size: 28px;
     }
 
@@ -239,4 +239,5 @@ footer {
         font-size: 12px;
     }
 }
+
 
