@@ -1,0 +1,4 @@
+id=t-3
+si=හිත්තැටිය රජමහා විහාරය
+en=Hiththatiya Rajamaha Viharaya
+var=matara hiththatiya rajamaha viharaya

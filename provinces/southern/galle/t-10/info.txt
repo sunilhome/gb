@@ -1,0 +1,4 @@
+id=t-10
+si=සපුගොඩ ශ්‍රී මහා විහාරය
+en=Spugoda Sri Maha Viharaya
+var=beruwala Sapugoda Sri Maha Viharaya

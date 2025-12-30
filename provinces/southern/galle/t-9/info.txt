@@ -1,0 +1,4 @@
+id=t-9
+si=කුමාරකන්ද කුමාර මහා විහාරය
+en=Kumara Kanda Kumara Maha Viharaya
+var=hikkaduwa kumarakanda kumara maha viharaya

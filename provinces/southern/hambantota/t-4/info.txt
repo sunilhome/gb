@@ -1,0 +1,4 @@
+id=t-4
+si=රම්බ රජමහා විහාරය
+en=Ramba Raja Maha Viharaya
+var=ramba raja maha viharaya hambantota

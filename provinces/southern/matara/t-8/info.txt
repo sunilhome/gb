@@ -1,0 +1,4 @@
+id=t-8
+si=තලල්ල ලංකා විහාරය
+en=Thalalla Lanka Viharaya
+var=thalalla lanka viharaya

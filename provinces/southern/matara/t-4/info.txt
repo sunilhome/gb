@@ -1,0 +1,4 @@
+id=t-4
+si=වෙහෙරහේන රජමහා විහාරය
+en=matara weherahena viharaya
+var=matara weherahena viharaya

@@ -1,0 +1,4 @@
+id=t-10
+si=දලුග්ගල විහාරය
+en=Daluggala Viharaya
+var=Daluggala temple urubokka

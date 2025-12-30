@@ -1,0 +1,4 @@
+id=t-3
+si=සීනිගම දේවාලය
+en=Sinigama Dhewalaya
+var=sinigama devalaya, hikkaduwa

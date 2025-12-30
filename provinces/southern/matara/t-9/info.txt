@@ -1,0 +1,4 @@
+id=t-9
+si=අරඹෙගොඩ පුරාණ විහාරය
+en=Arambegoda Purana Viharaya
+var=arambegoda purana viharaya

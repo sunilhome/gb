@@ -1,0 +1,4 @@
+id=t-3
+si=මුල්කිරිගල රජමහා විහාරය
+en=Mulkirigala RajaMaha Viharaya
+var=mulkirigala raja maha viharaya

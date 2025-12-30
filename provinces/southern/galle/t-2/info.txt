@@ -1,0 +1,4 @@
+id=t-2
+si=ජපන් රූමස්සල විහාරය
+en=Japan Rumassala Viharaya
+var=japan rumassala vehera

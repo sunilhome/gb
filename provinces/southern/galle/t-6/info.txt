@@ -1,0 +1,4 @@
+id=t-6
+si=ශ්‍රී ශෛලකූටාරාම පුරාණ විහාරය
+en=Shailakutarama Purana Viharaya
+var=Hikkaduwa Shri Shailakutarama Purana Gallen Viharaya

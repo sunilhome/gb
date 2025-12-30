@@ -1,0 +1,4 @@
+id=t-6
+si=පරවිදූව විහාරය
+en=Paravi Duwa Viharaya
+var=paravi duwa viharaya
