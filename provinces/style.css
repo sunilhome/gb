@@ -169,14 +169,14 @@ footer {
 
     /* Title boxes spacing & size */
     .title-box1 {
-       padding: 10px 0;
+       padding: 20px 0;
         margin: 50px auto 0;
         border-radius: 20px;
         box-shadow: 0 0 15px #555;
     }
 
     .title-box2 {
-       padding: 10px 0;
+       padding: 20px 0;
         margin: 20px auto 30px;
         border-radius: 16px;
         box-shadow: 0 0 15px #555;
@@ -239,6 +239,7 @@ footer {
         font-size: 12px;
     }
 }
+
 
 
 
