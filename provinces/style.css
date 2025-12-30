@@ -97,7 +97,7 @@ body {
     font-size: 20px;
 
     border-radius: 10px;
-    border: 2px solid #000;
+    border: 3px solid #000;
     background: #fff;
     cursor: pointer;
 
@@ -206,7 +206,7 @@ footer {
     /* Action buttons */
     .action-btn {
         font-size: 25px;
-        padding: 5px 0;
+        padding: 8px 0;
         border-radius: 16px;
         box-shadow: 0 0 15px #555;
     }
@@ -239,6 +239,7 @@ footer {
         font-size: 12px;
     }
 }
+
 
 
 
