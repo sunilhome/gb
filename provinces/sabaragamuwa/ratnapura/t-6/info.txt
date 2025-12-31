@@ -1,0 +1,4 @@
+id=t-6
+si=දෙල්ගමුව රජ මහා විහාරය
+en=Delgamuwa Rajamaha Viharaya
+var=delgamuwa raja maha vihara

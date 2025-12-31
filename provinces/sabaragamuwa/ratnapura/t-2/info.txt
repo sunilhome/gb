@@ -1,0 +1,4 @@
+id=t-2
+si=බුදුගල විහාරය
+en=Budugala Viharaya
+var=budugala viharaya, kalthota
