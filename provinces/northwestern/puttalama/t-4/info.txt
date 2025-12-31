@@ -1,0 +1,4 @@
+id=t-4
+si=මාදම්පේ සේනානායක ආරාමය
+en=Madampe Senanayake Aramaya
+var=madampe senanayake aramaya

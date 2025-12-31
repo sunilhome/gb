@@ -1,0 +1,4 @@
+id=t-9
+si=මකුබුක්කඩවල ශ්‍රී ධර්ම විජයාරාම විහාරය
+en=Makubukkadawala Sri Dharma Vijayarama Viharaya
+var=makubukkadawala sri dharma vijayarama viharaya

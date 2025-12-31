@@ -1,0 +1,4 @@
+id=t-7
+si=නන්දිමිත්‍ර නවවංගු රජමහා විහාරය
+en=Nandimithra Nawawangu Rajamaha Viharaya
+var=nandimithra nawawangu rajamaha viharaya

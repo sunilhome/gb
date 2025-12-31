@@ -1,0 +1,4 @@
+id=t-2
+si=බෝවත්ත ශ්‍රී අන්ගුලිමාල මහාසෑය
+en=Bowatta Sri Angulimala Mahaseya
+var=bowatta sri angulimala mahaseya

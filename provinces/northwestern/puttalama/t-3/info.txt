@@ -1,0 +1,4 @@
+id=t-3
+si=හාල්පන්විල විහාරය
+en=Halpanwila Viharaya
+var=halpanwila temple

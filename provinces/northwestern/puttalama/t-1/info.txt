@@ -1,0 +1,4 @@
+id=t-1
+si=ආනමඩුව පරමකන්ද රජමහා විහාරය
+en=Anamaduwa Paramakanda Rajamaha Viharaya
+var=anamaduwa paramakanda rajamaha viharaya
