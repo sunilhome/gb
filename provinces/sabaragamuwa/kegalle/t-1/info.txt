@@ -1,0 +1,4 @@
+id=t-1
+si=දණකිරිගල රජමහා විහාරය
+en=Danakirigala Rajamaha Viharaya
+var=danakirigala rajamaha viharaya

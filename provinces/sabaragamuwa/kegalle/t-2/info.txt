@@ -1,0 +1,4 @@
+id=t-2
+si=හකුරුගල රජමහා විහාරය
+en=Hakurugala Rajamaha Viharaya
+var=hakurugala raja maha viharaya

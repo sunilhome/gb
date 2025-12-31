@@ -1,0 +1,4 @@
+id=t-9
+si=ශ්‍රී විශුද්දාරාමය පුරාණ විහාරය
+en=Sri Vishuddharamaya Purana Viharaya
+var=tammita sri vishddharamaya purana tampita viharaya
