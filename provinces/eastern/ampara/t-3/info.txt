@@ -1,0 +1,4 @@
+id=t-3
+si=ශ්‍රී ධර්මේන්ද්‍රාරාම පුරාණ විහාරය
+en=sri dharmendrarama purana viharaya
+var=ampara sri dharmendrarama purana viharaya

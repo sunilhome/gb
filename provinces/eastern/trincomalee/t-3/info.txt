@@ -1,0 +1,4 @@
+id=t-3
+si=අනන්දකුලම
+en=Anandakulama
+var=anandakulama alias andamkulam, near trincomalee

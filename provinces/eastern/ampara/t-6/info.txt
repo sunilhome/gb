@@ -1,0 +1,4 @@
+id=t-6
+si=ගෝනගොල්ල විහාරය
+en=Gonagolla viharaya
+var=ampara gonagolla viharaya

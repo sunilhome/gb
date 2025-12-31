@@ -1,0 +1,4 @@
+id=t-7
+si=තරුලෙන්ගල අරණ්‍ය සේනාසනය
+en=Tharulengala aranya senasanaya
+var=tharulengala aranya senasanaya /karadahela viharaya

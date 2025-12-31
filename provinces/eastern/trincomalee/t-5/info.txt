@@ -1,0 +1,4 @@
+id=t-5
+si=ලංකාපටුන විහාරය
+en=Lankapatuna Viharaya
+var=lankapatuna viharaya, trincomalee

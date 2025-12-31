@@ -1,0 +1,4 @@
+id=t-5
+si=හෙණනිගල රජමහා විහාරය
+en=Henanigala raja maha viharaya
+var=henanigala raja maha viharaya – dehiattakandiya

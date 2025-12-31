@@ -1,0 +1,4 @@
+id=t-8
+si=අරිසීමලේ
+en=Arisimale
+var=arisimale, trincomalee
