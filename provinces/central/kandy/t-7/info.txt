@@ -1,0 +1,4 @@
+id=t-7
+si=බහිරවකන්ද ශ්‍රී මහාබෝදි විහාරය
+en=Sri Maha Bodhi Viharaya
+var=sri maha bodhi viharaya bahirawakanda

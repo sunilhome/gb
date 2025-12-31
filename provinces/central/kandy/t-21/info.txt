@@ -1,0 +1,4 @@
+id=t-21
+si=නුවර මාලගම්මන රජමහා විහාරය
+en=Malagammana Rajamaha Viharaya 
+var=malagammana raja maha viharaya kandy

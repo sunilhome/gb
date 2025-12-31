@@ -1,0 +1,5 @@
+id=t-20
+si=කුන්ඩසාලේ ශ්‍රී නරේන්න්ද්‍රසිංහ විහාරය
+en=Sri Narendrasinghe Rajamaha Viharaya
+var=kundasale Sri Narendrasinghe Rajamaha Viharaya
+

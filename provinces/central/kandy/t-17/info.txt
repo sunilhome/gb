@@ -1,0 +1,4 @@
+id=t-17
+si=හිඳගල රජමහා විහාරය
+en=Hindagala Rajamaha Viharaya
+var=hindagala rajamaha viharaya kandy

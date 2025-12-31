@@ -1,0 +1,4 @@
+id=t-24
+si=නුවර බහිරවකන්ද විහාරය
+en=Bahirawakandha Viharaya 
+var=bahirawakandha viharaya kandy

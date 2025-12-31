@@ -1,0 +1,4 @@
+id=t-8
+si=උඩ අලුදෙනිය රජමහා විහාරය
+en=Uda Aludeniya Rajamaha Viharaya
+var=uda aludeniya rajamaha viharaya

@@ -1,0 +1,4 @@
+id=t-16
+si=ගල්මඩුව විහාරය
+en=Galmaduwa Vihara 
+var=Galmaduwa Vihara kandy

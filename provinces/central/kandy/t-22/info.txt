@@ -1,0 +1,4 @@
+id=t-22
+si=නුවර මෝරපාය රජමහා විහාරය
+en=morapaya rajamaha viharaya 
+var=morapaya rajamaha viharaya kandy

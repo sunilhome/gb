@@ -1,0 +1,4 @@
+id=t-27
+si=නුවර වේගිරිය රජමහා විහාරය
+en=Vegiriya Rajamaha Viharaya  
+var=vegiriya rajamaha viharaya kandy

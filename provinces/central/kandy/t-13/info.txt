@@ -1,0 +1,4 @@
+id=t-13
+si=නුවර ගංගාරාම රජමහා විහාරය
+en=Kandy Gangarama Rajamaha Viharaya
+var=kandy gangarama raja maha viharaya

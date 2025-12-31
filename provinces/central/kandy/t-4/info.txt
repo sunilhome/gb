@@ -1,0 +1,5 @@
+id=t-4
+si=හන්තාන සඳගිරි මහා විහාරය
+en=Hanthana Sandagiri Maha Viharaya
+var=hanthana sandagiri maha viharaya
+

@@ -1,0 +1,5 @@
+id=t-29
+si=ගැටබරු රජමහා විහාරය
+en=Getabaru Rajamaha Viharaya 
+var=getabaru rajamaha viharaya
+

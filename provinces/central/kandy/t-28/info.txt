@@ -1,0 +1,4 @@
+id=t-28
+si=වැලිවිට ශ්‍රී සාංගිකාරාම විහාරය
+en=Weliwita Sri Sanghikarama Viharaya 
+var=Weliwita Sri Sanghikarama Tampita Viharaya kandy
