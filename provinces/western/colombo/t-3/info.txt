@@ -1,0 +1,4 @@
+id=t-3
+si=කඩුවෙල මහමෙව්න අසපුව
+en=Kaduwela Mahamevnawa Asapuwa
+var=kaduwela mahamevnawa asapuwa

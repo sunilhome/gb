@@ -1,0 +1,4 @@
+id=t-6
+si=බම්බලපිටිය වජිරාරාමය
+en=Bambalapitiya Vajiraramaya
+var=bambalapitiya vajiraramaya

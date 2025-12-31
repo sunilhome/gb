@@ -1,0 +1,4 @@
+id=t-8
+si=අසෝකරාමය තිබිරිගස්යය
+en=Asokaramaya Thibirigasyaya
+var=asokaramaya thibirigasyaya

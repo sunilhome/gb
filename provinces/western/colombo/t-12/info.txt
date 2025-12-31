@@ -1,0 +1,4 @@
+id=t-12
+si=සුනේත්‍රා දෙවි පුරාණ රජමහ විහාරය
+en=Sunethra Devi Purana Raja Maha Viharaya
+var=sunethra devi purana raja maha viharaya

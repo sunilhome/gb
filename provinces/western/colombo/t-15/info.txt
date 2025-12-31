@@ -1,0 +1,4 @@
+id=t-15
+si=සිරි වජිරග්නන දර්මයතනය මහරගම
+en=Siri Vajiragnana Dharmayathanaya Maharagama
+var=siri vajiragnana dharmayathanaya maharagama

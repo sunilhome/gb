@@ -1,0 +1,4 @@
+id=t-2
+si=ඹෙල්ලන්විල රජමහා විහාරය
+en=Bellanwila Rajamaha Viharaya
+var=bellanwila rajamaha viharaya

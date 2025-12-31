@@ -1,0 +1,4 @@
+id=t-4
+si=මලඹෙ පිට්ටුගල විහාරය
+en=Malabe Pittugala Viharaya
+var=mahamevnawa amawatura monastery

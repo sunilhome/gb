@@ -1,0 +1,4 @@
+id=t-14
+si=හන්වැල්ල ඇබුල්ගම රජමහ විහාරය
+en=Hanwella Ambulugama Raja Maha Viharaya
+var=ambulgama raja maha viharaya

@@ -1,0 +1,4 @@
+id=t-7
+si=ඇම්බුල්ගම රජ මහ විහාරය
+en=Ambulgama Raja Maha Viharaya
+var=embulgama raja maha viharaya

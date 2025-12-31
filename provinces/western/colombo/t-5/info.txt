@@ -1,0 +1,4 @@
+id=t-5
+si=නවගමුව පත්තිනි දේවාලය
+en=Nawagamuwa Pattini Devalaya
+var=nawagamuwa pattini devalaya

@@ -1,0 +1,4 @@
+id=t-9
+si=කොට්ටෙ රජ මහ විහාරය
+en=Kotte Raja Maha Viharaya
+var=kotte raja maha viharaya
