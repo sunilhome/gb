@@ -1,0 +1,4 @@
+id=t-1
+si=ලංකාතිලක විහාරය
+en=Lankatilaka Viharaya
+var=lankatilaka viharaya polonnaruwa

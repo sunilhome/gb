@@ -1,0 +1,4 @@
+id=t-11
+si=අනුරාධපුර මහමෙව්නා අසපුව
+en=Anuradhapura Mahamewna Asapuwa
+var=anuradapura mahamewna asapuwa

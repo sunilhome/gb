@@ -1,0 +1,4 @@
+id=t-12
+si=හඳගල රජමහා විහාරය
+en=Handagala Rajamaha Viharaya
+var=horowpathana hadagala rajamaha viharaya

@@ -1,0 +1,4 @@
+id=t-14
+si=ගල්කිරියාගම විහාරය
+en=Galkiriyagama Viharaya
+var=galkiriyagama temple

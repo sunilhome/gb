@@ -1,0 +1,4 @@
+id=t-16
+si=කැකිරාව විජිතපුර රජමහා විහාරය
+en=Kekirawa Vijithapura Rajamaha Viharaya
+var=kekirawa vijithapura raja maha viharaya

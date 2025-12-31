@@ -1,0 +1,4 @@
+id=t-2
+si=රුවන්වැලි මහා සෑය
+en=Ruwanweli Maha Seya
+var=ruwanweliseya

@@ -1,0 +1,4 @@
+id=t-5
+si=ලංකාරාමය
+en=Lankaramaya
+var=lankaramaya

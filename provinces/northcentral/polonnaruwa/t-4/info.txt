@@ -1,0 +1,4 @@
+id=t-4
+si=පබළු වෙහෙර
+en=Pabalu Vehera
+var=pabalu vehera in polonnaruwa

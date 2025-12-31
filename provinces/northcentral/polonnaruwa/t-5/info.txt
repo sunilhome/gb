@@ -1,0 +1,4 @@
+id=t-5
+si=පොලොන්නරුව බද්දසීමා ප්‍රාසාදය
+en=Polonnaruwa Baddasima Prasadaya
+var=polonnaruwa baddasima prasadaya

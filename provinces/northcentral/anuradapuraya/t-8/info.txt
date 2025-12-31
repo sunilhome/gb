@@ -1,0 +1,4 @@
+id=t-8
+si=මිරිසවැටිය
+en=Mirisawetiya
+var=mirisawetiya
