@@ -1,0 +1,4 @@
+id=t-8
+si=වළගම්බා රජමහා විහාරය
+en=Walagamba Rajamaha Viharaya
+var=gampaha uruwala valagamba raja maha vihara

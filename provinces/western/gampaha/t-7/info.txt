@@ -1,0 +1,4 @@
+id=t-7
+si=ගම්පහ අස්ගිරිය රජමහා විහාරය
+en=Gampaha Asgiriya Rajamaha Viharaya
+var=gampaha asgiriya rajamaha viharaya

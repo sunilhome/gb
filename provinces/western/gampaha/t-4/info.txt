@@ -1,0 +1,4 @@
+id=t-4
+si=මාලිගාතැන්න රජමහා විහාරය
+en=Maligathanna Rajamaha Viharaya
+var=uggalboda maligatenna raja maha viharaya

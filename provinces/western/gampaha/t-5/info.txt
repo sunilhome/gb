@@ -1,0 +1,4 @@
+id=t-5
+si=පිලිකුත්තුව රජමහා විහාරය
+en=Pilikuththuwa Rajamaha Viharaya
+var=pilikuththuwa raja maha viharaya

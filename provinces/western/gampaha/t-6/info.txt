@@ -1,0 +1,4 @@
+id=t-6
+si=කොස්කදවල රජමහා විහාරය
+en=Koskadawala Rajamaha Viharaya
+var=gampaha koskandawala raja maha viharaya

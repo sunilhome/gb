@@ -1,0 +1,4 @@
+id=t-2
+si=අත්තනගල්ල රජමහා විහාරය
+en=Atthanagalla Rajamaha Viharaya
+var=attanagalla raja maha viharaya

@@ -1,0 +1,4 @@
+id=t-1
+si=අඟුරුකාරමුල්ල රජමහා විහාරය
+en=Angurukaramulla Rajamaha Viharaya
+var=agurukaramulla raja maha viharaya
