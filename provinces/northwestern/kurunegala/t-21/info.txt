@@ -1,0 +1,4 @@
+id=t-21
+si=දේවගිරි රජමහා විහාරය
+en=Devagiri Rajamaha Viharaya
+var=devagiri raja maha viharaya, bingiriya

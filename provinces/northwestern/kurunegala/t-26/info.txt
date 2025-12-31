@@ -1,0 +1,4 @@
+id=t-26
+si=රාම්බඩගල්ල විද්‍යාසාගර පිරිවෙන් විහාරය
+en=Rambadagalla Vidyasagara Piriven Viharaya
+var=kurunegala rambadagalla vidyasagara piriven viharaya

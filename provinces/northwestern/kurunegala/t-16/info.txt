@@ -1,0 +1,4 @@
+id=t-16
+si=නාගොල්ල පුරාණ රජමහා විහාරය
+en=Nagolla Purana Rajamaha Viharaya
+var=nagolla purana rajamaha viharaya

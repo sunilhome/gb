@@ -1,0 +1,4 @@
+id=t-9
+si=වාරියපොල නුවරකන්ද රජමහා විහාරය
+en=Wariyapola Nuwarakanda Rajamaha Viharaya
+var=wariyapola nuwarakanda rajamaha viharaya

@@ -1,0 +1,4 @@
+id=t-13
+si=ශ්‍රී නාගල රජමහා විහාරය
+en=Sri Nagala Rajamaha Viharaya
+var= sri nagala rajamaha viharaya

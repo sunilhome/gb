@@ -1,0 +1,4 @@
+id=t-22
+si=මැල්සිරිපුර නාඋයන අරණ්‍ය සේනාසනය
+en=Melsiripura Nauyana Aranya Senasanaya
+var=melsiripura nauyana aranya senasanaya

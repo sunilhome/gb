@@ -1,0 +1,4 @@
+id=t-15
+si=රංවැල්ල විහාරය කොතලුව
+en=Ranwella Viharaya, Kothaluwa
+var=ranwella viharaya, kothaluwa

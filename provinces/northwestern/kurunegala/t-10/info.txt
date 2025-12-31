@@ -1,0 +1,4 @@
+id=t-10
+si=මාස්පොත ශ්‍රී ගංගාරාම විහාරස්ථානය
+en=Maspotha Sri Gangarama Viharasthanaya
+var=maspotha sri gangarama viharasthanaya

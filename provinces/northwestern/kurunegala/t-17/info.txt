@@ -1,0 +1,4 @@
+id=t-17
+si=කපිල විහාරය කෙලිමුණේ
+en=Kapila Viharaya, Kelimune
+var=kapila viharaya, kelimune

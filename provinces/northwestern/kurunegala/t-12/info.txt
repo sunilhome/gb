@@ -1,0 +1,4 @@
+id=t-12
+si=වෙල්ලගල රජමහා විහාරය
+en=Wellagala Rajamaha Viharaya
+var=wellagala raja maha viharaya

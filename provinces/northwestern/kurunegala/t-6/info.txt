@@ -1,0 +1,4 @@
+id=t-6
+si=පොල්ගහවෙල මහමෙව්නා අසපුව
+en=Polgahawela Mahamewna Asapuwa
+var=polgahawela mahamewna asapuwa

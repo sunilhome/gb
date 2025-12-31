@@ -1,0 +1,4 @@
+id=t-27
+si=විල්බාව රජමහා විහාරය
+en=Vilbawa Rajamaha Viharaya
+var=vilbawa rajamaha viharaya - kurunegala

@@ -1,0 +1,4 @@
+id=t-28
+si=ශ්‍රී රුවන්බෝධිමහ පිරිවෙන් විහාරය
+en=Sri Ruwanbodhima Piriven Viharaya
+var=sri ruwanbodhi wiharaya

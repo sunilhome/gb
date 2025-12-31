@@ -1,0 +1,4 @@
+id=t-11
+si=කුරුණෑගල මරලුවාව රජමහා විහාරය
+en=Kurunegala Maraluwawa Rajamaha Viharaya
+var=kurunegala maraluwawa raja maha viharaya

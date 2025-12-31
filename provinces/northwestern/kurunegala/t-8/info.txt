@@ -1,0 +1,4 @@
+id=t-8
+si=වාරියපොල ශ්‍රී සුමංගල පිරිවෙන් රජමහා විහාරය
+en=Wariyapola Sri Sumangala Piriven Rajamaha Viharaya
+var=wariyapola sri sumangala piriwen rajamaha viharaya

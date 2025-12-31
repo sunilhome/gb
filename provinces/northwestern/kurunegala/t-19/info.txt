@@ -1,0 +1,4 @@
+id=t-19
+si=හිරුවල්පොල ශ්‍රී පුෂ්පාරාම විහාරය
+en=Hiruwalpola Sri Pushparama Rajamaha Viharaya
+var=hiruwalpola sri pushparamaya tampita viharaya

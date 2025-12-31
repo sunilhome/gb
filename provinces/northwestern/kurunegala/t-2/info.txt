@@ -1,0 +1,4 @@
+id=t-2
+si=ඇත්කද රජමහා විහාරය
+en=Athkada Rajamaha Viharaya
+var=kurunegala athkadarajamaha viharaya

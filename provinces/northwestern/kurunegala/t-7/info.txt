@@ -1,0 +1,4 @@
+id=t-7
+si=අලව්ව මැද්දෙපොල රජමහා විහාරය
+en=Alawwa Meddepola Rajamaha Viharaya
+var=alawwa meddepola rajaamaha viharaya
