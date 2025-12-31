@@ -1,0 +1,4 @@
+id=t-1
+si=මඩුකන්ද රජමහා විහාරය
+en=Madukanda Rajamaha Viharaya
+var=Madukanda Rajamaha Viharaya, vavuniya

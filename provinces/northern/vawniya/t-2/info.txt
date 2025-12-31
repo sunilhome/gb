@@ -1,0 +1,4 @@
+id=t-2
+si=වඩ්ඩමාන පර්වත විහාරය
+en=Waddamana Parwatha Viharaya
+var=waddamana parwatha viharaya
