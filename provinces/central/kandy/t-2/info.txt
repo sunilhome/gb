@@ -1,0 +1,4 @@
+id=t-2
+si=ගඩලාදෙණිය විහාරය
+en=Gadaladeniya Rajamaha viharaya
+var=Gadaladeniya Rajamaha viharaya, pilimathalawa
