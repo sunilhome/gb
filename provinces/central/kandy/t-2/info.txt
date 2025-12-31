@@ -1,4 +1,5 @@
-id=t-12
+id=t-2
 si=දෙගල්දොරුව රජමහා විහාරය
 en=Degaldoruwa Rajamaha Viharaya
+
 var=degaldoruwa rajamaha viharaya
