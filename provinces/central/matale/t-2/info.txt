@@ -1,0 +1,4 @@
+id=t-2
+si=දඹුල්ල ගල්ලෙන් රජමහා විහාරය
+en=Dabulla cave temple
+var=Dabulla cave temple
