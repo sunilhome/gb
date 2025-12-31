@@ -1,0 +1,4 @@
+id=t-2
+si=රිකිලිකගස්කඩ විල්වල රජමහා විහාරය
+en=Wilwala Rajamaha Viharaya
+var=Rikillagaskada Wilwala Rajamaha Viharaya

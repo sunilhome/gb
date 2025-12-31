@@ -1,0 +1,4 @@
+id=t-5
+si=වෑගම රජමහා විහාරය
+en=Wegama Rajamaha Viharaya
+var=wegama rajamaha viharaya, nuwara-eliya

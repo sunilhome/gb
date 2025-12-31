@@ -1,0 +1,4 @@
+id=t-1
+si=කඩදොර විහාරය
+en=Kadadora Viharaya
+var=kadadora viharaya
