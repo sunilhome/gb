@@ -195,7 +195,7 @@ text-align: center;
 	   border-radius: 12px;
 	   border: 2px solid #000;
 
-        font-size: 22px;  /* smaller font on phone */
+        font-size: 18px;  /* smaller font on phone */
         padding: 6px 10px; /* reduce padding */
         height: auto;
         box-shadow: 0 3px 10px #999;
@@ -220,4 +220,5 @@ white-space: normal;
                 font-size: 12px;
             }
 }
+
 
