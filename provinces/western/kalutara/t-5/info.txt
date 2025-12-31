@@ -1,0 +1,4 @@
+id=t-5
+si=කලුතර රජමහා විහාරය
+en=Kaluthara Rajamaha Viharaya
+var=kaluthara rajamaha viharaya

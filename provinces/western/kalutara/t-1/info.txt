@@ -1,0 +1,4 @@
+id=t-1
+si=හොරණ මහමෙව්න අසපුුව
+en=Horana Mahamewna Asapuwa
+var=horana mahamewna asapuwa

@@ -1,0 +1,4 @@
+id=t-8
+si=පතාහවත්ත රජමහා විහාරය
+en=Pathahawatta Rajamaha Viharaya
+var=pathahawatta rajamaha viharaya

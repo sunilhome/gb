@@ -1,0 +1,4 @@
+id=t-4
+si=කණන්විල කන්දේ විහාරය
+en=Kananwila Kande Viharaya
+var=kananwila kande viharaya
