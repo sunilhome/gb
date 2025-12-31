@@ -1,0 +1,4 @@
+id=t-8
+si=ශ්‍රී මනබරන රජමහා විහාරය
+en=Sri Manabarana Rajamaha Viharaya
+var=Sri Manabarana Rajamaha Viharaya at Siyambalanduwa

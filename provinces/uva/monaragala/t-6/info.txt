@@ -1,0 +1,4 @@
+id=t-6
+si=මලිගවිල රජමහා විහාරය
+en=Maligawila Rajamaha Viharaya
+var=maligawila

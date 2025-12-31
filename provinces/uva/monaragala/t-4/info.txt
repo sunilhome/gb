@@ -1,0 +1,4 @@
+id=t-4
+si=බිංගොඩ පුරාණ විහාරය
+en=Bingoda Purana Viharaya
+var=Bingoda Purana Vihara (Dambagalla, Madulla)

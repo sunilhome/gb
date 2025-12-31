@@ -1,0 +1,4 @@
+id=t-10
+si=කදුරුගොඩ පුරාණ රජ මහා විහාරය
+en=Kadurugoda Purana Rajamaha Viharaya
+var=Kadurugoda Purana Raja Maha Viharaya

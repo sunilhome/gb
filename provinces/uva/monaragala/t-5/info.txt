@@ -1,0 +1,4 @@
+id=t-5
+si=අත්තරගම රජමහා විහාරය
+en=Aththaragama Rajamaha Viharaya
+var=aththaragama rajamaha viharaya

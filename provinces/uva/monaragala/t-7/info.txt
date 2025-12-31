@@ -1,0 +1,4 @@
+id=t-7
+si=මයුරගිරි ලෙන් විහාරය
+en=Mayuragiri Len Viharaya
+var=mayuragiri len viharaya
