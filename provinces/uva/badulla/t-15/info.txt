@@ -1,4 +1,0 @@
-id=t-16
-si=ලුනුගල නිලගිරි මහා සෑය
-en=Lunugala Nilagiri Maha Seya
-ver=lunugala nilagiri maha seya

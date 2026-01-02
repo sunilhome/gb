@@ -1,4 +1,0 @@
-id=t-9
-si=පස්සර රජමහා විහාරය
-en=Passara Rajamaha Viharaya
-ver=passara rajamaha viharaya
