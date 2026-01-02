@@ -1,0 +1,4 @@
+id=t-5
+si=කුබල්වැව මහමෙව්න අසපුව
+en=Kubalwewa Mahamewna Asapuwa
+ver=kubalwewa mahamewna asapuwa
