@@ -1,4 +1,0 @@
-id=t-12
-si=මලිගවිල පුරාණ රජමහා විහාරය
-en=Maligawila Purana Rajamaha Viharaya
-var=maligawila purana rajamaha viharaya. monaragala
