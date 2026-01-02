@@ -1,4 +1,5 @@
 id=t-6
-si=මලිගවිල රජමහා විහාරය
+si=මාළිගාවිල රජමහා විහාරය
 en=Maligawila Rajamaha Viharaya
 var=maligawila
+
