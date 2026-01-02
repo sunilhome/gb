@@ -1,0 +1,4 @@
+id=t-1
+si=බුදුරුවගල රජමහා විහාරය
+en=Buduruwagala Rajamaha Viharaya
+var=Buduruwagala
