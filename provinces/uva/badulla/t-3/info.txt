@@ -1,0 +1,4 @@
+id=t-3
+si=හලඹගල රජමහා විහාරය
+en=Halambagala Raja Maha Viharaya
+var=halambagala raja maha viharaya

@@ -1,0 +1,4 @@
+id=t-2
+si=ගණෙතැන්න රජමහා විහාරය
+en=Ganethenna Raja Maha Viharaya
+var=ganethenna raja maha viharaya

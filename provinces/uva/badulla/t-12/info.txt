@@ -1,0 +1,4 @@
+id=t-12
+si=සොරගුණේ පුරාණ රජමහා විහාරය
+en=Soragune Purana Raja Maha Viharaya
+var=soragune purana raja maha viharaya

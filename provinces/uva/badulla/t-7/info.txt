@@ -1,0 +1,4 @@
+id=t-7
+si=මහියංගණ රජමහා විහාරය
+en=Mahiyangana Raja Maha Viharaya
+var=mahiyangana raja maha viharaya

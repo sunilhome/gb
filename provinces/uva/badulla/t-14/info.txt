@@ -1,0 +1,4 @@
+id=t-14
+si=මහියංගණ නාගදීප විහාරය
+en=Mahiyangana Nagadeepa Viharaya
+var=mahiyangana nagadeepa viharaya

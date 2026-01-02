@@ -1,0 +1,4 @@
+id=t-11
+si=සැනසුන්ගල විහාරය
+en=Senasungala Viharaya
+var=senasungala viharaya
