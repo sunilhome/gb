@@ -1,4 +1,0 @@
-id=t-4
-si=කණුගොල්ල විහාරය
-en=Kanugolla Viharaya
-ver=kanugolla viharaya

@@ -1,4 +1,0 @@
-id=t-6
-si=මහමෙව්නාව, ඇල්ල
-en=Mahamevnawa Monastery, Ella
-ver=mahamevnawa monastery, ella
