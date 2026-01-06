@@ -1,5 +1,5 @@
 id=t-1
 si=නාගදීප විහාරය
 en=Nagadipa Viharaya
-
 var=mahamegaramaya
+
