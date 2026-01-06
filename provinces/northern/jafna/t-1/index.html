@@ -181,24 +181,30 @@ margin-bottom: 30px;
 	}
 	
 
- .event-box {
- display: block;
- margin-top: 5px;
+@media (max-width: 700px) {
+
+    .event-box {
         width: 90%;
-        padding: 5px;
-            text-align: center;
+        margin: 15px auto;   /* 👈 important */
+        padding: 10px;
+    background: #c0dfff;
+        box-sizing: border-box;
     }
 
-    .event-text h2 {
-        font-size: 16px;
-        line-height: 1;
-    }
-
-    .event-text p {
-        font-size: 12px;
-        line-height: 1.1;
+    .event-box h2 {
+        margin: 0 0 8px 0;   /* 👈 remove side margins */
+        font-size: 18px;
         text-align: center;
     }
+
+    .event-box p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: justify; /* 👈 better reading */
+    }
+}
+
 
     .nav-btn {
         font-size: 14px;
