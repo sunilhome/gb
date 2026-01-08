@@ -17,20 +17,25 @@ body {
     border-radius: 15px;
     border: 2px solid #fff;
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    padding: 15px;            /* optional, adds space inside box */
-    box-sizing: border-box;    /* ensures padding doesn’t break width */
-    text-align: center;        /* center all text inside */
+    padding: 15px;              /* space inside */
+    box-sizing: border-box;      /* includes padding in width */
+    text-align: center;          /* center text */
+    display: block;              /* ensure it’s block element */
+    word-break: break-word;      /* wrap long words anywhere */
+    overflow-wrap: break-word;   /* modern property for wrapping */
+    white-space: normal;         /* IMPORTANT: allow normal wrapping */
 }
 
 /* Title main */
 .title-box1 h1 {
-    margin: 20px 0 5px;       /* top / bottom spacing */
+    margin: 20px 0 5px;
     padding: 0;
     color: #fff;
     font-size: 28px;
-    word-wrap: break-word;     /* wrap long words */
-    overflow-wrap: break-word; /* ensures very long words break */
-    line-height: 1.2;          /* better line spacing */
+    line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;         /* allow wrapping */
 }
 
 /* Subtitle */
@@ -39,10 +44,12 @@ body {
     padding: 0;
     color: #fff;
     font-size: 20px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
     line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
+
 
 
 .main-image {
@@ -250,4 +257,5 @@ footer {
         font-size: 12px;
     }
 }
+
 
