@@ -4,7 +4,6 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -12,13 +11,13 @@ body {
 
 .title-box1 {
     width: 95%;
-    margin: 50px auto 20px;
+    margin: 50px auto 30px;
     background: #000099;
-    border-radius: 15px;
-    border: 2px solid #fff;
+    border-radius: 28px;
+    border: 3px solid #fff;
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    padding: 15px;              /* space inside */
-    box-sizing: border-box;      /* includes padding in width */
+    padding: 5px;              /* space inside */
+  /*  box-sizing: border-box;*/      /* includes padding in width */
     text-align: center;          /* center text */
     display: block;              /* ensure it’s block element */
     word-break: break-word;      /* wrap long words anywhere */
@@ -206,7 +205,7 @@ footer {
 @media (max-width: 700px) {
 
 	.title-box1 h1 {
-    margin: 20px 0 5px;
+    margin: 2px 0 2px;
     padding: 0;
     color: #fff;
     font-size: 20px;
@@ -218,7 +217,7 @@ footer {
 
 /* Subtitle */
 .title-box1 h2 {
-    margin: 0 0 20px;
+    margin: 0 0 2px;
     padding: 0;
     color: #fff;
     font-size: 20px;
@@ -245,7 +244,7 @@ footer {
         margin: 0;
         font-size: 14px;
         line-height: 1.4;
-        text-align: justify; /* 👈 better reading */
+        text-align: center;
     }
 
 
@@ -265,8 +264,8 @@ footer {
     }
 
     .contact-item {
-        font-size: 16px;     /* value text size */
-        margin-bottom: 10px;
+        font-size: 12px;     /* value text size */
+        margin-bottom: 5px;
         text-align: left;
     }
 
@@ -280,6 +279,7 @@ footer {
         font-size: 12px;
     }
 }
+
 
 
 
