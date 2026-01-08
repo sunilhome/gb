@@ -205,6 +205,29 @@ footer {
 
 @media (max-width: 700px) {
 
+	.title-box1 h1 {
+    margin: 20px 0 5px;
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;         /* allow wrapping */
+}
+
+/* Subtitle */
+.title-box1 h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
     .event-box {
         width: 90%;
         margin: 15px auto;   /* 👈 important */
@@ -257,6 +280,7 @@ footer {
         font-size: 12px;
     }
 }
+
 
 
 
