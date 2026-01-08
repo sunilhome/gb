@@ -125,12 +125,12 @@ body {
     }
 
     .info-box p {
-        font-size: 14px;
+        font-size: 12px;
         line-height: 1.4;
     }
 
     .info-box h3 {
-        font-size: 17px;
+        font-size: 14px;
         margin: 14px 0 6px;
     }
 }
