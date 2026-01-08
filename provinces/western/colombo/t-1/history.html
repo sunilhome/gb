@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Loading...</title>
+
+<style>
+/* ================= BASE ================= */
+body {
+    font-family: Arial, sans-serif;
+    background: #c0dfff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+/* ================= PAGE TITLE ================= */
+.page-title {
+    background: #000099;
+    color: #fff;
+    border-radius: 24px;
+    margin: 20px auto;
+
+    /* ✅ FLEX FIX */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 10px;
+}
+
+/* REMOVE DEFAULT HEADING MARGINS */
+.page-title h1,
+.page-title h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.page-title h1 {
+    font-size: 32px;
+    line-height: 1.1;
+}
+
+.page-title h2 {
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+
+.info-box {
+    background: #fff;
+    padding: 16px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    text-align: left;
+    margin: 20px auto;
+}
+
+.info-box h2 {
+    text-align: center;
+    margin: 0 0 12px;
+}
+.info-box h3 {
+    font-size: 34px !important;   /* bigger font and force it */
+    color:  blue !important;        /* red text */
+    margin: 20px 0 10px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+
+.info-box p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    text-align: left;
+
+    hyphens: auto;
+    word-wrap: break-word;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 8px;
+    border-radius: 12px;
+    border: 2px solid #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #000099;
+    color: #fff;
+}
+
+.back-btn {
+    display: block;
+    width: 90%;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 14px;
+    font-size: 18px;
+    border-radius: 14px;
+    border: 2px solid #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 700px) {
+
+    .page-title {
+        padding-top: 12px;   /* 🔼 control TOP space */
+        padding-bottom: 14px;/* 🔽 control BOTTOM space */
+    }
+
+    .page-title h1 {
+        font-size: 30px;
+        line-height: 1;
+    }
+
+    .page-title h2 {
+        font-size: 24px;
+        line-height: 1.1;
+        margin-top: 4px;     /* spacing BETWEEN h1 & h2 */
+    }
+
+    .info-box p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .info-box h3 {
+        font-size: 17px;
+        margin: 14px 0 6px;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+
+    <!-- TITLE -->
+    <div class="page-title">
+        <h1 id="title-si">Loading...</h1>
+        <h2 id="title-en"></h2>
+    </div>
+
+    <!-- LANGUAGE BUTTONS -->
+    <div>
+        <button class="btn" onclick="loadInfo('si')">සිංහල</button>
+        <button class="btn" onclick="loadInfo('en')">English</button>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="info-box">
+        <h2>History | ඉතිහාසය</h2>
+        <div id="temple-text">Loading...</div>
+    </div>
+
+    <!-- BACK -->
+    <button class="back-btn" onclick="window.location.href='index.html'">
+        ← Back to Temple Main Page
+    </button>
+
+</div>
+
+<script>
+/* LOAD TITLE */
+async function loadTempleInfo() {
+    try {
+   
+        const res = await fetch('info.txt');
+        const text = await res.text();
+        const info = {};
+
+        text.split(/\r?\n/).forEach(line => {
+            const [k,v] = line.split('=');
+            if(k && v) info[k.trim()] = v.trim();
+        });
+
+        const si = info.si || 'Temple History';
+        const en = info.en || '';
+
+        document.title = si + (en ? ' | ' + en : '');
+        document.getElementById('title-si').textContent = si;
+        document.getElementById('title-en').textContent = en;
+
+    } catch(e) {
+        document.title = 'Temple History';
+    }
+}
+
+async function loadInfo(lang) {
+    const file = lang === 'si' ? 'info-si.txt' : 'info-en.txt';
+    const box = document.getElementById('temple-text');
+    box.innerHTML = '';
+
+    try {
+        const res = await fetch(file);
+        const text = await res.text();
+
+        // Split by double or single line breaks
+        text.split(/\r?\n\r?\n|\r?\n/).forEach(line => {
+            const trimmed = line.trim();
+            if (!trimmed) return; // skip empty lines
+
+            if (trimmed.startsWith('#')) {
+                // Lines starting with # → h3
+                const h3 = document.createElement('h3');
+                h3.textContent = trimmed.substring(1).trim(); // remove #
+                box.appendChild(h3);
+            } else {
+                // Normal paragraph
+                const p = document.createElement('p');
+                p.textContent = trimmed;
+                box.appendChild(p);
+            }
+        });
+
+    } catch {
+        box.textContent = 'Information not available.';
+    }
+}
+
+loadTempleInfo().then(() => loadInfo('si'));
+</script>
+
+</body>
+</html>

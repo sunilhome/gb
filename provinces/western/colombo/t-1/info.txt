@@ -1,0 +1,8 @@
+id=t-1
+si=මහමේඝාරාමය,මහරගම
+en=Mahamegaramaya
+var=mahamegaramaya
+abbot=මෙම විහාරස්ථානයේ විහාරාධිපති ලෙස වර්තමානයේ කටයුතු කරනු ලබන්නේ ගෞරවනීය ස්වාමීන් වහන්සේය.
+address=මහමේඝාරාමය, මහරගම.
+telephone=076-6178102
+district_si=යාපනය                                                                                                                                                                                                                                                                           
