@@ -1,0 +1,241 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #c0dfff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-box1   {
+width: 95%;
+    margin: 50px auto 20px;
+    background: #000099;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+
+.title-box1 h1  {
+ margin: 20px auto 5px;
+    padding: 0;
+    color: #fff;
+}
+.title-box1 h2 {
+    margin: 0 auto 20px;
+    padding: 0;
+    color: #fff;
+}
+
+.title-box1 h1 { font-size: 32px; }
+.title-box1 h2 { font-size: 20px; }
+
+.main-image {
+    width: 95%;
+    margin: 35px auto;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+	.small-image  {
+	width: 60%;
+	margin: 30px auto 5px;
+	    border-radius: 15px;
+    border: 2px solid #fff;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+	}
+	
+
+  
+	.event-box {
+    width: 90%;
+    margin: 30px auto;
+     background: #c0dfff;
+    padding: 5px;
+ 
+}
+
+.event-text p {
+    color: #000;
+    font-size: 24px;
+    line-height: 1.1;
+
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+
+.event-text h2 {
+    margin: 0 ;       /* Remove top margin, add space below */
+    font-size: 28px;          /* Desktop size */
+    line-height: 1;         /* Slightly taller line spacing */
+}
+
+
+   
+    .event-text p {
+        font-size: 18px;
+        line-height: 1;
+        text-align: center;    /* Center text on mobile */
+		  margin: 0 ;
+    }
+
+
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 20px auto;
+}
+
+.nav-btn {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px 0;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+.button-box {
+    width: 95%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.action-btn {
+     margin: auto;
+    width: 100%;
+    padding: 6px 0;
+    font-size: 20px;
+    border-radius: 18px;
+    border: 2px solid #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* ===============================
+   Contact box (Address + Phone)
+   =============================== */
+
+.contact-box {
+    background: #eaf2ff;
+    max-width: 800px;
+    margin: 16px auto;
+    padding: 14px 18px;
+    border-radius: 0;
+}
+
+/* Each row */
+.contact-item {
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Label (ලිපිනය / දුරකථන) */
+.contact-item .label {
+    font-weight: bold;
+    color: #1b3a6b;
+    margin-right: 8px;
+}
+
+/* Address text */
+#templeAddress {
+    color: #000;
+}
+
+/* Clickable phone */
+#templePhone {
+    color: #0b5ed7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#templePhone:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+footer {
+    background: #000;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    color: #fff;
+    font-size: 16px;
+}
+
+/* ============================================================
+   MOBILE
+   ===================================*/
+	
+
+@media (max-width: 700px) {
+
+    .event-box {
+        width: 90%;
+        margin: 15px auto;   /* 👈 important */
+        padding: 10px;
+    background: #c0dfff;
+        box-sizing: border-box;
+    }
+
+    .event-box h2 {
+        margin: 0 0 8px 0;   /* 👈 remove side margins */
+        font-size: 18px;
+        text-align: center;
+    }
+    .event-box p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: justify; /* 👈 better reading */
+    }
+
+
+    .nav-btn {
+        font-size: 14px;
+    }
+
+    .action-btn {
+        font-size: 24px;
+         width: 90%;
+    }
+.contact-box {
+        padding: 3px;
+        margin: 12px;
+          border: 2px solid #000099;
+         border-radius: 12px;  /* 🔑 adjust smaller for mobile */
+    }
+
+    .contact-item {
+        font-size: 16px;     /* value text size */
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .contact-item .label {
+        display: block;     /* label on top */
+        font-size: 18px;    /* 🔑 label size */
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+    .footer-content {
+        font-size: 12px;
+    }
+}
