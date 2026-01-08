@@ -17,7 +17,7 @@ body {
     border: 3px solid #fff;
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
     padding: 5px;              /* space inside */
-  /*  box-sizing: border-box;*/      /* includes padding in width */
+    box-sizing: border-box;      /* includes padding in width */
     text-align: center;          /* center text */
     display: block;              /* ensure it’s block element */
     word-break: break-word;      /* wrap long words anywhere */
