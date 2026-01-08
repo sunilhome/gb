@@ -1,4 +1,0 @@
-id=t-1
-si=කැලනිය රජමහා විහාරය
-en=Kelaniya Rajamaha Viharaya
-var=kelaniya rajamaha viharaya
