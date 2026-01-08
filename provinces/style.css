@@ -10,29 +10,40 @@ body {
     flex-direction: column;
 }
 
-.title-box1   {
-width: 95%;
+.title-box1 {
+    width: 95%;
     margin: 50px auto 20px;
     background: #000099;
     border-radius: 15px;
     border: 2px solid #fff;
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    padding: 15px;            /* optional, adds space inside box */
+    box-sizing: border-box;    /* ensures padding doesn’t break width */
+    text-align: center;        /* center all text inside */
 }
 
-
-.title-box1 h1  {
- margin: 20px auto 5px;
+/* Title main */
+.title-box1 h1 {
+    margin: 20px 0 5px;       /* top / bottom spacing */
     padding: 0;
     color: #fff;
+    font-size: 28px;
+    word-wrap: break-word;     /* wrap long words */
+    overflow-wrap: break-word; /* ensures very long words break */
+    line-height: 1.2;          /* better line spacing */
 }
+
+/* Subtitle */
 .title-box1 h2 {
-    margin: 0 auto 20px;
+    margin: 0 0 20px;
     padding: 0;
     color: #fff;
+    font-size: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.2;
 }
 
-.title-box1 h1 { font-size: 32px; }
-.title-box1 h2 { font-size: 20px; }
 
 .main-image {
     width: 95%;
@@ -239,3 +250,4 @@ footer {
         font-size: 12px;
     }
 }
+
