@@ -13,10 +13,10 @@ body {
     width: 95%;
     margin: 50px auto 30px;
     background: #000099;
-    border-radius: 28px;
+    border-radius: 26px;
     border: 3px solid #fff;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    padding: 5px;              /* space inside */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    padding: 10px;              /* space inside */
     box-sizing: border-box;      /* includes padding in width */
     text-align: center;          /* center text */
     display: block;              /* ensure it’s block element */
@@ -64,16 +64,18 @@ body {
 	margin: 30px auto 5px;
 	    border-radius: 15px;
     border: 2px solid #fff;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.8);
 	}
 	
 
   
-	.event-box {
+	.event-box { 
+        
     width: 90%;
     margin: 30px auto;
      background: #c0dfff;
     padding: 5px;
+    width: 90%;
  
 }
 
@@ -100,6 +102,14 @@ body {
         text-align: center;    /* Center text on mobile */
 		  margin: 0 ;
     }
+   .event-text .event-note {
+    font-size: 18px;       /* adjust to whatever you want */
+    color: #000099;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+}
+
 
 
 
@@ -146,10 +156,13 @@ body {
 
 .contact-box {
     background: #eaf2ff;
-    max-width: 800px;
+    width: 90%;       /* change from max-width to width */
+    max-width: none;  /* optional, remove old max-width limit */
     margin: 16px auto;
-    padding: 14px 18px;
-    border-radius: 0;
+    padding: 6px 18px;
+    border-radius: 15px;
+    box-sizing: border-box;  /* ensures padding does not break width */
+     border: 2px solid #000;
 }
 
 /* Each row */
@@ -233,6 +246,7 @@ footer {
         padding: 10px;
     background: #c0dfff;
         box-sizing: border-box;
+        
     }
 
     .event-box h2 {
@@ -257,24 +271,28 @@ footer {
          width: 90%;
     }
 .contact-box {
-        padding: 3px;
-        margin: 12px;
-          border: 2px solid #000099;
-         border-radius: 12px;  /* 🔑 adjust smaller for mobile */
-    }
+    width: 90%;
+    margin: 15px auto;
+}
 
-    .contact-item {
-        font-size: 12px;     /* value text size */
-        margin-bottom: 5px;
-        text-align: left;
-    }
+.contact-item {
+    display: flex;
+    align-items: flex-start;   /* 👈 important for multi-line */
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
 
-    .contact-item .label {
-        display: block;     /* label on top */
-        font-size: 18px;    /* 🔑 label size */
-        font-weight: bold;
-        margin-bottom: 0;
-    }
+.label {
+    font-weight: bold;
+    white-space: nowrap;       /* label stays in one line */
+}
+
+#templeAddress,
+#templePhone {
+    word-break: break-word;   /* 👈 allows 2nd line on mobile */
+    flex: 1;                  /* 👈 takes remaining width */
+}
     .footer-content {
         font-size: 12px;
     }
