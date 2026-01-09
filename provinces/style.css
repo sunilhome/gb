@@ -1,0 +1,306 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #c0dfff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-box1 {
+    width: 95%;
+    margin: 50px auto 30px;
+    background: #000099;
+    border-radius: 26px;
+    border: 3px solid #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    padding: 10px;              /* space inside */
+    box-sizing: border-box;      /* includes padding in width */
+    text-align: center;          /* center text */
+    display: block;              /* ensure it’s block element */
+    word-break: break-word;      /* wrap long words anywhere */
+    overflow-wrap: break-word;   /* modern property for wrapping */
+    white-space: normal;         /* IMPORTANT: allow normal wrapping */
+}
+
+/* Title main */
+.title-box1 h1 {
+    margin: 20px 0 5px;
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;         /* allow wrapping */
+}
+
+/* Subtitle */
+.title-box1 h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+
+
+.main-image {
+    width: 95%;
+    margin: 35px auto;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+	.small-image  {
+	width: 60%;
+	margin: 30px auto 5px;
+	    border-radius: 15px;
+    border: 2px solid #fff;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.8);
+	}
+	
+
+  
+	.event-box { 
+        
+    width: 90%;
+    margin: 30px auto;
+     background: #c0dfff;
+    padding: 5px;
+    width: 90%;
+ 
+}
+
+.event-text p {
+    color: #000;
+    font-size: 24px;
+    line-height: 1.1;
+
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+
+.event-text h2 {
+    margin: 0 ;       /* Remove top margin, add space below */
+    font-size: 28px;          /* Desktop size */
+    line-height: 1;         /* Slightly taller line spacing */
+}
+
+
+   
+    .event-text p {
+        font-size: 18px;
+        line-height: 1;
+        text-align: center;    /* Center text on mobile */
+		  margin: 0 ;
+    }
+   .event-text .event-note {
+    font-size: 16px;       /* adjust to whatever you want */
+    color: #000099;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 20px auto;
+}
+
+.nav-btn {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px 0;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+.button-box {
+    width: 95%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.action-btn {
+     margin: auto;
+    width: 100%;
+    padding: 6px 0;
+    font-size: 20px;
+    border-radius: 18px;
+    border: 2px solid #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* ===============================
+   Contact box (Address + Phone)
+   =============================== */
+
+.contact-box {
+    background: #eaf2ff;
+    width: 90%;       /* change from max-width to width */
+    max-width: none;  /* optional, remove old max-width limit */
+    margin: 16px auto;
+    padding: 6px 18px;
+    border-radius: 15px;
+    box-sizing: border-box;  /* ensures padding does not break width */
+     border: 2px solid #000;
+}
+
+/* Each row */
+.contact-item {
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Label (ලිපිනය / දුරකථන) */
+.contact-item .label {
+    font-weight: bold;
+    color: #1b3a6b;
+    margin-right: 8px;
+}
+
+/* Address text */
+#templeAddress {
+    color: #000;
+}
+
+/* Clickable phone */
+#templePhone {
+    color: #0b5ed7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#templePhone:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+footer {
+    background: #000;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    color: #fff;
+    font-size: 16px;
+}
+
+/* ============================================================
+   MOBILE
+   ===================================*/
+	
+
+@media (max-width: 700px) {
+
+	.title-box1 h1 {
+    margin: 2px 0 2px;
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;         /* allow wrapping */
+}
+
+/* Subtitle */
+.title-box1 h2 {
+    margin: 0 0 2px;
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+    .event-box {
+        width: 90%;
+        margin: 15px auto;   /* 👈 important */
+        padding: 10px;
+    background: #c0dfff;
+        box-sizing: border-box;
+        
+    }
+
+    .event-box h2 {
+        margin: 0 0 8px 0;   /* 👈 remove side margins */
+        font-size: 18px;
+        text-align: center;
+    }
+    .event-box p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+
+    .nav-btn {
+        font-size: 14px;
+    }
+
+    .action-btn {
+        font-size: 24px;
+         width: 90%;
+    }
+.contact-box {
+    width: 90%;
+    margin: 15px auto;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;   /* 👈 important for multi-line */
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.label {
+    font-weight: bold;
+    white-space: nowrap;       /* label stays in one line */
+}
+
+#templeAddress,
+#templePhone {
+    word-break: break-word;   /* 👈 allows 2nd line on mobile */
+    flex: 1;                  /* 👈 takes remaining width */
+}
+    .footer-content {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+
