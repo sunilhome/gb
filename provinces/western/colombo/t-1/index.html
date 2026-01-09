@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>"pageTitle"</title>
-
+<title id="pageTitle">Temple Page</title>
+<meta name="description" id="metaDescription" content="">
 <!-- ✅ Correct CSS path for temple pages inside t-x folders -->
 <link rel="stylesheet" href="../../../style.css">
 
@@ -28,7 +28,7 @@
         <h2>විහාරාධිපති</h2>
        
  <p id="abbot-info"></p>
-
+  <p class="event-note">This is the new line text</p>
        
     </div>
 </div>
@@ -61,6 +61,7 @@
 <button class="action-btn" onclick="window.location.href='../../../../index.html'">🏠 First Page</button>
 </div>
 
+<!-- Address & Phone -->
 <div class="contact-box">
     <div class="contact-item">
         <span class="label">ලිපිනය :</span>
@@ -73,6 +74,10 @@
     </div>
 </div>
 
+<!-- JS -->
+
+<!--<script src="data.js"></script>-->
+<!--<script src="../../../common.js"></script>-->
 
 <!-- Footer -->
 <footer>
@@ -95,10 +100,26 @@ fetch("info.txt")
         const parts = line.split("=");
         if(parts.length === 2) info[parts[0].trim()] = parts[1].trim();
     });
+
+    // Update headings
     document.getElementById("title-si").textContent = info.si || "";
     document.getElementById("title-en").textContent = info.en || "";
     document.getElementById("abbot-info").textContent = info.abbot || "";
     window.temple = info.var || "";
+
+    // ✅ Update browser tab / page title: si | en | Sri Lanka
+    document.getElementById("pageTitle").textContent =
+        (info.si || "") + " | " + (info.en || "") + " | Sri Lanka";
+	    /* ✅ SEO META DESCRIPTION (ADD THIS) */
+document.getElementById("metaDescription").setAttribute(
+    "content",
+    info.desc
+    ? info.desc
+    : (info.si || "") + " (" + (info.en || "") + ") පිහිටි .. බෞද්ධ විහාරස්ථානය."
+);
+		
+		
+		
 });
 </script>
 
@@ -191,8 +212,6 @@ function handleSwipe() {
     if (swipeDistance > 0 && prevBtn.style.display !== "none") prevBtn.click();
     if (swipeDistance < 0 && nextBtn.style.display !== "none") nextBtn.click();
 }
-</script>
-                      <!-- Address -->
 <script>
 fetch("info.txt")
 .then(response => response.text())
@@ -208,25 +227,78 @@ fetch("info.txt")
         }
     });
 
-    // ✅ Set Address
+    /* ✅ Address */
     if (info.address) {
         document.getElementById("templeAddress").textContent = info.address;
     }
 
-    // ✅ Set Telephone
+    /* ✅ Telephone */
     if (info.telephone) {
-        document.getElementById("templePhone").textContent = info.telephone;
+        const phoneEl = document.getElementById("templePhone");
+        phoneEl.textContent = info.telephone;
+        phoneEl.href = "tel:" + info.telephone.replace(/[^0-9+]/g, "");
     }
+
+})
+.catch(err => console.error("Address load error:", err));
+</script>
+<script>
+window.addEventListener("load", () => {
+
+    fetch("info.txt")
+    .then(res => res.text())
+    .then(data => {
+
+        const info = {};
+        data.split("\n").forEach(line => {
+            const parts = line.split("=");
+            if (parts.length === 2) {
+                info[parts[0].trim()] = parts[1].trim();
+            }
+        });
+
+        /* Address */
+        document.getElementById("templeAddress").textContent =
+            info.address || "";
+
+        /* Telephone */
+        const phoneEl = document.getElementById("templePhone");
+        if (info.telephone) {
+            phoneEl.textContent = info.telephone;
+            phoneEl.href = "tel:" + info.telephone.replace(/[^0-9+]/g, "");
+        } else {
+            phoneEl.textContent = "";
+        }
+
+        console.log("✅ Address & phone loaded from info.txt");
+    })
+    .catch(err => console.error("info.txt error:", err));
 
 });
 
-if (info.telephone) {
-    const phone = document.getElementById("templePhone");
-    phone.textContent = info.telephone;
-    phone.href = "tel:" + info.telephone;
-}
 
 </script>
+<script>
+window.addEventListener("load", () => {
+    fetch("info.txt")
+        .then(res => res.text())
+        .then(data => {
+            const info = {};
+            data.split("\n").forEach(line => {
+                const parts = line.split("=");
+                if(parts.length === 2) info[parts[0].trim()] = parts[1].trim();
+            });
+
+            // insert dynamic text into the new line
+            document.querySelector(".event-note").textContent = info.note || "Default text";
+        });
+});
+</script>
+
+
 
 </body>
+
+
+
 </html>
