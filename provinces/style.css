@@ -303,6 +303,16 @@ background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ98
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.title-box1,
+.event-box,
+.contact-box,
+.button-box,
+.nav-buttons,
+footer {
+    background-color: rgba(255,255,255,0.85);
+    border-radius: 12px;
+}
+
 
 }
 
