@@ -29,7 +29,7 @@ body {
 .title-box1 h1 {
     margin: 20px 0 5px;
     padding: 0;
-    color: #000;
+    color: #fff;
     font-size: 20px;
     line-height: 1.2;
     word-break: break-word;
@@ -41,7 +41,7 @@ body {
 .title-box1 h2 {
     margin: 0 0 20px;
     padding: 0;
-    color: #000;
+    color: #fff;
     font-size: 20px;
     line-height: 1.2;
     word-break: break-word;
@@ -220,7 +220,7 @@ footer {
 	.title-box1 h1 {
     margin: 2px 0 2px;
     padding: 0;
-    color: #fff;
+    color: #000;
     font-size: 20px;
     line-height: 1.2;
     word-break: break-word;
@@ -232,7 +232,7 @@ footer {
 .title-box1 h2 {
     margin: 0 0 2px;
     padding: 0;
-    color: #fff;
+    color: #000;
     font-size: 20px;
     line-height: 1.2;
     word-break: break-word;
@@ -297,7 +297,7 @@ footer {
         font-size: 12px;
     }
     body {
-background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ98n8bf3ofjFX9lTsxgZ14KTgvAZ0Kzpcecw&s");
+background-image: url("https://www.pinterest.com/pngmagic/solid-color-backgrounds/s://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ98n8bf3ofjFX9lTsxgZ14KTgvAZ0Kzpcecw&s");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -308,16 +308,13 @@ background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ98
 .contact-box,
 .button-box,
 .nav-buttons,
- {
-    background-color: rgba(255,255,255,0.);
+{
+    background-color: rgba(255,255,255,0);
     border-radius: 12px;
 }
 
 
 }
-
-
-
 
 
 
