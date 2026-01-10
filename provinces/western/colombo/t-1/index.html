@@ -3,62 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title id="pageTitle">Temple Page</title>
-<meta name="description" id="metaDescription" content="">
-<!-- ✅ Correct CSS path for temple pages inside t-x folders -->
-<link rel="stylesheet" href="../../../style.css">
 
+<title>Temple Page</title>
+<meta name="description" id="metaDescription" content="">
+
+<link rel="stylesheet" href="../../../style.css">
 </head>
 
 <body>
 
 <!-- Headings -->
 <div class="title-box1">
-                <h1 id="title-si"></h1>
-                <h2 id="title-en"></h2>
+    <h1 id="title-si"></h1>
+    <h2 id="title-en"></h2>
 </div>
 
-<!-- Main image -->
+<!-- Images -->
 <img src="main.webp" class="main-image" alt="Buddhist Temple">
-<img src="main3.webp" class="small-image" alt="Buddhist Temple">            <!--==========Small_Image=========--> 
+<img src="main3.webp" class="small-image" alt="Buddhist Temple">
 
-<!-- EVENT TEXT ONLY -->
+<!-- Abbot -->
 <div class="event-box">
     <div class="event-text">
         <h2>විහාරාධිපති</h2>
-       
- <p id="abbot-info"></p>
-  <p class="event-note">This is the new line text</p>
-       
+        <p id="abbot-info"></p>
+        <p class="event-note"></p>
     </div>
 </div>
 
-  <img src="bodi.webp" class="main-image" alt="Buddhist Temple">
-  <img src="vehera.webp" class="main-image" alt="Buddhist Temple">
-  <img src="gantara.webp" class="main-image" alt="Buddhist Temple">
-
-
-
-<!-- Navigation buttons -->
+<!-- Navigation -->
 <div class="nav-buttons">
     <button class="nav-btn" id="prevBtn">◀ Previous</button>
     <button class="nav-btn" id="nextBtn">Next ▶</button>
 </div>
-<!-- Action buttons information -->
 
-
-
-
-<!-- Action buttons -->
+<!-- Buttons -->
 <div class="button-box">
- <a href="history.html" class="action-btn">Infomation</a>
-
-    <button class="action-btn" onclick="window.open('https://www.google.com/maps/search/' + temple)">සිතියම/Maps</button>
-    <button class="action-btn" onclick="window.open('https://www.google.com/search?tbm=isch&q=' + temple)">ඡායාරූප/Photos</button>
-    <button class="action-btn" onclick="window.open('https://www.youtube.com/results?search_query=' + temple)">වීඩියෝ/Videos</button>
+    <a href="history.html" class="action-btn">Information</a>
+    <button class="action-btn" onclick="window.open('https://www.google.com/maps/search/' + temple)">සිතියම / Maps</button>
+    <a href="photo.html" class="action-btn">ඡායාරූප / Photos</a>
+    <button class="action-btn" onclick="window.open('https://www.youtube.com/results?search_query=' + temple)">වීඩියෝ / Videos</button>
 </div>
+
 <div class="button-box">
-<button class="action-btn" onclick="window.location.href='../../../../index.html'">🏠 First Page</button>
+    <button class="action-btn" onclick="window.location.href='../../../../index.html'">🏠 First Page</button>
 </div>
 
 <!-- Address & Phone -->
@@ -74,232 +62,82 @@
     </div>
 </div>
 
-<!-- JS -->
-
-<!--<script src="data.js"></script>-->
-<!--<script src="../../../common.js"></script>-->
-
 <!-- Footer -->
 <footer>
     <div class="footer-content">
         © ව්‍යාපෘතිය: සුනිල් රණසිංහ <br>
-        ශ්‍රී ලංකාවේ සංස්කෘතික හා ආගමික උරුමය සුරැකීමට<br>
-        සංකල්පය: දේශ කීර්ති ශ්‍රී දේශබන්දු<br>
-		සම්පත් රණසිංහ<br>
-        දත්ත: ධනේශ් රණසිංහ
+        ශ්‍රී ලංකාවේ සංස්කෘතික හා ආගමික උරුමය සුරැකීමට
     </div>
 </footer>
 
-<!-- Headings and temple variable -->
+<!-- ================= MAIN SCRIPT ================= -->
 <script>
+let templeID = "t-1";
+let temple = "";
+
 fetch("info.txt")
 .then(res => res.text())
 .then(data => {
+
     const lines = data.split("\n");
     const info = {};
-    lines.forEach(line => {
-        const parts = line.split("=");
-        if(parts.length === 2) info[parts[0].trim()] = parts[1].trim();
-    });
-
-    // Update headings
-    document.getElementById("title-si").textContent = info.si || "";
-    document.getElementById("title-en").textContent = info.en || "";
-    document.getElementById("abbot-info").textContent = info.abbot || "";
-    window.temple = info.var || "";
-
-    // ✅ Update browser tab / page title: si | en | Sri Lanka
-    document.getElementById("pageTitle").textContent =
-        (info.si || "") + " | " + (info.en || "") + " | Sri Lanka";
-	    /* ✅ SEO META DESCRIPTION (ADD THIS) */
-document.getElementById("metaDescription").setAttribute(
-    "content",
-    info.desc
-    ? info.desc
-    : (info.si || "") + " (" + (info.en || "") + ") පිහිටි .. බෞද්ධ විහාරස්ථානය."
-);
-		
-		
-		
-});
-</script>
-
-<!-- Navigation script -->
-<script>
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-
-let currentTempleId = "";
-let templeList = [];
-
-/* 1️⃣ Read current temple ID */
-fetch("info.txt")
-  .then(res => res.text())
-  .then(data => {
-    data.split("\n").forEach(line => {
-      const parts = line.split("=");
-      if (parts[0].trim() === "id") {
-        currentTempleId = parts[1].trim();
-      }
-    });
-    loadTemples();
-  })
-  .catch(err => console.error("Error reading info.txt:", err));
-
-/* 2️⃣ Read temples.txt safely */
-function loadTemples() {
-  fetch("../temples.txt")
-    .then(res => res.text())
-    .then(data => {
-      templeList = data
-        .split("\n")
-        .map(line => line.trim())
-        .filter(line => line !== "" && line.includes("|"))
-        .map(line => line.split("|")[0].trim());
-
-      setupNavigation();
-    })
-    .catch(err => console.error("Error reading temples.txt:", err));
-}
-
-/* 3️⃣ Navigation logic */
-function setupNavigation() {
-  const currentIndex = templeList.indexOf(currentTempleId);
-
-  if (currentIndex === -1) {
-    console.error("Temple ID not found:", currentTempleId);
-    prevBtn.style.display = "none";
-    nextBtn.style.display = "none";
-    return;
-  }
-
-  /* Previous button */
-  if (currentIndex > 0) {
-    prevBtn.style.display = "inline-block";
-    prevBtn.onclick = () => {
-      window.location.href = "../" + templeList[currentIndex - 1] + "/index.html";
-    };
-  } else {
-    prevBtn.style.display = "none";
-  }
-
-  /* Next button */
-  if (currentIndex < templeList.length - 1) {
-    nextBtn.style.display = "inline-block";
-    nextBtn.onclick = () => {
-      window.location.href = "../" + templeList[currentIndex + 1] + "/index.html";
-    };
-  } else {
-    nextBtn.style.display = "none";
-  }
-}
-</script>
-
-<!-- Swipe navigation for mobile -->
-<script>
-let touchStartX = 0;
-let touchEndX = 0;
-
-document.addEventListener("touchstart", e => touchStartX = e.changedTouches[0].screenX);
-document.addEventListener("touchend", e => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-});
-
-function handleSwipe() {
-    const swipeDistance = touchEndX - touchStartX;
-    if (Math.abs(swipeDistance) < 50) return; // ignore small swipe
-
-    if (swipeDistance > 0 && prevBtn.style.display !== "none") prevBtn.click();
-    if (swipeDistance < 0 && nextBtn.style.display !== "none") nextBtn.click();
-}
-<script>
-fetch("info.txt")
-.then(response => response.text())
-.then(data => {
-
-    const lines = data.split("\n");
-    let info = {};
+    let reading = false;
 
     lines.forEach(line => {
-        let parts = line.split("=");
-        if (parts.length === 2) {
-            info[parts[0].trim()] = parts[1].trim();
+        line = line.trim();
+
+        if (line === `id=${templeID}`) {
+            reading = true;
+            return;
+        }
+
+        if (reading && line.startsWith("id=")) {
+            reading = false;
+        }
+
+        if (reading && line.includes("=")) {
+            const parts = line.split("=");
+            const key = parts[0].trim();
+            const value = parts.slice(1).join("=").trim();
+            info[key] = value;
         }
     });
 
-    /* ✅ Address */
+    /* ===== PAGE TITLE (Pattern 1) ===== */
+    document.title = (info.si || info.en || "Temple") + " - Sri Lanka";
+    document.getElementById("title-si").textContent = info.si || "";
+    document.getElementById("title-en").textContent = info.en || "";
+
+    /* ===== DETAILS ===== */
+    document.getElementById("abbot-info").textContent = info.abbot || "";
+    document.querySelector(".event-note").textContent = info.note || "";
+
+    /* ===== ADDRESS ===== */
     if (info.address) {
         document.getElementById("templeAddress").textContent = info.address;
     }
 
-    /* ✅ Telephone */
+    /* ===== TELEPHONE ===== */
     if (info.telephone) {
-        const phoneEl = document.getElementById("templePhone");
-        phoneEl.textContent = info.telephone;
-        phoneEl.href = "tel:" + info.telephone.replace(/[^0-9+]/g, "");
+        const phone = document.getElementById("templePhone");
+        phone.textContent = info.telephone;
+        phone.href = "tel:" + info.telephone.replace(/[^0-9+]/g, "");
     }
 
+    /* ===== MAP & VIDEO VARIABLE ===== */
+    temple = info.var || "";
+
+    /* ===== SEO META DESCRIPTION ===== */
+    document.getElementById("metaDescription").setAttribute(
+        "content",
+        info.desc
+            ? info.desc
+            : (info.si || "") + " (" + (info.en || "") +
+              ") පිහිටි ශ්‍රී ලංකාවේ බෞද්ධ විහාරස්ථානයකි."
+    );
 })
-.catch(err => console.error("Address load error:", err));
+.catch(err => console.error("Temple info error:", err));
 </script>
-<script>
-window.addEventListener("load", () => {
-
-    fetch("info.txt")
-    .then(res => res.text())
-    .then(data => {
-
-        const info = {};
-        data.split("\n").forEach(line => {
-            const parts = line.split("=");
-            if (parts.length === 2) {
-                info[parts[0].trim()] = parts[1].trim();
-            }
-        });
-
-        /* Address */
-        document.getElementById("templeAddress").textContent =
-            info.address || "";
-
-        /* Telephone */
-        const phoneEl = document.getElementById("templePhone");
-        if (info.telephone) {
-            phoneEl.textContent = info.telephone;
-            phoneEl.href = "tel:" + info.telephone.replace(/[^0-9+]/g, "");
-        } else {
-            phoneEl.textContent = "";
-        }
-
-        console.log("✅ Address & phone loaded from info.txt");
-    })
-    .catch(err => console.error("info.txt error:", err));
-
-});
-
-
-</script>
-<script>
-window.addEventListener("load", () => {
-    fetch("info.txt")
-        .then(res => res.text())
-        .then(data => {
-            const info = {};
-            data.split("\n").forEach(line => {
-                const parts = line.split("=");
-                if(parts.length === 2) info[parts[0].trim()] = parts[1].trim();
-            });
-
-            // insert dynamic text into the new line
-            document.querySelector(".event-note").textContent = info.note || "Default text";
-        });
-});
-</script>
-
-
 
 </body>
-
-
-
 </html>
