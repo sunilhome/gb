@@ -308,13 +308,14 @@ background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ98
 .contact-box,
 .button-box,
 .nav-buttons,
-footer {
-    background-color: rgba(255,255,255,0.5);
+ {
+    background-color: rgba(255,255,255,0.);
     border-radius: 12px;
 }
 
 
 }
+
 
 
 
