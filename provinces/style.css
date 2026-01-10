@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: #c0dfff;
+   /* background: #c0dfff;*/
     margin: 0;
     padding: 0;
     text-align: center;
@@ -71,7 +71,7 @@ body {
   
 	.event-box { 
         
-    width: 90%;
+    width: 95%;
     margin: 30px auto;
      background: #c0dfff;
     padding: 5px;
@@ -241,7 +241,7 @@ footer {
 }
 
     .event-box {
-        width: 90%;
+        width: 95%;
         margin: 15px auto;   /* 👈 important */
         padding: 10px;
     background: #c0dfff;
@@ -296,6 +296,14 @@ footer {
     .footer-content {
         font-size: 12px;
     }
+    body {
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ98n8bf3ofjFX9lTsxgZ14KTgvAZ0Kzpcecw&s");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 }
 
 
