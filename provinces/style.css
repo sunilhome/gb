@@ -235,7 +235,7 @@ footer {
     margin: 2px 0 2px;
     padding: 0;
     color: #000;
-    font-size: 10px;
+    font-size: 40px;
 	        font-weight: bold;
 
     line-height: 1.2;
@@ -333,7 +333,7 @@ footer {
 body {
    background: #000 url("y-0.png") no-repeat center top;
     background-size: cover;
-
+background: transparent;
 } 
 
 .title-box1,
@@ -353,6 +353,7 @@ button.action-btn,
 
 
 }
+
 
 
 
