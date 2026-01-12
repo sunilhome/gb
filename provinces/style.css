@@ -334,7 +334,7 @@ body {
     background-image: url("y-0.png");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: contain;   /* 🔑 fills screen */
+    background-size: cover;   /* 🔑 fills screen */
 	background-attachment: fixed;  /* 🔑 THIS */
     background-color: #000;
 } 
@@ -356,6 +356,7 @@ button.action-btn,
 
 
 }
+
 
 
 
