@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Temple Page</title>
+<meta name="description" id="metaDescription" content="">
+
+<!--<link rel="stylesheet" href="../../../style.css">  -->
+</head>
+<body>
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #000000; /* or your desired color */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: none; /* IMPORTANT */
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+background-image: url("ivory.png"); 
+
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+
+    z-index: -1;          /* stays behind content */
+    pointer-events: none;/* clickable elements work */
+    background-color: #000;
+}
+
+	    
+
+
+.title-box1 {
+    width: 95%;
+    margin: 50px auto 30px;
+   background:  #ffb69f; 
+    border-radius: 26px;
+    border: 3px solid #e36602;  
+   box-shadow: 0 8px 20px rgba(0,0,0,0.8); 
+    padding: 10px;              /* space inside */
+    box-sizing: border-box;      /* includes padding in width */
+    text-align: center;          /* center text */
+    display: block;              /* ensure it’s block element */
+    word-break: break-word;      /* wrap long words anywhere */
+    overflow-wrap: break-word;   /* modern property for wrapping */
+    white-space: normal;         /* IMPORTANT: allow normal wrapping */
+}
+
+/* Title main */
+.title-box1 h1 {
+    margin: 20px 0 5px;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;         /* allow wrapping */
+     color: #000; /* black text */
+    text-shadow:
+        -1px -1px 0 #fff,
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff;
+}
+
+/* Subtitle */
+.title-box1 h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+         color: #000; /* black text */
+    text-shadow:
+        -1px -1px 0 #fff,
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff;
+
+}
+
+
+
+.main-image {
+    width: 95%;
+    margin: 35px auto;
+    border-radius: 15px;
+    border: 2px solid #000;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+	.small-image  {
+	width: 60%;
+	margin: 30px auto 5px;
+	    border-radius: 15px;
+    border: 2px solid #000;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.8);
+	}
+	
+
+  
+	.event-box { 
+        
+    width: 95%;
+    margin: 30px auto;
+/*	background: #c0dfff;  */
+    padding: 5px;
+    width: 90%;
+ 
+}
+
+.event-text p {
+    color: #000;
+    font-size: 24px;
+    line-height: 1.1;
+
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+
+.event-text h2 {
+    margin: 0 ;       /* Remove top margin, add space below */
+    font-size: 28px;          /* Desktop size */
+    line-height: 1;         /* Slightly taller line spacing */
+}
+
+
+   
+    .event-text p {
+        font-size: 18px;
+        line-height: 1;
+        text-align: center;    /* Center text on mobile */
+		  margin: 0 ;
+    }
+   .event-text .event-note {
+    font-size: 16px;       /* adjust to whatever you want */
+    color: #000099;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 20px auto;
+
+}
+
+.nav-btn {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px 0;
+    font-size: 16px;
+        font-weight: bold;
+
+    border-radius: 10px;
+    border: 2px solid #000;
+  /*  background: #fff;             */
+    cursor: pointer;
+}
+
+.button-box {
+    width: 95%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+	background: none;
+}
+
+.action-btn {
+     margin: auto;
+    width: 100%;
+    padding: 6px 0;
+    font-size: 20px;
+        font-weight: bold;
+
+   border-radius: 18px;      
+  border: 2px solid #000;
+  /*  background: #fff;                  */
+    cursor: pointer;
+}
+
+/* ===============================
+   Contact box (Address + Phone)
+   =============================== */
+
+.contact-box {
+  /*  background: #eaf2ff;           */
+    width: 90%;       /* change from max-width to width */
+    max-width: none;  /* optional, remove old max-width limit */
+    margin: 16px auto;
+    padding: 6px 18px;
+    border-radius: 15px;
+    box-sizing: border-box;  /* ensures padding does not break width */
+     border: 2px solid #000;
+}
+
+.contact-item {
+    margin-bottom: 6px;   /* balanced spacing */
+    font-size: 18px;
+    line-height: 1.4;     /* comfortable reading */
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Address text */
+#templeAddress {
+    color: #000;
+}
+
+/* Clickable phone */
+#templePhone {
+    color: #0b5ed7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#templePhone:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+footer {
+    background: #000;
+    padding: 15px 0;
+    margin-top: auto;
+	width: 100%;
+}
+
+.footer-content {
+    color: #fff;
+    font-size: 16px;
+	align-self: stretch;  
+	
+}
+
+/* ============================================================
+   MOBILE
+   ===================================*/
+	
+
+@media (max-width: 700px) {
+
+	.title-box1 h1 {
+    margin: 2px 0 2px;
+    padding: 0;
+    color: #000;
+    font-size: 22px;
+	        font-weight: bold;
+
+    line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;         /* allow wrapping */
+}
+
+/* Subtitle */
+.title-box1 h2 {
+    margin: 0 0 2px;
+    padding: 0;
+    color: #000;
+    font-size: 22px;
+	        font-weight: bold;
+
+    line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+    .event-box {
+        width: 95%;
+        margin: 15px auto;   /* 👈 important */
+        padding: 10px;
+    background: #c0dfff;
+        box-sizing: border-box;
+        
+    }
+
+    .event-box h2 {
+        margin: 0 0 8px 0;   /* 👈 remove side margins */
+        font-size: 18px;
+        text-align: center;
+    }
+    .event-box p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+
+    .nav-btn {
+        font-size: 14px;
+		background: none;
+    }
+
+    .action-btn {
+        font-size: 20px;
+         width: 95%;
+		 text-align: Center;
+    }
+	button.action-btn {
+    appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    cursor: pointer;
+width: 95%
+	
+}
+
+	
+	
+.contact-box {
+	     width: 90%;
+    margin: 30px auto 45px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;   /* 👈 important for multi-line */
+    gap: 8px;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.label {
+    font-weight: bold;
+    white-space: nowrap;       /* label stays in one line */
+}
+
+#templeAddress,
+#templePhone {
+    word-break: break-word;   /* 👈 allows 2nd line on mobile */
+    flex: 1;                  /* 👈 takes remaining width */
+}
+    .footer-content {
+        font-size: 12px;
+	  text-align: center;   /* 🔑 this centers the text */
+    }
+	html, body {
+    margin: 0;
+    height: 100%;
+}
+body {
+
+        background-size: contain;     /* show full image on small screens */
+        background-position: center top; 
+    }  
+   
+} 
+
+.title-box1,
+.event-box,
+.contact-box,
+.nav-btn,
+button.action-btn,
+.action-btn
+
+{
+
+    background-color: rgba(253, 249, 222,0.9);
+    border-radius: 12px;
+    border: 3px solid #DCBD10;  
+
+}
+}
+
+</style>
+
+
+<!-- Headings -->
+<div class="title-box1">
+    <h1 id="title-si"></h1>
+    <h2 id="title-en"></h2>
+</div>
+
+<!-- Images -->
+<img src="main.webp" class="main-image" alt="Buddhist Temple">
+<img src="main3.webp" class="small-image" alt="Buddhist Temple">
+
+<!-- Abbot -->
+<div class="event-box">
+    <div class="event-text">
+        <h2>විහාරාධිපති</h2>
+        <p id="abbot-info"></p>
+        <p class="event-note"></p>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="nav-buttons">
+    <button class="nav-btn" id="prevBtn">◀ Previous</button>
+    <button class="nav-btn" id="nextBtn">Next ▶</button>
+</div>
+
+<!-- Buttons -->
+<div class="button-box">
+    <a href="history.html" class="action-btn">තොරතුරු/Information</a>
+    <button class="action-btn" onclick="window.open('https://www.google.com/maps/search/' + temple)">සිතියම / Maps</button>
+    <a href="photo.html" class="action-btn">ඡායාරූප / Photos</a>
+    <button class="action-btn" onclick="window.open('https://www.youtube.com/results?search_query=' + temple)">වීඩියෝ / Videos</button>
+</div>
+
+<div class="button-box">
+    <button class="action-btn" onclick="window.location.href='../../../../index.html'">🏠 First Page</button>
+</div>
+
+<!-- Address & Phone -->
+<div class="contact-box">
+    <div class="contact-item">
+        <span class="label">ලිපිනය :</span>
+        <span id="templeAddress"></span>
+    </div>
+
+    <div class="contact-item">
+        <span class="label">දුරකථන :</span>
+        <a id="templePhone"></a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        © ව්‍යාපෘතිය: සුනිල් රණසිංහ <br>
+        ශ්‍රී ලංකාවේ සංස්කෘතික හා ආගමික උරුමය සුරැකීමට
+    </div>
+</footer>
+
+<!-- ================= MAIN SCRIPT ================= -->
+<script>
+let templeID = "t-1";
+let temple = "";
+
+fetch("info.txt")
+.then(res => res.text())
+.then(data => {
+
+    const lines = data.split("\n");
+    const info = {};
+    let reading = false;
+
+    lines.forEach(line => {
+        line = line.trim();
+
+        if (line === `id=${templeID}`) {
+            reading = true;
+            return;
+        }
+
+        if (reading && line.startsWith("id=")) {
+            reading = false;
+        }
+
+        if (reading && line.includes("=")) {
+            const parts = line.split("=");
+            const key = parts[0].trim();
+            const value = parts.slice(1).join("=").trim();
+            info[key] = value;
+        }
+    });
+
+    /* ===== PAGE TITLE (Pattern 1) ===== */
+    document.title = (info.si || info.en || "Temple") + " - Sri Lanka";
+    document.getElementById("title-si").textContent = info.si || "";
+    document.getElementById("title-en").textContent = info.en || "";
+
+    /* ===== DETAILS ===== */
+    document.getElementById("abbot-info").textContent = info.abbot || "";
+    document.querySelector(".event-note").textContent = info.note || "";
+
+    /* ===== ADDRESS ===== */
+    if (info.address) {
+        document.getElementById("templeAddress").textContent = info.address;
+    }
+
+    /* ===== TELEPHONE ===== */
+    if (info.telephone) {
+        const phone = document.getElementById("templePhone");
+        phone.textContent = info.telephone;
+        phone.href = "tel:" + info.telephone.replace(/[^0-9+]/g, "");
+    }
+
+    /* ===== MAP & VIDEO VARIABLE ===== */
+    temple = info.var || "";
+
+    /* ===== SEO META DESCRIPTION ===== */
+    document.getElementById("metaDescription").setAttribute(
+        "content",
+        info.desc
+            ? info.desc
+            : (info.si || "") + " (" + (info.en || "") +
+              ") පිහිටි ශ්‍රී ලංකාවේ බෞද්ධ විහාරස්ථානයකි."
+    );
+})
+.catch(err => console.error("Temple info error:", err));
+</script>
+
+</body>
+</html>
