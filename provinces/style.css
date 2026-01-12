@@ -235,7 +235,7 @@ footer {
     margin: 2px 0 2px;
     padding: 0;
     color: #000;
-    font-size: 40px;
+    font-size: 22px;
 	        font-weight: bold;
 
     line-height: 1.2;
@@ -331,11 +331,13 @@ footer {
     height: 100%;
 }
 body {
-   background: #000 url("y-0.png") no-repeat center top;
-    background-size: cover;
-background: transparent;
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ98n8bf3ofjFX9lTsxgZ14KTgvAZ0Kzpcecw&s");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;  
+background-attachment: fixed;           
+  background-color: #000;    
 } 
-
 .title-box1,
 .event-box,
 .contact-box,
@@ -353,6 +355,7 @@ button.action-btn,
 
 
 }
+
 
 
 
