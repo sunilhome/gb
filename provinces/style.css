@@ -376,7 +376,9 @@ body {
 .contact-box,
 .nav-btn,
 button.action-btn,
-.action-btn
+.action-btn,
+.main-image,
+.small-image
 
 {
 
@@ -388,6 +390,7 @@ button.action-btn,
 
 
 }
+
 
 
 
