@@ -97,7 +97,7 @@ background-image: url("y-1.png");
     width: 95%;
     margin: 35px auto;
     border-radius: 15px;
-    border: 2px solid #000;
+  /*  border: 2px solid #000;    */
     box-shadow: 0 8px 30px rgba(0,0,0,0.5);
 }
 
@@ -377,7 +377,6 @@ body {
 .nav-btn,
 button.action-btn,
 .action-btn,
-.main-image,
 .small-image
 
 {
@@ -390,6 +389,7 @@ button.action-btn,
 
 
 }
+
 
 
 
