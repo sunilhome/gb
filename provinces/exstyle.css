@@ -23,7 +23,8 @@ body::before {
     width: 100vw;
     height: 100vh;
 
-background-image: url ("ivory1.png");
+/*background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ98n8bf3ofjFX9lTsxgZ14KTgvAZ0Kzpcecw&s"); */
+background-image: url("y-1.png");
 
     background-repeat: no-repeat;
     background-position: center top;
