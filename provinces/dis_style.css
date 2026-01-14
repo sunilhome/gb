@@ -1,15 +1,36 @@
-
-
-body {
-
-
-    font-family: Arial, sans-serif;
-    background: #c0dfff;
+html, body {
     margin: 0;
     padding: 0;
-     min-height: 100vh;          /* screen height */
+    min-height: 100vh;
+    background-color: #000000; /* or your desired color */
+}
+body {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: none; /* IMPORTANT */
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+background-image: url("ivory.webp");
+
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+
+    z-index: -1;          /* stays behind content */
+    pointer-events: none;/* clickable elements work */
+    background-color: #000;
 }
 /* ===== PAGE CONTENT WRAPPER ===== */
         /* ===== TITLE BOX ===== */
@@ -46,9 +67,9 @@ body {
             margin: 0;                 
             padding: 18px 10px;        
             font-size: 42px;
-            color: white;
+            color: black;
             white-space: nowrap;
-            text-shadow: 2px 2px 6px #333; /* extra drop shadow for heading */
+        /*    text-shadow: 2px 2px 6px #333; */
         }
 
   /* ===== TOP DESCRIPTION SECTION ===== */
@@ -67,36 +88,36 @@ body {
 
 
 .container {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
+    width: 100%;
+    display: block;          /* 🔑 stop flex fight */
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* 1 column for districts */
-    gap: 25px;
-    width: 35%;
+    margin: 0 auto;          /* 🔑 true centering */
+    width: 95%;
 }
-
   /* ===== DISTRICT  BUTTON ===== */
         .district {
-            background: white;
-            border-radius: 18px;
-            padding: 18px 10px;       /* reduced height */
-            text-align: center;
-            font-size: 36px;
-            font-weight: bold;
-            border: 3px solid black;
-            cursor: pointer;
-            transition: 0.3s;
-            box-shadow: 0 4px 12px #999; /* extra drop shadow */
-            white-space: nowrap;
-            display: flex;
-            align-items: center;       /* vertical center */
-            justify-content: center;   /* horizontal center */
-            height: 120px;             /* uniform height */
+    padding: 18px 10px;
+    background: white;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 18px;
+    font-size: 36px;
+    font-weight: bold;
+	height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 12px #999;
+    transition: 0.3s;
+    cursor: pointer;      
         }
+
 
 
 
@@ -107,24 +128,22 @@ body {
 }
 
         /* ===== FOOTER ===== */
-        footer {
-	      background: #000;
-            padding: 15px 15px;
-            margin-top: auto;
-			
-               }
+footer {
+    background: #000;
+    padding: 15px 0;
+    margin-top: auto;
+	width: 100%;
+}
 
 .footer-content {
-            max-width: 70%;
-		 text-align: center;
-            margin: auto;
-            color: #fff;
-            text-align: center;
-            font-size: 18px;
-          
-        }
+    color: #fff;
+    font-size: 16px;
+	align-self: stretch;  
+	
+}
 
 .district  {
+
     text-decoration: none;
     color: inherit;
 }
@@ -150,13 +169,15 @@ body {
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 700px) {
 
-               .title-box {
+  .title-box {
+                margin-top: 75px;
 			     border: 2px solid #fff;
                 width: 90%;
+
             }
 
   .title-box h1 {
-                font-size: 26px;
+                font-size: 24px;
                 padding: 14px 8px;
                 white-space: nowrap;
                 text-shadow: 1px 1px 4px #333;
@@ -171,6 +192,7 @@ body {
                 padding: 14px 8px;
                 white-space: nowrap;
                 text-shadow: 1px 1px 4px #333;
+                
             }
 
 
@@ -179,28 +201,42 @@ body {
             }
 
             
-    .container {
-        margin-top: 50px;
-        margin-bottom: 35px;
-    }
+  .container {
+    width: 90%;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 35px;
+  }
 
     .grid {
-                grid-template-columns: repeat(1, 1fr);
-                width: 90%;
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 14px !important;
+  }
 
-    }
+  .district {
+    margin: 0 !important;
+  }
 
-    .district {
-        font-size: 26px;  /* smaller font on phone */
-        padding: 12px 10px; /* reduce padding */
-                    border: 3px solid black;
+ .grid {
+    display: grid !important;
+    grid-template-columns: 1fr;
+      justify-items: center;
+    gap: 14px !important;
+    width: 95%;
+    margin: 0 auto;   /* ✅ CENTER FIX */
+  }
+  .district {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
-        height: 30px;
-        box-shadow: 0 3px 10px #999;
-
-    }
-
-  .district:hover {
+    width: 100%;
+    font-size: 24px;
+    padding: 14px 10px;
+    height: auto;
+  }  .district:hover {
               box-shadow: 0 5px 16px #777;           
             }
 
@@ -210,9 +246,27 @@ body {
     }
 
 
- .footer-content {
-             
-                max-width: 100%;
-                font-size: 12px;
-            }
+    .footer-content {
+        font-size: 12px;
+	  text-align: center;   /* 🔑 this centers the text */
+    }
+.title-box,
+.event-box,
+.contact-box,
+.nav-btn,
+button.action-btn,
+.action-btn,
+.small-image,
+.district
+
+{
+
+    background-color: rgba(253, 249, 222,0.7);
+    border-radius: 12px;
+    border: 3px solid #dcbd10;  
+
+}
+
+
+
 }

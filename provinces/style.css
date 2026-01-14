@@ -4,7 +4,6 @@ html, body {
     min-height: 100vh;
     background-color: #000000; /* or your desired color */
 }
-
 body {
     display: flex;
     flex-direction: column;
@@ -23,7 +22,6 @@ body::before {
     width: 100vw;
     height: 100vh;
 
-/*background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ98n8bf3ofjFX9lTsxgZ14KTgvAZ0Kzpcecw&s"); */
 background-image: url("ivory.webp");
 
     background-repeat: no-repeat;
@@ -34,8 +32,7 @@ background-image: url("ivory.webp");
     pointer-events: none;/* clickable elements work */
     background-color: #000;
 }
-
-	    
+    
 
 
 .title-box1 {
@@ -91,8 +88,6 @@ background-image: url("ivory.webp");
 
 }
 
-
-
 .main-image {
     width: 95%;
     margin: 35px auto;
@@ -109,11 +104,9 @@ background-image: url("ivory.webp");
     box-shadow: 0 8px 30px rgba(0,0,0,0.8);
 	}
 	
-
-  
+ 
 	.event-box { 
-        
-    width: 95%;
+     width: 95%;
     margin: 30px auto;
 /*	background: #c0dfff;  */
     padding: 5px;
@@ -125,7 +118,6 @@ background-image: url("ivory.webp");
     color: #000;
     font-size: 24px;
     line-height: 1.1;
-
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
@@ -164,9 +156,7 @@ background-image: url("ivory.webp");
     flex: 1;
     margin: 0 5px;
     padding: 10px 0;
-    font-size: 16px;
-        font-weight: bold;
-
+    font-size: 16px;        font-weight: bold;
     border-radius: 10px;
     border: 2px solid #000;
   /*  background: #fff;             */
@@ -187,10 +177,9 @@ background-image: url("ivory.webp");
     width: 100%;
     padding: 6px 0;
     font-size: 20px;
-        font-weight: bold;
-
+    font-weight: bold;
    border-radius: 18px;      
-  border: 2px solid #000;
+   border: 2px solid #000;
   /*  background: #fff;                  */
     cursor: pointer;
 }
@@ -220,7 +209,6 @@ background-image: url("ivory.webp");
     margin-bottom: 0;
 }
 
-
 /* Address text */
 #templeAddress {
     color: #000;
@@ -236,10 +224,6 @@ background-image: url("ivory.webp");
 #templePhone:hover {
     text-decoration: underline;
 }
-
-
-
-
 
 footer {
     background: #000;
@@ -258,7 +242,6 @@ footer {
 /* ============================================================
    MOBILE
    ===================================*/
-	
 
 @media (max-width: 700px) {
 
@@ -280,7 +263,7 @@ footer {
     margin: 0 0 2px;
     padding: 0;
     color: #000;
-    font-size: 22px;
+    font-size: 16px;
 	        font-weight: bold;
 
     line-height: 1.2;
@@ -310,7 +293,6 @@ footer {
         text-align: center;
     }
 
-
     .nav-btn {
         font-size: 14px;
 		background: none;
@@ -329,8 +311,6 @@ footer {
 width: 95%
 	
 }
-
-	
 	
 .contact-box {
 	     width: 90%;
@@ -363,13 +343,14 @@ width: 95%
     margin: 0;
     height: 100%;
 }
+
 body {
 
         background-size: contain;     /* show full image on small screens */
         background-position: center top; 
     }  
    
-} 
+
 
 .title-box1,
 .event-box,
@@ -386,8 +367,6 @@ button.action-btn,
     border: 3px solid #dcbd10;  
 
 }
-
-
 }
 
 
