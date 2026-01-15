@@ -7,5 +7,6 @@ address=මහමේඝාරාමය, මහරගම.
 telephone=+94
 desc=මහරගම xxxxxxx පිහිටxxxxxxxඉතිහාxxxxxබෞද්ධxxxxxxxxxxxxxxxxx 
 
-note=පූජ්‍ය අංකුඹුරේ අරියවංස නාහිමි
+note=පූජ්‍ය අංකුඹුරේ අමරවංශ නාහිමි
+
 
