@@ -4,9 +4,10 @@ en=Siri Vijaya Siriwardanaramaya
 var=
 abbot= 
 address=සිරි විජය සිරිවර්ධනාරාමය, ඇරැව්වල, පන්නිපිටිය.
-telephone=+94
+telephone=+94 766932965
 desc=මහරගම xxxxxxx පිහිටxxxxxxxඉතිහාxxxxxබෞද්ධxxxxxxxxxxxxxxxxx 
 
 note=පූජ්‍ය සේනපුර නන්දරතන ස්ථවිර
+
 
 
