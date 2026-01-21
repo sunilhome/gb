@@ -1,0 +1,12 @@
+id=t-8
+si=චන්ද්‍රසේකරාරාමය
+en=Chandrasekararamaya-
+var=chandrasekararamaya-
+abbot=
+address=චන්ද්‍රසේකරාරාමය
+telephone=+94
+desc=මහරගම xxxxxxx පිහිටxxxxxxxඉතිහාxxxxxබෞද්ධxxxxxxxxxxxxxxxxx 
+note=
+
+
+
