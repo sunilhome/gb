@@ -1,0 +1,12 @@
+id=t-5
+si=ධර්ම රාජ විහාරය ලියනගොඩ
+en=Dharmaraja Viharaya Liyanagoda
+var=darmaraja viharaya-liyanagoda
+abbot=
+address=Dharmaraja Viharaya, Liyanagoda
+telephone=+94
+desc=මහරගම xxxxxxx පිහිටxxxxxxxඉතිහාxxxxxබෞද්ධxxxxxxxxxxxxxxxxx 
+note=
+
+
+
