@@ -1,0 +1,226 @@
+body {
+      margin: 0;
+    }
+
+    /* top fixed band ("a") */
+/*    .top-band {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50px; /* fixed band height */
+      background: black;
+	  background: black;
+      z-index: 1000;
+    }      */
+
+    /* page content */
+    .content {
+      margin-top: 30px; /* same as top-band height */
+      padding: 0;       /* no padding for image/sub-band area */
+    }
+
+    /* full-width sub-band inside content ("b") */
+.sub-band {
+  width: 100%;
+  background: black;
+  display: flex;
+  flex-direction: column; /* stack icon above text */
+  align-items: center;    /* center icon and text horizontally */
+  justify-content: center; /* vertical center in sub-band */
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.sub-band-icon {
+  width: 60px;
+  height: auto;
+  margin-bottom: 8px; /* space between icon and text */
+}
+
+.sub-band-text {
+  color: white;
+  text-align: center;
+  max-width: 90%;
+  height: auto;            /* let it grow a little if needed */
+  line-height: 1.3em;
+  padding-bottom: 5px;     /* space below second line */
+  overflow: hidden;
+  word-break: keep-all;
+}
+
+.sub-band-text p {
+  margin: 0;
+  font-size: 22px;
+}.sub-band-text p:first-child {
+  margin-bottom: 8px; /* space between first and second line */
+}
+
+.sub-band-icon {
+  width: 60px;
+  height: auto;
+  flex-shrink: 0;
+ /* margin-right: 2px;    */
+}
+
+/* main image full width */
+    .main-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0;      /* remove default spacing */
+      
+    }
+.small-image {
+    display: block;          /* IMPORTANT */
+    width: 60%;
+    margin: 30px auto 5px;   /* centers horizontally */
+    border-radius: 15px;
+    border: 2px solid #000;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.8);
+}	
+.image-bottom-bar {
+    width: 100%;
+    background: black;
+    text-align: center;
+       }
+       
+.image-bottom-bar .bar-text {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 2;        /* 🔑 remove font vertical padding */
+     margin: 0;
+}  
+.event-box { 
+     width: 90%;
+     margin: 30px auto;
+/*	background: #c0dfff;  */
+    border-radius: 10px;
+
+     padding: 5px;
+     text-align: center;
+    border: 2px solid #000;
+  }
+
+  
+.event-text h2 {
+    margin: 0 ;       /* Remove top margin, add space below */
+    font-size: 22px;          /* Desktop size */
+    line-height: 1;         /* Slightly taller line spacing */
+	font-weight: bold;
+}
+
+.event-text p {
+    color: #000;
+    font-size: 18px;
+    line-height: 1.1;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+   .event-text .event-note {
+    font-size: 24px;       /* adjust to whatever you want */
+    color: #000099;
+ 
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+}
+/* ===== ABBOT INFO TEXT ===== */
+
+ .info-box {
+        width: 95%;
+        margin: 15px auto;   /* 👈 important */
+        padding: 10px;
+    background: white;
+        box-sizing: border-box;
+		    border-radius: 10px;
+     border: 1px solid #000;
+ }
+/* Container for buttons */
+.button-box {
+    display: flex;
+    gap: 10px; /* optional space between buttons */
+    margin: 20px 5px;
+}
+
+.button-box .action-btn {
+    flex: 1; /* each button takes equal width */
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: blue; /* blue color */
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px; /* 4px rounded corners */
+    cursor: pointer;
+    white-space: nowrap; /* prevent breaking inside */
+    overflow: hidden;    /* hide overflow if text too long */
+    text-overflow: ellipsis; /* show ... if text too long */
+    transition: all 0.3s ease;
+}
+
+.button-box .action-btn:hover {
+    background-color: #005fa3; /* darker blue on hover */
+}
+footer {
+    background: #000;
+    padding: 15px 0;
+    margin-top: auto;
+	width: 100%;
+}
+
+.footer-content {
+    color: #fff;
+    font-size: 16px;
+	align-self: stretch;  
+	
+}
+
+
+ /* mobile adjustments */
+    @media (max-width: 600px) {
+      .text-content {
+        padding: 10px;
+      }
+	      .action-btn {
+        width: 100%; /* Full width on small screens */
+        min-width: unset;
+    }
+	/* ===== MOBILE FIRST ===== */
+#temple-text {
+  font-family: "Noto Serif Sinhala", "Iskoola Pota", serif;
+  font-size: 22px;        /* ideal for mobile */
+  line-height: 1.2;       /* very important for Sinhala */
+  color: #222;
+}
+
+/* paragraph spacing */
+#temple-text p {
+  margin-bottom: 14px;
+}
+#abbot-info {
+  font-family: "Noto Serif Sinhala", "Iskoola Pota", serif;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #222;
+  margin-top: 8px;
+}
+
+/* ===== HISTORY TITLE (MOBILE) ===== */
+#history-title {
+  font-family: "Noto Serif Sinhala", "Iskoola Pota", serif;
+  font-size: 28px;        /* clear but not too big */
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: left;       /* change to center if you prefer */
+  color: #3a2f1c;
+}    
+
+    .footer-content {
+        font-size: 12px;
+	  text-align: center;   /* 🔑 this centers the text */
+    }
+
+	  
+    }

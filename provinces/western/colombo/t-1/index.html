@@ -1,0 +1,144 @@
+     <!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Temple Page</title>
+<meta name="description" id="metaDescription" content="">
+
+<link rel="stylesheet" href="new-style.css">
+
+</head>
+
+<body>
+
+  <!-- top fixed band -->
+ <!-- <div class="top-band"></div>-->
+
+  <!-- content -->
+  <div class="content">
+
+    <!-- full-width sub-band inside content -->
+<div class="sub-band">
+  <!-- icon centered on top -->
+  <img src="1.png" class="sub-band-icon" alt="Icon">
+
+  <!-- Sinhala text below icon -->
+  <div class="sub-band-text">
+    <p>මහමේඝාරාම විහාරය</p>
+    <p>මහරගම</p>
+  </div>
+</div>  
+
+  <!-- main image touching sub-band -->
+    <img src="a.webp" class="main-image" alt="Main Image">
+    
+<div class="image-bottom-bar">
+    <span class="bar-text">දිස්ත්‍රික්කය: කොළඹ</span>
+</div>
+    <img src="b.webp" class="small-image" alt="Buddhist Temple">
+    
+<div class="event-box">
+    <div class="event-text">
+        <h2>විහාරාධිපති</h2>
+        <p id="abbot-info"></p>
+        <p class="event-note"></p>
+    </div>
+</div>
+
+<div class="image-bottom-bar">
+    <span class="bar-text">පින්බිමේ සියලු තොරතුරු</span>
+</div>
+
+<div class="nav-buttons">
+    <button class="nav-btn" id="prevBtn">◀ Previous</button>
+    <button class="nav-btn" id="nextBtn">Next ▶</button>
+</div>
+
+<div class="button-box">
+      <a href="history.html" class="action-btn">තොරතුරු/Information</a>
+	  <a href="photo.html" class="action-btn">ඡායාරූප / Photos</a>
+</div>
+	  
+ <div class="button-box">
+      <button class="action-btn" onclick="window.open('https://www.google.com/maps/search/' + temple)">සිතියම / Maps</button>
+       <button class="action-btn" onclick="window.open('' + temple)">වීඩියෝ / Videos</button>
+    <button class="action-btn" onclick="window.location.href='../../../../index.html'">🏠 පළමු පිටුවට</button>
+</div>
+
+<div class="contact-box">
+    <div class="contact-item">
+        <span class="label">ලිපිනය :</span>
+        <span id="templeAddress"></span>
+    </div>
+
+    <div class="contact-item">
+        <span class="label">දුරකථන :</span>
+        <a id="templePhone"></a>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        © ව්‍යාපෘතිය: සුනිල් රණසිංහ <br>
+         සංකල්පය: ශාසන සුභ සාධන දේශ කීර්ති ශ්‍රී දේශබන්දු<br>
+		සම්පත් රණසිංහ<br>
+        දත්ත: ධනේශ් රණසිංහ
+    </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const templeID = "t-1";
+
+    fetch("info.txt")
+    .then(res => res.text())
+    .then(data => {
+        const info = {};
+        let reading = false;
+
+        data.split("\n").forEach(line => {
+            line = line.trim();
+            if (!line) return;
+
+            if (line === `id=${templeID}`) {
+                reading = true;
+                return;
+            }
+
+            if (reading && line.startsWith("id=")) {
+                reading = false;
+                return;
+            }
+
+            if (reading && line.includes("=")) {
+                const [key, ...rest] = line.split("=");
+                info[key.trim()] = rest.join("=").trim();
+            }
+        });
+console.log("Info loaded:", info);
+        // Fill Abbot
+        document.getElementById("abbot-info").textContent = info.abbot || "";
+
+        // Fill Note
+        document.querySelector(".event-note").textContent = info.note || "";
+    })
+    .catch(err => console.error("Temple info error:", err));
+});
+</script><script type="text/javascript"
+</script><script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/13198290/0/49a5504e/1/" alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+
+</body>
+</html>
+
+
+
+
+
