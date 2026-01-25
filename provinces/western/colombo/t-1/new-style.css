@@ -95,12 +95,12 @@ body {
 .event-box { 
      width: 90%;
      margin: 30px auto;
-/*	background: #c0dfff;  */
+	background: #fafafa;  
     border-radius: 10px;
 
      padding: 5px;
      text-align: center;
-    border: 2px solid #000;
+ /*   border: 2px solid #000;*/
   }
 
   
@@ -223,4 +223,5 @@ footer {
     }
 
 	  
+
     }
