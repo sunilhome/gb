@@ -164,6 +164,12 @@ background: #fafafa;
 .text-button-box {
   margin: 20px 0;
 }
+.text-button-box a:last-child {
+  /* custom styles for last link */
+  font-size: 22px;        /* make bigger */
+  padding: 15px 0 10px 50px;     /* adjust icon space */
+}
+
 
 .icon-link {
   display: block;              /* one below another */
@@ -171,7 +177,7 @@ background: #fafafa;
   font-size: 22px;
   font-weight: 700;
   text-decoration: none;
-  padding: 6px 0 6px 50px;    /* space for icon */
+  padding: 10px 0 10px 50px;    /* space for icon */
   position: relative;
   cursor: pointer;
 }
