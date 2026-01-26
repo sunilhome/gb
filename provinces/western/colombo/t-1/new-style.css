@@ -188,6 +188,12 @@ background: transparent;
 		    border-radius: 10px;
      border: 1px solid #000;
  }
+ .info-box p {
+    font-size: 22px !important;
+	line-height: 1.3;
+}
+
+ 
 /* Container for buttons */
 .text-button-box {
   margin: 20px 0;
