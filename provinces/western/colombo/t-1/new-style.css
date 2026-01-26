@@ -2,12 +2,16 @@ html, body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: #ffffff; /* your page color */
+    background: #000000; /* your page color */
 }
 
 .safe-bottom {
     height: env(safe-area-inset-bottom);
     background: #000000;
+}
+
+body {
+	background-image: url("white.jpg");
 }
 
     /* top fixed band ("a") */
@@ -237,4 +241,5 @@ footer {
 	  
 
     }
+
 
