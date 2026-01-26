@@ -35,7 +35,7 @@ body {
 }
 .top-mail {
   color: white;   /* black only for mail */
-  font-size: 35px;  /* adjust size if needed */
+  font-size: 45px;  /* adjust size if needed */
 }
 .top-tele {
   color: white;   /* black only for mail */
@@ -259,4 +259,5 @@ footer {
     }
 
 	  
+
     }
