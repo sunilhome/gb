@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#000000">
+<!--<meta name="theme-color" content="#000000">-->
 <title>Temple Page</title>
 <meta name="description" id="metaDescription" content="">
 
@@ -17,8 +17,8 @@
 <div class="top-band">
   <a href="javascript:history.back()" class="top-icon">&#8592;</a>
   <a href="/index.html" class="top-icon">&#127969;</a>
-  <a href="tel:+94766178102" class="top-icon">&#128222;</a>
-<a href="contact.html" class="top-icon">&#128233;</a>
+  <a href="tel:+94766178102" class="top-icon top-tele">&#128222;</a>
+<a href="contact.html" class="top-icon top-mail">&#128233;</a>
 </div> 
  
  
@@ -53,24 +53,23 @@
     </div>
 </div>
 
-<div class="image-bottom-bar">
-    <span class="bar-text">පින්බිමේ සියලු තොරතුරු</span>
-</div>
+<div class="image-bottom-bar"></div>
 
 <div class="nav-buttons">
     <button class="nav-btn" id="prevBtn">◀ Previous</button>
     <button class="nav-btn" id="nextBtn">Next ▶</button>
 </div>
 
-<div class="button-box">
-      <a href="history.html" class="action-btn">තොරතුරු/Information</a>
-	  <a href="photo.html" class="action-btn">ඡායාරූප / Photos</a>
-</div>
-	  
- <div class="button-box">
-      <button class="action-btn" onclick="window.open('https://www.google.com/maps/search/' + temple)">සිතියම / Maps</button>
-       <button class="action-btn" onclick="window.open('' + temple)">වීඩියෝ / Videos</button>
-    <button class="action-btn" onclick="window.location.href='../../../../index.html'">🏠 පළමු පිටුවට</button>
+
+<div class="text-button-box">
+  <a href="history.html" class="icon-link" data-icon="📄">තොරතුරු / Information</a>
+  <a href="photo.html" class="icon-link" data-icon="📷">ඡායාරූප / Photos</a>
+  <a href="javascript:void(0)" onclick="window.open('https://www.google.com/maps/search/' + temple)" class="icon-link" data-icon="🗺️">
+    සිතියම / Maps
+  </a>
+  <a href="javascript:void(0)" onclick="window.open('' + temple)" class="icon-link" data-icon="▶️">
+    වීඩියෝ / Videos
+  </a>
 </div>
 
 <div class="contact-box">
@@ -143,7 +142,6 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <div class="safe-bottom"></div>
 </body>
 </html>
-
 
 
 

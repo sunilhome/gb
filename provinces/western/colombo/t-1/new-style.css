@@ -35,7 +35,7 @@ body {
 }
 .top-mail {
   color: white;   /* black only for mail */
-  font-size: 45px;  /* adjust size if needed */
+  font-size: 35px;  /* adjust size if needed */
 }
 .top-tele {
   color: white;   /* black only for mail */
@@ -114,16 +114,9 @@ body {
 .image-bottom-bar {
     width: 100%;
     background: black;
-    text-align: center;
+	height: 1px;
        }
        
-.image-bottom-bar .bar-text {
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 2;        /* 🔑 remove font vertical padding */
-     margin: 0;
-}  
 .event-box { 
      width: 90%;
      margin: 30px auto;
@@ -168,38 +161,33 @@ background: #fafafa;
      border: 1px solid #000;
  }
 /* Container for buttons */
-.button-box {
-    display: flex;
-    gap: 10px; /* optional space between buttons */
-    margin: 20px 5px;
+.text-button-box {
+  margin: 20px 0;
 }
 
-.button-box .action-btn {
-    flex: 1; /* each button takes equal width */
-    padding: 10px 0;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: blue; /* blue color */
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    border-radius: 4px; /* 4px rounded corners */
-    cursor: pointer;
-    white-space: nowrap; /* prevent breaking inside */
-    overflow: hidden;    /* hide overflow if text too long */
-    text-overflow: ellipsis; /* show ... if text too long */
-    transition: all 0.3s ease;
+.icon-link {
+  display: block;              /* one below another */
+  color: #1a4cff;              /* blue text */
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 6px 0 6px 50px;    /* space for icon */
+  position: relative;
+  cursor: pointer;
 }
 
-.button-box .action-btn:hover {
-    background-color: #005fa3; /* darker blue on hover */
+.icon-link::before {
+  content: attr(data-icon);    /* use the emoji from HTML */
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;             /* size of the icon */
 }
-footer {
-    background: #000;
-    padding: 15px 0;
-    margin-top: auto;
-	width: 100%;
+  
+.icon-link:hover {
+  text-decoration: underline;
+  color: #0033cc;              /* darker blue on hover */
 }
 
 .footer-content {
@@ -259,5 +247,4 @@ footer {
     }
 
 	  
-
     }
