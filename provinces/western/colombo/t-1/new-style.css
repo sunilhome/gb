@@ -116,6 +116,32 @@ body {
     background: black;
 	height: 1px;
        }
+.button-box {
+    width: 95%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;      /* ← IMPORTANT */
+    justify-content: center;  /* center the group */
+    gap: 30px;                /* space between buttons */
+    background: none;
+}
+
+
+.action-btn {
+    width: 48%;
+    padding: 6px 0;
+    font-size: 20px !important;   /* force it */
+    font-weight: bold;
+    border-radius: 18px;
+    border: 2px solid blue;
+    cursor: pointer;
+    font-family: inherit;         /* inherit page font */
+	color: #1a4cff !important;
+    background: transparent; /* optional */
+}
+.action-btn:hover {
+    color: #0033cc;          /* darker blue on hover */
+}
        
 .event-box { 
      width: 90%;
@@ -131,9 +157,11 @@ background: transparent;
   
 .event-text h2 {
     margin: 0 ;       /* Remove top margin, add space below */
-    font-size: 22px;          /* Desktop size */
+    font-size: 26px;          /* Desktop size */
     line-height: 1;         /* Slightly taller line spacing */
 	font-weight: bold;
+	    color: brown;
+
 }
 
 .event-text p {
@@ -143,9 +171,9 @@ background: transparent;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
    .event-text .event-note {
-    font-size: 24px;       /* adjust to whatever you want */
-    color: #000099;
- 
+    font-size: 26px;       /* adjust to whatever you want */
+    color: brown;
+ font-weight: bold;
     margin-top: 10px;
     font-family: Arial, sans-serif;
 }
@@ -155,7 +183,7 @@ background: transparent;
         width: 95%;
         margin: 15px auto;   /* 👈 important */
         padding: 10px;
-    background: #fafafa;
+    background: transparent;
         box-sizing: border-box;
 		    border-radius: 10px;
      border: 1px solid #000;
@@ -208,6 +236,7 @@ footer {
 	align-self: stretch;  
 	
 }
+	/* ===== MOBILE FIRST ===== */
 
  /* mobile adjustments */
     @media (max-width: 600px) {
@@ -218,7 +247,6 @@ footer {
         width: 100%; /* Full width on small screens */
         min-width: unset;
     }
-	/* ===== MOBILE FIRST ===== */
 #temple-text {
   font-family: "Noto Serif Sinhala", "Iskoola Pota", serif;
   font-size: 22px;        /* ideal for mobile */
@@ -247,6 +275,7 @@ footer {
   text-align: left;       /* change to center if you prefer */
   color: #3a2f1c;
 }    
+
 
     .footer-content {
         font-size: 14px;
