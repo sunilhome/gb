@@ -2,7 +2,10 @@ html, body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: #ffffff; /* your page color */
+    background:  black; /* your page color */
+}
+body {
+	background-image: url("white.jpg");
 }
 
 .safe-bottom {
@@ -242,7 +245,7 @@ footer {
 
     .footer-content {
         font-size: 14px;
-		    line-height: 1.2;
+		    line-height: 1.3;
 
 	  text-align: center;   /* 🔑 this centers the text */
     }
