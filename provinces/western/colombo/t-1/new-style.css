@@ -66,6 +66,7 @@ body {
   font-size: 22px;
 }.sub-band-text p:first-child {
   margin-bottom: 8px; /* space between first and second line */
+	margin-top: 8px;
 }
 
 .sub-band-icon {
@@ -241,5 +242,6 @@ footer {
 	  
 
     }
+
 
 
