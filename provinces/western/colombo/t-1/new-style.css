@@ -16,11 +16,13 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+ /* width: 100%;  */
+ width: 100vw;
+ 
   height: 55px;
   background: black;
-  z-index: 1000;
-
+ /* z-index: 1000;    */
+  z-index: 9999;
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* equal space */
   align-items: center;
@@ -100,25 +102,30 @@ body {
 
 /* Each row spacing */
 .contact-info p {
-    margin-bottom: 15px;      /* space between each info item */
+    margin-bottom: 45px;      /* space between each info item */
 }
 
 /* Labels (Address:, Email:, etc.) */
-.contact-info .label {
-    display: block;            /* puts English on top */
-    font-weight: 700;          /* bold */
-    font-size: 18px;           /* label size */
-    color: #0033cc;            /* blue color for labels */
-    line-height: 1.2;
+.contact-info .label.en {
+    font-weight: 700;
+    font-size: 18px;
+    color: #0033cc;
+    display: block;      /* English on top */
+}
+.contact-info .label.si {
+    font-weight: 900;
+    font-size: 22px;
+    color: #222;
+    display: block;      /* Sinhala below English */
+    margin-bottom: 4px;
 }
 
 /* Values (filling part from info.txt) */
 .contact-info .value {
-    display: block;            /* new line under label */
-    font-weight: 400;          /* thin / normal */
-    font-size: 16px;           /* value text size */
-    line-height: 1.4;          /* spacing for multi-line text */
-    color: #000;               /* black text */
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+    display: block;
 }
 
 /* Example for Address multi-line */
@@ -126,15 +133,11 @@ body {
     white-space: pre-line;     /* preserves line breaks if needed */
 }
 
-
 /* main image full width */
     .main-image {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0;      /* remove default spacing */
-      
-    }
+    display: block;          /* IMPORTANT */
+    width: 100%;
+   }
 .small-image {
     display: block;          /* IMPORTANT */
     width: 60%;
@@ -215,10 +218,10 @@ background: transparent;
         width: 95%;
         margin: 15px auto;   /* 👈 important */
         padding: 10px;
-    background: transparent;
+        background: transparent;
         box-sizing: border-box;
-		    border-radius: 10px;
-     border: 1px solid #000;
+	    border-radius: 10px;
+        border: 1px solid #000;
  }
  .info-box p {
     font-size: 22px !important;
@@ -263,7 +266,7 @@ background: transparent;
 }
 footer {
     background: #000;
-    padding: 15px 0;
+    padding: 10px 0;
     margin-top: auto;
 	width: 100%;
 }
@@ -317,10 +320,7 @@ footer {
 
     .footer-content {
         font-size: 14px;
-		    line-height: 1.4;
-
+		    line-height: 1.2;
 	  text-align: center;   /* 🔑 this centers the text */
     }
-
-	  
-    }
+   }

@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="new-style.css">
 
 </head>
-
 <body>
 
   <!-- top fixed band -->
@@ -41,7 +40,6 @@
 
 <!-- CONTACT DETAILS -->
 <div class="info-box">
-
   <!-- Map -->
   <div class="contact-item">
     <iframe id="contact-map"
@@ -53,13 +51,40 @@
   </div>
 
 <div class="contact-info">
-  <p><span class="label">Address:</span> <span class="value" id="contact-address"></span></p>
-  <p><span class="label">Email:</span> <span class="value" id="contact-email"></span></p>
-  <p><span class="label">Telephone:</span> <span class="value" id="contact-telephone"></span></p>
-  <p><span class="label">Fax:</span> <span class="value" id="contact-fax"></span></p>
-  <p><span class="label">Website:</span> <span class="value" id="contact-website"></span></p>
+
+  <p class="contact-row">
+    <span class="label en">Address</span>
+    <span class="label si">ලිපිනය</span>
+    <span class="value" id="contact-address"></span>
+  </p>
+
+  <p class="contact-row">
+    <span class="label en">Email</span>
+    <span class="label si">ඊ-තැපැල්</span>
+    <span class="value" id="contact-email"></span>
+  </p>
+
+  <p class="contact-row">
+    <span class="label en">Telephone</span>
+    <span class="label si">දුරකථන</span>
+    <span class="value" id="contact-telephone"></span>
+  </p>
+
+  <p class="contact-row">
+    <span class="label en">Fax</span>
+    <span class="label si">ෆැක්ස්</span>
+    <span class="value" id="contact-fax"></span>
+  </p>
+
+  <p class="contact-row">
+    <span class="label en">Website</span>
+    <span class="label si">වෙබ් අඩවිය</span>
+    <span class="value" id="contact-website"></span>
+  </p>
+
 </div>
 </div>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -72,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const info = {};
             let reading = false;
 
-            data.split("\n").forEach(line => {
+            data.split(/\r?\n/).forEach(line => {
                 line = line.trim();
                 if (!line) return;
 
@@ -91,40 +116,37 @@ document.addEventListener("DOMContentLoaded", function () {
                     info[key.trim()] = rest.join("=").trim();
                 }
             });
-
-            /* 1️⃣ Map */
             if (info.map) {
                 document.getElementById("contact-map").src = info.map;
             }
 
-            /* 2️⃣ Address */
+            /* Address */
             if (info.address) {
-                document.getElementById("contact-address").textContent =
-                    "ලිපිනය: " + info.address;
+                document.getElementById("contact-address").textContent = info.address;
             }
 
-            /* 3️⃣ Email */
+            /* Email */
             if (info.email) {
                 document.getElementById("contact-email").innerHTML =
-                    "ඊ-තැපෑල: <a href='mailto:" + info.email + "'>" + info.email + "</a>";
+                    `<a href="mailto:${info.email}">${info.email}</a>`;
             }
-		/* 3️⃣A Telephone (below email) */
-if (info.telephone) {
-    document.getElementById("contact-telephone").innerHTML =
-        "දුරකථන: <a href='tel:" + info.telephone.replace(/\s+/g, '') + "'>" +
-        info.telephone + "</a>";
-}	
 
-            /* 4️⃣ Fax */
+            /* Telephone */
+            if (info.telephone) {
+                const tel = info.telephone.replace(/\s+/g, "");
+                document.getElementById("contact-telephone").innerHTML =
+                    `<a href="tel:${tel}">${info.telephone}</a>`;
+            }
+
+            /* Fax */
             if (info.fax) {
-                document.getElementById("contact-fax").textContent =
-                    "ෆැක්ස්: " + info.fax;
+                document.getElementById("contact-fax").textContent = info.fax;
             }
 
-            /* 5️⃣ Website */
+            /* Website */
             if (info.website) {
                 document.getElementById("contact-website").innerHTML =
-                    "වෙබ් අඩවිය: <a href='" + info.website + "' target='_blank'>" + info.website + "</a>";
+                    `<a href="${info.website}" target="_blank">${info.website}</a>`;
             }
 
         })
@@ -132,17 +154,10 @@ if (info.telephone) {
 });
 </script>
 
-
-
-
-
-
-
-
 <footer>
     <div class="footer-content">
-        © ව්‍යාපෘතිය: සුනිල් රණසිංහ <br>
-         සංකල්පය: ශාසන සුභ සාධන දේශ කීර්ති ශ්‍රී දේශබන්දු<br>
+        ©  සංකල්පය: ශාසන සුභ සාධන<br>
+		දේශ කීර්ති ශ්‍රී දේශබන්දු<br>
 		සම්පත් රණසිංහ<br>
         දත්ත: ධනේශ් රණසිංහ
     </div>
