@@ -102,7 +102,10 @@ body {
 
 /* Each row spacing */
 .contact-info p {
-    margin-bottom: 45px;      /* space between each info item */
+    margin-bottom: 50px;      /* space between each info item */
+}
+.contact-info p:first-child {
+    margin-top: 50px; /* only the first row gets this spacing */
 }
 
 /* Labels (Address:, Email:, etc.) */
