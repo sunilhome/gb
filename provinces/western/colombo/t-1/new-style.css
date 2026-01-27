@@ -90,6 +90,7 @@ body {
   flex-shrink: 0;
 }
 /* Container spacing */
+/* Container for contact info */
 .contact-info {
     width: 95%;
     margin: 20px auto;
@@ -97,23 +98,32 @@ body {
     line-height: 1.6;        /* spacing between lines */
 }
 
-/* Labels: bold */
-.contact-info .label {
-    font-weight: 700;        /* bold */
-    color: #0033cc;          /* optional: blue color for labels */
-}
-
-/* Values: thin / normal */
-.contact-info .value {
-    font-weight: 400;        /* normal / thin */
-    color: #000;             /* black or dark */
-    display: block;          /* makes each value start on new line */
-    margin-top: 2px;         /* optional spacing below label */
-}
-
-/* Optional: add spacing between each info item */
+/* Each row spacing */
 .contact-info p {
-    margin-bottom: 15px;
+    margin-bottom: 15px;      /* space between each info item */
+}
+
+/* Labels (Address:, Email:, etc.) */
+.contact-info .label {
+    display: block;            /* puts English on top */
+    font-weight: 700;          /* bold */
+    font-size: 18px;           /* label size */
+    color: #0033cc;            /* blue color for labels */
+    line-height: 1.2;
+}
+
+/* Values (filling part from info.txt) */
+.contact-info .value {
+    display: block;            /* new line under label */
+    font-weight: 400;          /* thin / normal */
+    font-size: 16px;           /* value text size */
+    line-height: 1.4;          /* spacing for multi-line text */
+    color: #000;               /* black text */
+}
+
+/* Example for Address multi-line */
+#contact-address {
+    white-space: pre-line;     /* preserves line breaks if needed */
 }
 
 
