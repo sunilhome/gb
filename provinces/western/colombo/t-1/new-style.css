@@ -62,12 +62,6 @@ body {
   box-sizing: border-box;
 }
 
-.sub-band-icon {
-  width: 60px;
-  height: auto;
-  margin-bottom: 8px; /* space between icon and text */
-  margin-top: 45px;
-}
 
 .sub-band-text {
   color: white;
@@ -91,9 +85,37 @@ body {
 .sub-band-icon {
   width: 60px;
   height: auto;
+  margin-top: 45px;
+  margin-bottom: 8px;
   flex-shrink: 0;
- /* margin-right: 2px;    */
 }
+/* Container spacing */
+.contact-info {
+    width: 95%;
+    margin: 20px auto;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;        /* spacing between lines */
+}
+
+/* Labels: bold */
+.contact-info .label {
+    font-weight: 700;        /* bold */
+    color: #0033cc;          /* optional: blue color for labels */
+}
+
+/* Values: thin / normal */
+.contact-info .value {
+    font-weight: 400;        /* normal / thin */
+    color: #000;             /* black or dark */
+    display: block;          /* makes each value start on new line */
+    margin-top: 2px;         /* optional spacing below label */
+}
+
+/* Optional: add spacing between each info item */
+.contact-info p {
+    margin-bottom: 15px;
+}
+
 
 /* main image full width */
     .main-image {
