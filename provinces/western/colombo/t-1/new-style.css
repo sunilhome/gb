@@ -105,13 +105,16 @@ body {
     margin-bottom: 50px;      /* space between each info item */
 }
 .contact-info p:first-child {
-    margin-top: 50px; /* only the first row gets this spacing */
+    margin-top: 60px; /* only the first row gets this spacing */
+}
+.contact-info p:last-child {
+    margin-bottom: 150px; /* only the first row gets this spacing */
 }
 
 /* Labels (Address:, Email:, etc.) */
 .contact-info .label.en {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 20px;
     color: #0033cc;
     display: block;      /* English on top */
 }
