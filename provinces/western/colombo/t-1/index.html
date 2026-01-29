@@ -1,96 +1,75 @@
-     <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="si">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--<meta name="theme-color" content="#000000">-->
+
 <title>Temple Page</title>
 <meta name="description" id="metaDescription" content="">
 
 <link rel="stylesheet" href="new-style.css">
 
 </head>
-
 <body>
 
-  <!-- top fixed band -->
-<div class="top-band">
-  <a href="javascript:history.back()" class="top-icon">&#8592;</a>
-  <a href="/index.html" class="top-icon">&#127969;</a>
-  <a href="tel:+94766178102" class="top-icon top-tele">&#128222;</a>
-<a href="contact.html" class="top-icon top-mail">&#128233;</a>
-</div> 
- 
- 
-  <!-- content -->
-  <div class="content">
-
-    <!-- full-width sub-band inside content -->
-<div class="sub-band">
-  <!-- icon centered on top -->
-  <img src="1.png" class="sub-band-icon" alt="Icon">
-
-  <!-- Sinhala text below icon -->
-  <div class="sub-band-text">
-    <p>මහමේඝාරාම විහාරය</p>
-    <p>මහරගම</p>
+  <!-- Top fixed band -->
+  <div class="top-band">
+    <a href="javascript:history.back()" class="top-icon">&#8592;</a>
+    <a href="/index.html" class="top-icon">&#127969;</a>
+    <a href="tel:+94766178102" class="top-icon">&#128222;</a>
+    <a href="contact.html" class="top-icon">&#128233;</a>
   </div>
-</div>  
 
-  <!-- main image touching sub-band -->
-    <img src="a.webp" class="main-image" alt="Main Image">
-    
-<!--<div class="image-bottom-bar">
-    <span class="bar-text">දිස්ත්‍රික්කය: කොළඹ</span>
-</div>     -->
+  <!-- Main content -->
+  <div class="content">
+  
+    <div class="sub-band">
+      <img src="1.png" class="sub-band-icon" alt="Icon">
+	  
+      <div class="sub-band-text">
+        <p>මහමේඝාරාම විහාරය</p>
+        <p>මහරගම</p>
+      </div>
+    </div>
+
+  <div class="slideshow">
+    <img id="slideImg" src="1.webp" alt="Slideshow">
+  </div>
+  
     <img src="b.webp" class="small-image" alt="Buddhist Temple">
-    
-<div class="event-box">
-    <div class="event-text">
+
+    <div class="event-box">
+      <div class="event-text">
         <h2>විහාරාධිපති</h2>
         <p id="abbot-info"></p>
         <p class="event-note"></p>
+      </div>
     </div>
-</div>
+  </div>
+  <div class="image-bottom-bar"></div>
 
-<div class="image-bottom-bar"></div>
-
-<div class="nav-buttons">
+  <div class="nav-buttons">
     <button class="nav-btn" id="prevBtn">◀ Previous</button>
     <button class="nav-btn" id="nextBtn">Next ▶</button>
-</div>
+  </div>
 
-
-<div class="text-button-box">
-  <a href="history.html" class="icon-link" data-icon="📄">තොරතුරු / Information</a>
-  <a href="photo.html" class="icon-link" data-icon="📷">ඡායාරූප / Photos</a>
-  <a href="javascript:void(0)" onclick="window.open('https://www.google.com/maps/search/' + temple)" class="icon-link" data-icon="🗺️">
-    සිතියම / Maps
-  </a>
-  <a href="javascript:void(0)" onclick="window.open('' + temple)" class="icon-link" data-icon="▶️">
-    වීඩියෝ / Videos
-  </a>
-</div>
-
-<div class="contact-box">
-    <div class="contact-item">
-        <span class="label">ලිපිනය :</span>
-        <span id="templeAddress"></span>
-    </div>
-
-    <div class="contact-item">
-        <span class="label">දුරකථන :</span>
-        <a id="templePhone"></a>
-    </div>
-</div>
+  <div class="text-button-box">
+    <a href="history.html" class="icon-link" data-icon="📄">තොරතුරු / Information</a>
+    <a href="photo.html" class="icon-link" data-icon="📷">ඡායාරූප / Photos</a>
+    <a href="javascript:void(0)" onclick="window.open('https://www.google.com/maps/search/' + temple)" class="icon-link" data-icon="🗺️">
+      සිතියම / Maps
+    </a>
+    <a href="javascript:void(0)" onclick="window.open('' + temple)" class="icon-link" data-icon="▶️">
+      වීඩියෝ / Videos
+    </a>
+  </div>
 
 <footer>
-    <div class="footer-content">
-        © ව්‍යාපෘතිය: සුනිල් රණසිංහ <br>
-         සංකල්පය: ශාසන සුභ සාධන දේශ කීර්ති ශ්‍රී දේශබන්දු<br>
-		සම්පත් රණසිංහ<br>
-        දත්ත: ධනේශ් රණසිංහ
-    </div>
+  <div class="footer-content">
+    ©   සංකල්පය: ශාසන සුභ සාධන <br>
+	දේශ කීර්ති ශ්‍රී දේශබන්දු  සම්පත් රණසිංහ<br>
+    දත්ත: ධනේශ් රණසිංහ
+  </div>
 </footer>
 
 <script>
@@ -110,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (line === `id=${templeID}`) {
                 reading = true;
                 return;
-            }
+            } 
 
             if (reading && line.startsWith("id=")) {
                 reading = false;
@@ -122,28 +101,25 @@ document.addEventListener("DOMContentLoaded", function() {
                 info[key.trim()] = rest.join("=").trim();
             }
         });
-console.log("Info loaded:", info);
-        // Fill Abbot
+        console.log("Info loaded:", info);
         document.getElementById("abbot-info").textContent = info.abbot || "";
-
-        // Fill Note
         document.querySelector(".event-note").textContent = info.note || "";
     })
     .catch(err => console.error("Temple info error:", err));
 });
-</script><script type="text/javascript"
-</script><script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js" async></script>
-<noscript><div class="statcounter"><a title="Web Analytics"
-href="https://statcounter.com/" target="_blank"><img class="statcounter"
-src="https://c.statcounter.com/13198290/0/49a5504e/1/" alt="Web Analytics"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code -->
+</script>
+<script>
+  const images = ["1.webp", "2.webp", "3.webp"];
+  let index = 0;
+  const img = document.getElementById("slideImg");
+
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    img.src = images[index];
+  }, 3000);
+</script>
+
+
 <div class="safe-bottom"></div>
 </body>
 </html>
-
-
-
-
-
