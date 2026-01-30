@@ -190,6 +190,18 @@ body {
   justify-content: center;
   gap: 30px;
 }
+.audio{
+  width: 28%;
+  padding: 2px 0;
+  font-size: 20px !important;
+  font-weight: bold;
+  border-radius: 18px;
+  border: 2px solid blue;
+  cursor: pointer;
+  font-family: inherit;
+  color: #1a4cff !important;
+  background: transparent;
+}
 
 .action-btn {
   width: 48%;
@@ -292,6 +304,9 @@ body {
   text-decoration: underline;
   color: #0033cc;
 }
+
+
+
 
 /* ===== FOOTER ===== */
 footer {

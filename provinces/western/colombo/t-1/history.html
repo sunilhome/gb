@@ -41,6 +41,44 @@
       <button class="action-btn" onclick="loadInfo('si')">සිංහල</button>
       <button class="action-btn" onclick="loadInfo('en')">English</button>
     </div>
+<div class="button-box">
+  <button class="audio" onclick="toggleAudio('a1')">
+    🔊
+  </button>
+
+  <button class="audio" onclick="toggleAudio('a2')">
+    🔊
+  </button>
+</div>
+
+<audio id="a1" src="audio1.mp3"></audio>
+<audio id="a2" src="audio2.mp3"></audio>
+
+<script>
+let currentAudio = null;
+
+function toggleAudio(id) {
+  const audio = document.getElementById(id);
+
+  // if same button clicked → stop
+  if (currentAudio === audio && !audio.paused) {
+    audio.pause();
+    audio.currentTime = 0;
+    currentAudio = null;
+    return;
+  }
+
+  // stop previous audio
+  if (currentAudio && !currentAudio.paused) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+  }
+
+  // play new audio
+  audio.play();
+  currentAudio = audio;
+}
+</script>
 
     <!-- CONTENT -->
     <div class="info-box">
