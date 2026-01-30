@@ -192,7 +192,7 @@ body {
 }
 .audio{
   width: 28%;
-  padding: 2px 0;
+  padding: 12px 0;
   font-size: 20px !important;
   font-weight: bold;
   border-radius: 18px;
@@ -202,6 +202,12 @@ body {
   color: #1a4cff !important;
   background: transparent;
 }
+.audio.active{
+  background: #1a4cff;   /* dark / active */
+  color: #fff !important;
+  border-color: #1a4cff;
+}
+
 
 .action-btn {
   width: 48%;
