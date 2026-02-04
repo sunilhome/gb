@@ -57,6 +57,12 @@ body {
   margin-top: calc(var(--top-band-h) - 60px); 
   padding: 0;
 }               
+.content1{
+  margin-top: calc(var(--top-band-h) - 60px); 
+  padding: 0;
+    background: black;
+
+}               
 
 /* ===== SUB-BAND ===== */
 .sub-band {
@@ -164,6 +170,7 @@ body {
 .main-image {
   display: block;
   width: 100%;
+  margin-bottom: 35px;
 }
 
 .small-image {
