@@ -94,20 +94,27 @@ main.content {
   text-align: center;
   max-width: 90%;
   height: auto;
-  line-height: 1.3em;
+  line-height: 1.7em;
   padding-bottom: 5px;
   overflow: hidden;
   word-break: keep-all;
 }
+.en-text {
+  margin-top: 14px;   /* space between languages */
+  font-size: 10px;    /* optional: slightly smaller */
+  opacity: 0.9;       /* optional: softer look */
+    line-height: 3.3em; 
+}
+
 
 .sub-band-text p {
   margin: 0;
-  font-size: 22px;
+  font-size: 26px;
 }
 
 .sub-band-text p:first-child {
   margin-top: 4px;     /* fine-tuned top */
-  margin-bottom: 8px;  /* space between lines */
+  margin-bottom: 7px;  /* space between lines */
 }
 
   /* ===== TOP DESCRIPTION SECTION ===== */
@@ -122,8 +129,8 @@ main.content {
 	
 
 .box {
-  background: #ffffff;
-  padding: 14px 0;
+  background: black;
+  padding:  8px 0;
   margin-bottom: 0;   /* 🔑 this removes black lines */
 }
 .grid {
@@ -236,16 +243,17 @@ footer {
     align-self: flex-start;
     text-align: left;
     padding-left: 10px;
-    background: #ffffff;   /* ✅ white */
+   background: black; 
 }
 
 .title-box1 h2 {
-  font-size: 28px;       /* desktop font size */
-  line-height: 30px;     /* adjust spacing */
-  color: blue;
+  font-size: 22px;       /* desktop font size */
+  line-height: 28px;     /* adjust spacing */
+  color: yellow;
   padding-left: 20px;    /* space for dot */
   position: relative;    /* required for ::before positioning */
   margin: 10px 0;
+  font-weight: 300; 
 }
 
 .title-box1 h2::before {
