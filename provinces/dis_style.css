@@ -115,7 +115,7 @@ main.content {
 /* Container stays simple */
 .container {
     background: #ffffff;
-    padding: 16px;        /* 🔑 ONE padding only */
+ padding-bottom: 10px;   /* 🔑 ONE padding only */
     text-align: left;
 }
 
@@ -123,10 +123,9 @@ main.content {
 
 .box {
   background: #ffffff;
-  padding: 8px 0;      /* vertical padding inside each box */
-  margin-bottom: 6px;  /* space between boxes */
+  padding: 14px 0;
+  margin-bottom: 0;   /* 🔑 this removes black lines */
 }
-/* Grid: simple vertical list */
 .grid {
     display: flex;
     flex-direction: column;
@@ -246,7 +245,7 @@ footer {
   color: blue;
   padding-left: 20px;    /* space for dot */
   position: relative;    /* required for ::before positioning */
-  margin: 16px 0;
+  margin: 10px 0;
 }
 
 .title-box1 h2::before {
