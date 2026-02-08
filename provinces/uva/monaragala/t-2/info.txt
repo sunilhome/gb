@@ -1,4 +1,0 @@
-id=t-2
-si=වෙහෙරගොඩ පුරාණ රජමහා විහාරය
-en=Veheragoda Purana Rajamaha Viharaya
-var=Badalkumbura Veheragoda Purana Rajamaha Viharaya

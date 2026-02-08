@@ -1,4 +1,0 @@
-id=t-4
-si=ගිරිහඬු සෑය තිරියාය
-en=Girihandu Seya, Tiriyaya
-var=girihandu seya - tiriyaya, trincomalee

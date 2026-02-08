@@ -1,4 +1,0 @@
-id=t-1
-si=ශ්‍රී දළදා රජමහා විහාරය
-en=Sri Dalada Maligawa
-var=sri dalada maligawa

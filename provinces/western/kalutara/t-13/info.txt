@@ -1,4 +1,0 @@
-id=t-13
-si=පානදුර රන්කොත් විහාරය
-en=Panadura Rankoth Viharaya
-var=panadura rankoth viharaya

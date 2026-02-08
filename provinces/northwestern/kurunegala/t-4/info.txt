@@ -1,4 +1,0 @@
-id=t-4
-si=රිදී විහාරය
-en=Ridi Viharaya
-var=ridi viharaya

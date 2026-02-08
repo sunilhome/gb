@@ -1,4 +1,0 @@
-id=t-2
-si=දෙවිනුවර රජමහා විහාරය
-en=Devinuwara Raja Maha Viharaya
-var=Devinuwara Raja Maha Viharaya

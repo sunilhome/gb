@@ -1,4 +1,0 @@
-id=t-7
-si=කොට්ටිඹුල්වල රජමහා විහාරය
-en=Kottibulwala Rajamaha Viharaya
-var=kottimbulwala raja maha viharaya, ratnapura

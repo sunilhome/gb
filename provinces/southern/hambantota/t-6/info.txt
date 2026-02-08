@@ -1,4 +1,0 @@
-id=t-6
-si=උඩකන්දර රජමහා විහාරය
-en=Uddhakandara Rajamaha Viharaya
-var=Uddhakandara Rajamaha Viharaya

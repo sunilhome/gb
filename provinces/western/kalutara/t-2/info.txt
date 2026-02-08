@@ -1,4 +1,0 @@
-id=t-2
-si=බක්කුල මහා සෑය
-en=Bakkula Maha Seya
-var=bakkula maha seya

@@ -1,4 +1,0 @@
-id=t-5
-si=යාපහුව මකුලණ රජමහා විහාරය
-en=Yapahuwa Makulana Rajamaha Viharaya
-var=yapahuwa makulana rajamaha viharaya

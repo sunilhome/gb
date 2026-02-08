@@ -1,4 +1,0 @@
-id=t-10
-si=ශ්‍රි දෙවුරම් විහාරය
-en=Sri Dewuram Viharaya
-var=sri devram viharaya temple

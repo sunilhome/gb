@@ -1,4 +1,0 @@
-id=t-6
-si=සෝමවතිය රජමහා විහාරය
-en=Somawathiya Rajamaha Viharaya
-var=somawathiya rajamaha viharaya

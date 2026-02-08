@@ -1,4 +1,0 @@
-id=t-15
-si=ලුණුගල මඟුල් මහා විහාරය
-en=Lunugala Magul Maha Viharaya
-var=lunugala magul maha viharaya

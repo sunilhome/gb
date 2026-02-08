@@ -1,4 +1,0 @@
-id=t-23
-si=නුවර නාග විමානය විහාරය
-en=Nagawimanaya Viharaya
-var=Nagawimanaya viharaya kandy

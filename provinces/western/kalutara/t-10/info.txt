@@ -1,4 +1,0 @@
-id=t-10
-si=බටමුල්ලකන්ද බුද්ධ ප්‍රතිමාව
-en=Batamullakanda Buddha Statue
-var=batamullakanda buddha statue

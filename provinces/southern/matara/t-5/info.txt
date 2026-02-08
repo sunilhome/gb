@@ -1,4 +1,0 @@
-id=t-5
-si=උප්පලවන්නා ශ්‍රී විශ්ණු දේවාලය
-en=Uthpalawanna Sri Vishnu Devalaya
-var=Uthpalawanna Sri Vishnu Devalaya, Devinuwara 

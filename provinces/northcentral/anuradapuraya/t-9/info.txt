@@ -1,4 +1,0 @@
-id=t-9
-si=ඉසුරුමුණිය විහාරය
-en=Isurumuniya Viharaya
-var=isurumuniya temple

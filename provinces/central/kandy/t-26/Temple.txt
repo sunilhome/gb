@@ -1,4 +1,0 @@
-id=t-26
-si=නුවර ඉලුපන්දෙණිය රජමහා විහාරය
-en=Ilupandeniya Raja Maha Viharaya  
-var=Ilupandeniya Raja Maha Viharaya kandy

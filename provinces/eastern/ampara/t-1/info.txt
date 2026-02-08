@@ -1,4 +1,0 @@
-id=t-1
-si=නීලගිරි මහා සෑය
-en=neelagiri maha seya
-var=neelagiri maha seya

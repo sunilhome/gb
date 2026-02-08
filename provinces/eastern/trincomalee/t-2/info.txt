@@ -1,4 +1,0 @@
-id=t-2
-si=ගෝකන්න රජමහා විහාරය
-en=Gokanna Rajamaha Viharaya
-var=gokanna rajamaha viharaya, trincomalee

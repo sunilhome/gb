@@ -1,4 +1,0 @@
-id=t-1
-si=සේරුවාවිල මංගල මහා විහාරය
-en=Seruwawila Mangala Maha Viharaya
-var=seruwawila mangala maha viharaya

@@ -1,4 +1,0 @@
-id=t-3
-si=මල් අස්නේ රජමහා විහාරය
-en=Mal Asne Rajamaha Viharaya
-var=mal asne rajamaha viharaya

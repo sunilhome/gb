@@ -1,4 +1,0 @@
-id=t-7
-si=බන්ඩගිරිය රජමහා විහාරය
-en=Bandagiriya Rajamaha Viharaya
-var=Bandagiriya Rajamaha Viharaya

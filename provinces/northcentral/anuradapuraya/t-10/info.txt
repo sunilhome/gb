@@ -1,4 +1,0 @@
-id=t-10
-si=අනුරාධපුර අම්බස්තල දාගැබ
-en=Anuradhapura Ambasthala Dagoba
-var=anuradapura - ambasthala dagoba

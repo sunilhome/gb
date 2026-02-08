@@ -1,4 +1,0 @@
-id=t-19
-si=කඩුවෙල කොරතොට විහාරය
-en=Kaduwela Korathota Viharaya
-var=korathota royal temple

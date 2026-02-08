@@ -1,4 +1,0 @@
-id=t-3
-si=සංකපාල රජමහා විහාරය
-en=Sankapala Rajamaha Viharaya
-var=sankapala rajamaha viharaya

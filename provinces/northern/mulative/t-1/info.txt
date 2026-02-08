@@ -1,4 +1,0 @@
-id=t-1
-si=කුරින්දි රජමහා විහාරය
-en=Kurundi Rajamaha Viharaya.
-var=kurundi rajamaha viharaya. mullaitivu

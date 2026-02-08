@@ -1,4 +1,0 @@
-id=t-5
-si=මහමාඑලිය ජයසුමනාරාමය
-en=Maha Maeliya Jayasumanaramaya
-var=maha maeliya jayasumanaramaya

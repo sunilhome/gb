@@ -1,4 +1,0 @@
-id=t-4
-si=රත්නපුර සමන් දේවාලය
-en=Ratnapura Saman Dewalaya
-var=ratnapura saman dewalaya

@@ -1,4 +1,0 @@
-id=t-9
-si=සිතුල්පව්ව රජමහා විහාරය
-en=Sithulpawwa Raja Maha Viharaya
-var=Sithulpawwa Raja Maha Viharaya

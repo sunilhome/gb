@@ -1,4 +1,0 @@
-id=t-7
-si=වරකාගොඩ ගල්ලෙන් රජමහා විහාරය
-en=Warakagoda Gallen Rajamaha Viharaya
-var=warakagoda gallen rajamaha viharaya

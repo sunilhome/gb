@@ -1,4 +1,0 @@
-id=t-8
-si=යටාල මහා සෑය
-en=Yatala Maha Seya
-var=yatala maha seya

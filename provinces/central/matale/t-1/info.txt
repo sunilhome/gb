@@ -1,4 +1,0 @@
-id=t-1
-si=මාතලේ අලුවිහාරය
-en=Mathale Alu Viharaya
-var=Mathale Alu Viharaya

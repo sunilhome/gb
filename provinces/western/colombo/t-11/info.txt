@@ -1,4 +1,0 @@
-id=t-11
-si=ගනෙලන්ද පුරාණ විහාරය
-en=Ganelanda Purana Viharaya
-var=ganelanda purana viharaya

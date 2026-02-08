@@ -1,4 +1,0 @@
-id=t-3
-si=රංකොත් වෙහෙර
-en=Rankoth Vehera
-var=rankoth vehera polonnaruwa

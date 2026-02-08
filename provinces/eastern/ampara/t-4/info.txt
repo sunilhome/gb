@@ -1,4 +1,0 @@
-id=t-4
-si=ගල්මඩුව විහාරය
-en=galmaduwa viharaya
-var=ampara galmaduwa viharaya

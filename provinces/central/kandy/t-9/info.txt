@@ -1,4 +1,0 @@
-id=t-9
-si=අනුරාගල රජමහා විහාරය
-en=Anuragala Rajamaha Viharaya
-var=Anuragala Rajamaha Viharaya kandy

@@ -1,5 +1,0 @@
-id=t-10
-si=අස්ගිරි ගෙඩිගේ රජමහා විහාරය
-en=Asgiri Gedige Rajamaha Viharaya 
-var=asgiri gedige rajamaha viharaya kandy
-

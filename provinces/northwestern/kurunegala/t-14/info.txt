@@ -1,4 +1,0 @@
-id=t-14
-si=රම්බඩගල්ල විද්‍යාසාගර පිරිවෙන් විහාරය
-en=Rambadagalla Vidyasagara Piriven Viharaya
-var=rambadagalla vidyasagara piriven viharaya

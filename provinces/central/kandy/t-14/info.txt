@@ -1,4 +1,0 @@
-id=t-14
-si=දියකෙලිනාවල කිත්සිරිමෙවන් විහාරය
-en=Diyakelinawala Kithsiri Mewan Rajamaha Viharaya 
-var=Diyakelinawala Kithsiri Mewan Rajamaha Viharaya 

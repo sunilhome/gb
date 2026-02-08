@@ -1,4 +1,0 @@
-id=t-3
-si=බෝධිරුක්කරමය
-en=Bodhirukkaramaya
-var=Bibila, Bodhirukkaramaya

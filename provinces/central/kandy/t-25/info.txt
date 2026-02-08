@@ -1,4 +1,0 @@
-id=t-25
-si=නුවර සූරියගොඩ රජමහා විහාරය
-en=Suriyagoda Rajamaha Viharaya  
-var=Suriyagoda rajamaha viharaya kandy

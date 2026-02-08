@@ -1,4 +1,0 @@
-id=t-3
-si=කළුගල අර්ණ්‍ය සේනාසනය
-en=Kalugala Aranya Senasanaya
-var=kalugala arnya senasanaya

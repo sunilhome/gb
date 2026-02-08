@@ -1,4 +1,0 @@
-id=t-8
-si=ගල්දූව ආරන්‍ය සේනාසණය.
-en=Galduwa Aranya Senasana
-var=Galduwa Aranya Senasana(Sri Gunawardhana Yogasramaya)

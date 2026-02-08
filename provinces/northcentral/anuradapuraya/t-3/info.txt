@@ -1,4 +1,0 @@
-id=t-3
-si=ශ්‍රී මහා බෝධිය
-en=Sri Maha Bodhiya
-var=sri maha bodiya

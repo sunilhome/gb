@@ -1,4 +1,0 @@
-id=t-20
-si=ගිරිබාව හත්තිකුච්චි විහාරය
-en=Giribawa Hatthikuchchi Viharaya
-var=giribawa haththikuchchi viharaya

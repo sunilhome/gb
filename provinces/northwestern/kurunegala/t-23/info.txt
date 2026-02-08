@@ -1,4 +1,0 @@
-id=t-23
-si=වඩුවාව බඹරගල්ල රජමහා විහාරය
-en=Waduwawa Bambaragala Rajamaha Viharaya
-var=waduwawa bambaragala rajamaha viharaya, polgahawela

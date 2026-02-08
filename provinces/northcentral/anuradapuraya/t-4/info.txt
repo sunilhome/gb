@@ -1,4 +1,0 @@
-id=t-4
-si=ජේථවානාරාමය
-en=Jethawanaramaya
-var=jethawanaramaya

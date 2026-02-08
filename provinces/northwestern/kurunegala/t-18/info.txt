@@ -1,4 +1,0 @@
-id=t-18
-si=ඉඳුල්ගොඩ ශ්‍රී පුෂ්පාරාම රජමහා විහාරය
-en=Indulgoda Sri Pushparama Rajamaha Viharaya
-var=indulgoda sri pushparama tampita raja maha viharaya

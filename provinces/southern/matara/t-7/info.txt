@@ -1,4 +1,0 @@
-id=t-7
-si=ශ්‍රී විජය සුන්දාරාම රජමහා විහාරය
-en=Sri Vijayasunandarama Rajamaha Viharaya
-var=Sapugaskanda Sri Vijaya Sunandarama Tampita Rajamaha Viharaya

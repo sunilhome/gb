@@ -1,4 +1,0 @@
-id=t-8
-si=මුල්ගිරිගල රජමහා විහාරය
-en=Mulgirigala Rajamaha Viharaya
-var=mullegama mulgirigala raja maha vihara

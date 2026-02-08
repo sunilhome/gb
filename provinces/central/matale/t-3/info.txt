@@ -1,4 +1,0 @@
-id=t-3
-si=සීගිරිය
-en=Sigiriya
-var=sigiriya

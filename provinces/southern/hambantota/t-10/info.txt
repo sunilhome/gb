@@ -1,4 +1,0 @@
-id=t-10
-si=එළමල්දෙණිය රජමහා විහාරය
-en=Elamaldeniya Rajamaha Viharaya
-var=Elamaldeniya Rajamaha Viharaya

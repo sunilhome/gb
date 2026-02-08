@@ -1,4 +1,0 @@
-id=t-7
-si=ගල් විහාරය පොලොන්නරුව
-en=Gal Viharaya, Polonnaruwa
-var=gal viharaya polonnaruwa

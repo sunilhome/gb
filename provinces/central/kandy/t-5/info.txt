@@ -1,5 +1,0 @@
-id=t-5
-si=කැටපිටිය පුරාණ රජමහා විහාරය
-en=ketapitiya purana tampita rajamaha viharaya
-var=ketapitiya purana tampita rajamaha viharaya
-

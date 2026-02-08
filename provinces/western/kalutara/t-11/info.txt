@@ -1,4 +1,0 @@
-id=t-11
-si=අලුත්ගම කන්දේ විහාරය
-en=Aluthgama Kande Viharaya
-var=aluthgama kande viharaya

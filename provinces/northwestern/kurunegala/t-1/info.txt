@@ -1,4 +1,0 @@
-id=t-1
-si=දබදෙණිය ශ්‍රී විජයසුන්දරාරාම විහාරය
-en=Dabadeniya Sri Vijayasundararama Viharaya
-var=dabadeniya sri vijayasundararama viharaya

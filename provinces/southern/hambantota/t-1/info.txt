@@ -1,4 +1,0 @@
-id=t-1
-si=තිස්සමහාරාම රජමහා විහාරය
-en=Tissamaharama Rajamaha Viharaya
-var=thissamaharamaya hambanthota

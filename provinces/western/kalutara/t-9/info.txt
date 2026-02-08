@@ -1,4 +1,0 @@
-id=t-9
-si=පොකුණුවිට රජමහා විහාරය
-en=Pokunuwita Rajamaha Viharaya
-var=pokunuwita rajamaha viharaya

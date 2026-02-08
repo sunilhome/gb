@@ -1,4 +1,0 @@
-id=t-7
-si=හික්කඩුව සුනාමි විහාරය
-en=Tsunami Honganji Viharaya
-var=Tsunami Honganji Viharaya

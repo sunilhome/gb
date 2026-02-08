@@ -1,4 +1,0 @@
-id=t-1
-si=මාතොට රජමහා විහාරය
-en=Mathota Raja Maha Viharaya
-var=Mathota Raja Maha Viharaya

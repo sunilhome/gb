@@ -1,4 +1,0 @@
-id=t-5
-si=ගණේගම අරමුණපොල රජමහා විහාරය
-en=Ganegama Aramunapola Rajamaha Viharaya
-var=ganegama aramunapola rajamaha viharaya, pelmadulla

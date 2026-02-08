@@ -1,4 +1,0 @@
-id=t-5
-si=රුවන්වැල්ල හුම්බස්වල ශෛලබිම්බාරාමය
-en=Ruwanwella Humbaswala Shailabimbaramaya
-var=ruwanwella humbaswala shailabimbaramaya

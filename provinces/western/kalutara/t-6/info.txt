@@ -1,4 +1,0 @@
-id=t-6
-si=වරකාගොඩ ගනේඋඩ රජමහා විහාරය
-en=Warakagoda Ganeuda Rajamaha Viharaya
-var=warakagoda ganeuda rajamaha viharaya

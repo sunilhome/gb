@@ -1,4 +1,0 @@
-id=t-11
-si=දන්තුරේ රජමහා විහාරය
-en=Danthure Rajamaha Viharaya
-var=danthure rajamaha viharaya

@@ -1,4 +1,0 @@
-id=t-9
-si=යුදගනාව රජමහා විහාරය
-en=Yudaganawa Rajamaha Viharaya
-var=Yudaganawa Rajamaha Viharaya

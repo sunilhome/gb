@@ -1,4 +1,0 @@
-id=t-1
-si=දිවාගුහාව විහාරය
-en=Divaguhawa Viharaya
-var=divaguhawa, ratnapura

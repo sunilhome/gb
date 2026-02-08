@@ -1,4 +1,0 @@
-id=t-7
-si=තුපාරාමය
-en=Thuparamaya
-var=thuparamaya

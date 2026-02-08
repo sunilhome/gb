@@ -1,4 +1,0 @@
-id=t-1
-si=ලුම්බිණී විහාරය
-en=Lumbini Viharaya.kilinochchiya
-var=lumbini viharaya. kilinochchiya

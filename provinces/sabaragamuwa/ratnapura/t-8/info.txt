@@ -1,4 +1,0 @@
-id=t-8
-si=කුකුලුව රජමහා විහාරය
-en=Kukuluwa Rajamaha Viharaya
-var=kukuluwa rajamaha viharaya, ratnapura

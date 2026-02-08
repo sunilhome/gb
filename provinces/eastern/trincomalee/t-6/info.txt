@@ -1,4 +1,0 @@
-id=t-6
-si=ශ්‍රී ජයසුමනාරාම විහාරය
-en=Sri Jayasumanaramaya Vihara
-var=sri jayasumanaramaya vihara, trincomalee

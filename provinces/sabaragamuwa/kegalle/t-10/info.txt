@@ -1,4 +1,0 @@
-id=t-10
-si=හොලොම්ඹුව ස්ත්‍රී පුර පුරාණ ගල් ලෙන් විහාරය
-en=Holombuwa Sthri Pura Purana Gal Len Viharaya
-var=holombuwa sthri pura purana gal len viharaya

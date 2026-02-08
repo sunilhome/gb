@@ -1,4 +1,0 @@
-id=t-3
-si=නුවර ලංකාතිලක විහාරය
-en=Lankatilaka Rajamaha Viharaya 
-var=lankatilaka raja maha viharaya kandy

@@ -1,4 +1,0 @@
-id=t-7
-si=ගංගුල්දේනිය රජමහා විහාරය
-en=Ganguldeniya Rajamaha Viharaya
-var=ganguldeniya rajamaha viharaya in kegalle

@@ -1,4 +1,0 @@
-id=t-10
-si=රාජගල රජමහා විහාරය
-en=Rajagala Rajamaha Viharaya
-var=rajagala rajamaha viharaya

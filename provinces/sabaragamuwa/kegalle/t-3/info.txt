@@ -1,4 +1,0 @@
-id=t-3
-si=මානියම්ගම රජමහා විහාරය
-en=Maniyamgama Rajamaha Viharaya
-var=maniyamgama rajamaha viharaya

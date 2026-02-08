@@ -1,4 +1,0 @@
-id=t-3
-si=පඬුවස්නුවර රජමහා විහාරය
-en=Panduwasnuwara Rajamaha Viharaya
-var=panduwasnuwara raja maha vihara

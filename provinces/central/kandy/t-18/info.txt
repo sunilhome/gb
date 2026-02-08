@@ -1,4 +1,0 @@
-id=t-18
-si=කොබ්බෑකඩුව රජමහා විහාරය
-en=Kobbekaduwa Rajamaha Viharaya
-var=kobbekaduwa rajamaha viharaya kandy

@@ -1,4 +1,0 @@
-id=t-15
-si=නුවර සුදුහුම්පොල රජමහා විහාරය
-en=Suduhumpola Rajamaha Viharaya 
-var=suduhumpola rajamaha viharaya kandy

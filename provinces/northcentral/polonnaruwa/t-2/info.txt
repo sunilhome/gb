@@ -1,4 +1,0 @@
-id=t-2
-si=මැණික් වෙහෙර
-en=Manik Vehera
-var=manik vehera polonnaruwa

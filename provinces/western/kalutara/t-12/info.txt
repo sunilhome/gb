@@ -1,4 +1,0 @@
-id=t-12
-si=වෙහෙරගලකන්ද පුරාණ රජමහා විහාරය
-en=Weheragalkanda Purana Rajamaha Viharaya
-var=weheragalakandha purana rajamaha viharaya - payagala

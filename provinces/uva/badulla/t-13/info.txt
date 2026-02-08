@@ -1,4 +1,0 @@
-id=t-13
-si=කන්දකැටිය කිරිවෙහෙර රජමහා විහාරය
-en=Kandaketiya Kirivehera Rajamaha Viharaya
-var=kandaketiya kirivehera rajamaha viharaya

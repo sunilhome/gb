@@ -1,4 +1,0 @@
-id=t-17
-si=හෝමගම පුරාණ විහාරය
-en=Homagama Purana Viharaya
-var=homagama purana viharaya

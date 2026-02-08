@@ -1,4 +1,0 @@
-id=t-24
-si=පාදේනිය පුරාණ රජමහා විහාරය
-en=Padeniya Purana Rajamaha Viharaya
-var=padeniya purana rajamaha viharaya, kurunegala

@@ -1,4 +1,0 @@
-id=t-4
-si=රාවණා පබ්භත විහාරස්ථානය
-en=Rawana Pabbatha Viharasthanaya
-var=rawana pabbatha viharasthanaya

@@ -1,4 +1,0 @@
-id=t-8
-si=අලවතුර ගනේගොඩ රජමහා විහාරය
-en=Alawathura Ganegoda Rajamaha Viharaya
-var=alawathura ganegoda rajamaha viharaya kegalle

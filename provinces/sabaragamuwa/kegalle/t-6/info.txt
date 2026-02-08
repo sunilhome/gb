@@ -1,4 +1,0 @@
-id=t-6
-si=වතුර රජමහා විහාරය
-en=Wathura Rajamaha Viharaya
-var=wathura rajamaha viharaya in kegall

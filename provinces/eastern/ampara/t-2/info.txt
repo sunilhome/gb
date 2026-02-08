@@ -1,4 +1,0 @@
-id=t-2
-si=පොතුවිල් මුහුදු මහා විහාරය
-en=pothuwil muhudu maha viharaya
-var=pothuwil muhudu maha viharaya

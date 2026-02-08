@@ -1,4 +1,0 @@
-id=t-16
-si=ශ්‍රි සුමනරම පුරාණ විහාරය
-en=Sri Sumanarama Purana Viharaya
-var=sri sumanarama temple

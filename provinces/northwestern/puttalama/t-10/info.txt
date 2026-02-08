@@ -1,4 +1,0 @@
-id=t-10
-si=ධාතුකන්ද ශ්‍රී ජිනේන්ද්‍රාරාම පුරාණ රජමහා විහාරය
-en=Dhathukanda Sri Jinendarama Purana Rajamaha Viharaya
-var=dhathukanda sri jinendarama purana raja maha viharaya - kalalpitiya

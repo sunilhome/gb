@@ -1,4 +1,0 @@
-id=t-5
-si=කිරින්ද නිමලව ආරන්‍යසේනාසනය
-en=kirinda Nimalawa Aranya Senasanaya 
-var=kirinda nimalawa aranya senasanaya 

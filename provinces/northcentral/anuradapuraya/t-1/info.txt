@@ -1,4 +1,0 @@
-id=t-1
-si=අබයගිරිය රජමහා විහාරය
-en=Abhayagiriya Rajamaha Viharaya
-var=abayagiriya rajamaha viharaya

@@ -1,4 +1,0 @@
-id=t-15
-si=විලඳගොඩ රජමහා විහාරය
-en=Viladagoda Rajamaha Viharaya
-var=viladagoda rajamaha viharaya

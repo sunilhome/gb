@@ -1,4 +1,0 @@
-id=t-13
-si=තන්තිරිමලේ රජමහා විහාරය
-en=Thanthirimale Rajamaha Viharaya
-var=thanthirimale rajamaha viharaya

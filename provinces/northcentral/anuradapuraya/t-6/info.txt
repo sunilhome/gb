@@ -1,4 +1,0 @@
-id=t-6
-si=ලෝවමහපාය
-en=Lowamahapaya
-var=lowamahapaya

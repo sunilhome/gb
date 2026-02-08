@@ -1,4 +1,0 @@
-id=t-7
-si=වෙල්ගම් වෙහෙර
-en=Welgam Vehera
-var=welgam vehera, trincomalee

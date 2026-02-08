@@ -1,4 +1,0 @@
-id=t-1
-si=බණ්ඩාරවෙල දෝව රජමහා විහාරය
-en=Bandarawela Dowa Raja Maha Viharaya
-var=bandarawela dowa raja maha viharaya

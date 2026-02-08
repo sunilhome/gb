@@ -1,4 +1,0 @@
-id=t-1
-si=යටගල රජමහා විහාරය
-en=Yatagala Rajamaha Viharaya
-var=yatagala  rajamaha viharaya

@@ -1,4 +1,0 @@
-id=t-6
-si=තොටගමුවේ රන්පත් විහාරය
-en=Thotagamuwe Ranpath Viharaya
-var=thotagamuwe ranpath viharaya

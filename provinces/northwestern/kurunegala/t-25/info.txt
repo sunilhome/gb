@@ -1,4 +1,0 @@
-id=t-25
-si=අලව්ව පරමාඋල්ල රජමහා විහාරය
-en=Alawwa Paramaulla Rajamaha Viharaya
-var=alawwa paramaulla raja maha vihara temple

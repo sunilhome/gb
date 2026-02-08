@@ -1,4 +1,0 @@
-id=t-3
-si=පොත්ගුල් මාළිගා රජමහා විහාරය
-en=Pothgul Maliga Rajamaha Viharaya
-var=pothgul maliga rajamaha viharaya

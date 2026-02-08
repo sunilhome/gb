@@ -1,4 +1,0 @@
-id=t-8
-si=උනගලවේහෙර රජමහා විහාරය
-en=Unagalawehera Rajamaha Viharaya
-var=unagalawehera rajamaha viharaya, hingurakgoda

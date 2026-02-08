@@ -1,4 +1,0 @@
-id=t-6
-si=ස්වර්ණගිරි රජමහා විහාරය
-en=Swarnagiri Rajamaha Viharaya
-var=swarnagiri rajamaha viharaya

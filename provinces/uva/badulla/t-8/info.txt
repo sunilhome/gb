@@ -1,4 +1,0 @@
-id=t-8
-si=මුතියංගණ රජමහා විහාරය
-en=Muthiyangana Raja Maha Viharaya
-var=muthiyangana raja maha viharaya

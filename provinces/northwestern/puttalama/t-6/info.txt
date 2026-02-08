@@ -1,4 +1,0 @@
-id=t-6
-si=ශ්‍රී සරණංකරාරාමය
-en=Sri Saranankara Ramaya
-var=sri saranankara ramaya (madurankuliya)
