@@ -165,7 +165,7 @@ main.content {
 	  line-height: 1;
 	  text-align: center;       /* example change */
   margin-bottom:  5px;
-  font-size: 20px;
+  font-size: 21px;
   color: white;
 }
 .sub-band-text1 p + p {
@@ -302,29 +302,32 @@ footer {
     margin-top: 10px;
     align-self: flex-start;
     text-align: left;
-    padding-left: 10px;
+    padding-left: 28px;
    background: black; 
+   position: relative;  /* needed for ::before */
+
 }
 
-.title-box1 h2 {
-  font-size: 22px;       /* desktop font size */
-  line-height: 28px;     /* adjust spacing */
-  color: yellow;
-  padding-left: 20px;    /* space for dot */
-  position: relative;    /* required for ::before positioning */
-  margin: 10px 0;
-  font-weight: 300; 
-}
-
-.title-box1 h2::before {
-  content: "●";           /* the dot */
+.title-box1::before {
+  content: "●";
   position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 28px;        /* same size as text for balance */
-  line-height: 30px;
-  color: blue;            /* same color as text */
+  left: 10px;
+  top: 14px;            /* aligns with first (Sinhala) line */
+  font-size: 28px;
+  color: blue;
 }
+.title-box1 h2 {
+  font-size: 22px;
+  line-height: 24px;
+  color: yellow;
+  margin: 2px 0;
+  font-weight: 300;
+}
+
+.title-box1 h2 + h2 {
+  margin-top: 0;
+}
+
 .title-box2 h2 {
   font-family: "Noto Serif Sinhala", "Noto Sans Sinhala", sans-serif;
   font-size: 18px;     
