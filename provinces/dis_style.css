@@ -66,6 +66,7 @@ main.content {
 .content {
   margin-top: calc(var(--top-band-h) - 60px); 
   padding: 0;
+  background: black;
 }               
 
 /* ===== SUB-BAND ===== */
@@ -99,17 +100,65 @@ main.content {
   overflow: hidden;
   word-break: keep-all;
 }
+.si-text {
+  margin-bottom: 18px;   /* space after Sinhala */
+}
+.temple-si {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.25;
+  color: yellow;
+}
+
+.temple-en {
+  margin: 2px 0 0 0;   /* space between languages */
+  font-size: 18px;
+  color: yellow;
+}
+.temple-si,
+.temple-en {
+  position: relative;
+  padding-left: 14px;   /* space for dot */
+}
+
+.temple-si::before,
+.temple-en::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: yellow;          /* dot color */
+}
+
+
+
 .en-text {
   margin-top: 14px;   /* space between languages */
   font-size: 10px;    /* optional: slightly smaller */
   opacity: 0.9;       /* optional: softer look */
     line-height: 3.3em; 
 }
-
+/* Page 2 – new adjustment */
+.en-text1 {
+  font-size: 18px;        /* example change */
+  text-align: center;       /* example change */
+  line-height: 1.1;
+  margin-top: 20px;
+}
 
 .sub-band-text p {
-  margin: 0;
+  margin-bottom: 15px;
   font-size: 26px;
+}
+.sub-band-text1 p {
+	  line-height: 1.1;
+	  text-align: center;       /* example change */
+  margin-bottom:  5px;
+  font-size: 26px;
+  color: white;
+}
+.sub-band-text1 p + p {
+  margin-top: 2px;
 }
 
 .sub-band-text p:first-child {

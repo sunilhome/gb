@@ -28,16 +28,15 @@
   <img src="1.png" class="sub-band-icon" alt="Icon">
 
   <!-- Sinhala text below icon -->
-  <div class="sub-band-text">
-    <p>දකුණු පළාතේ</p>
-    <p>බෞද්ධ සිද්ධස්ථාන එකතුව</p>
-  </div>
+<div class="sub-band-text">
+  <p class="si-text">දකුණු පළාතේ බෞද්ධ සිද්ධස්ථාන</p>
+  <p class="en-text1">Buddhist Temples In Southern Province</p>
+</div>
 </div>  
 </div>
 
   <!-- 🔹 MAIN CONTENT -->
   <main class="content">
-  <h1> යාවත් කාලීන කරමින් තිබේ </h1>
 
     <!-- 🔹 TEMPLE LIST -->
     <div id="templeGrid" class="temple-grid"></div>
@@ -65,11 +64,12 @@ fetch("temples.txt")
     const grid = document.getElementById("templeGrid");
 
     data.trim().split("\n").forEach(line => {
-        const parts = line.split("|");
-        if (parts.length !== 2) return;
+const parts = line.split("|");
+if (parts.length !== 3) return;
 
-        const folder = parts[0].trim();  // folder name
-        const name   = parts[1].trim();  // temple name
+const folder = parts[0].trim();
+const siName = parts[1].trim();
+const enName = parts[2].trim();
 
         // Create box
         const box = document.createElement("div");
@@ -84,11 +84,16 @@ a.className = "title-link";
         titleBox.className = "title-box2";
 
         // Temple name text
-        const h2 = document.createElement("h2");
-        h2.textContent = name;
+const si = document.createElement("p");
+si.className = "temple-si";
+si.textContent = siName;
 
-        // Build structure
-        titleBox.appendChild(h2);
+const en = document.createElement("p");
+en.className = "temple-en";
+en.textContent = enName;
+
+titleBox.appendChild(si);
+titleBox.appendChild(en);
         a.appendChild(titleBox);
         box.appendChild(a);
         grid.appendChild(box);
