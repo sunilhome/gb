@@ -101,7 +101,7 @@ main.content {
   word-break: keep-all;
 }
 .si-text {
-  margin-bottom: 18px;   /* space after Sinhala */
+  margin-bottom: 17px;   /* space after Sinhala */
 }
 .temple-si {
   margin: 0;
@@ -131,7 +131,7 @@ main.content {
 }
 /* Page 2 – Sinhala sub-band text only */
 .page-2 .sub-band-text .si-text {
-  font-size: 22px;      /* adjust as needed */
+  font-size: 21px;      /* adjust as needed */
   line-height: 1.4;    /* font height control */
 }
 .page-2 .sub-band-text .en-text1 {
@@ -327,7 +327,7 @@ footer {
 .title-box1 h2 + h2 {
   margin-top: 0;
 }
-
+  
 .title-box2 h2 {
   font-family: "Noto Serif Sinhala", "Noto Sans Sinhala", sans-serif;
   font-size: 18px;     
