@@ -131,7 +131,7 @@ main.content {
 }
 /* Page 2 – Sinhala sub-band text only */
 .page-2 .sub-band-text .si-text {
-  font-size: 20px;      /* adjust as needed */
+  font-size: 22px;      /* adjust as needed */
   line-height: 1.4;    /* font height control */
     position: relative;
 
