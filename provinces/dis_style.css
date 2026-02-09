@@ -121,15 +121,6 @@ main.content {
   padding-left: 14px;   /* space for dot */
 }
 
-.temple-si::before,
-.temple-en::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: yellow;          /* dot color */
-}
-/* Page 2 – Sinhala sub-band text only */
 .page-2 .sub-band-text .si-text {
   font-size: 22px;      /* adjust as needed */
   line-height: 1.4;    /* font height control */
@@ -140,6 +131,47 @@ main.content {
   font-size: 22px;      /* adjust as needed */
   line-height: 1.4;    /* font height control */
 }
+/* Page 2 – remove dots from h2 */
+.page-2 .title-box1 h2::before {
+  content: none;
+}
+.page-2 .title-box1 {
+  position: relative;
+  padding-left: 28px;   /* space for single dot */
+}
+
+.page-2 .title-box1::before {
+  content: "●";
+  position: absolute;
+  left: 10px;
+  top: 14px;            /* aligns with Sinhala line */
+  font-size: 28px;
+  color: blue;
+}
+.page-2 .title-box1 h2 {
+  margin: 2px 0;
+  line-height: 24px;
+}
+
+.page-2 .title-box1 h2 + h2 {
+  margin-top: 0;
+}
+/* Page 2 only */
+.page-2 .title-box2 {
+  position: relative;
+  padding-left: 24px;   /* space for the dot */
+}
+
+/* Single dot for each temple box */
+.page-2 .title-box2::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  top: 4px;             /* aligns vertically with Sinhala line */
+  font-size: 20px;      /* adjust dot size as needed */
+  color: blue;
+}
+
 
 
 
@@ -294,7 +326,7 @@ footer {
 }
 
   .title-box h1 {
-                font-size: 24px;
+                font-size: 22px;
 
                 white-space: nowrap;
                             }
@@ -319,7 +351,7 @@ footer {
   color: blue;
 }
 .title-box1 h2 {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 24px;
   color: yellow;
   margin: 2px 0;
