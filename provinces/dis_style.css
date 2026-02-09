@@ -131,7 +131,11 @@ main.content {
 }
 /* Page 2 – Sinhala sub-band text only */
 .page-2 .sub-band-text .si-text {
-  font-size: 23px;      /* adjust as needed */
+  font-size: 22px;      /* adjust as needed */
+  line-height: 1.4;    /* font height control */
+}
+.page-2 .sub-band-text .en-text1 {
+  font-size: 22px;      /* adjust as needed */
   line-height: 1.4;    /* font height control */
 }
 
@@ -155,23 +159,6 @@ main.content {
   margin-bottom: 15px;
   font-size: 26px;
   
-  .sub-band-text  .si-text {
-  position: relative;
-  padding-left: 16px;   /* space between dot and text */
-  margin: 0;
-  line-height: 1.6;
-}
-
-.sub-band-text .si-text::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 18px;      /* dot size */
-  line-height: 1;
-  color: #000;
-}
-
   
 }
 .sub-band-text1 p {
