@@ -103,6 +103,8 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Info loaded:", info);
         document.getElementById("abbot-info").textContent = info.abbot || "";
         document.querySelector(".event-note").textContent = info.note || "";
+  	    document.querySelector(".event-note1").textContent = info.note1 || "";
+
     })
     .catch(err => console.error("Temple info error:", err));
 });
@@ -122,6 +124,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="safe-bottom"></div>
 </body>
 </html>
+
 
 
 
