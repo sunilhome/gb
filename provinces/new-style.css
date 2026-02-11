@@ -291,6 +291,14 @@ body {
   margin-top: 10px;
   font-family: Arial, sans-serif;
 }
+.event-note1 {
+  font-size: 20px;
+  color: brown;
+  font-weight: bold;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+}
+
 
 /* ===== ABBOT INFO ===== */
 .info-box {
@@ -406,3 +414,4 @@ footer {
     text-align: center;
   }
 }
+
