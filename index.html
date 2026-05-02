@@ -9,9 +9,95 @@
 <meta name="theme-color" content="#000000">
 
 <link rel="stylesheet" href="provinces/dis_style.css">
+	<style>
+
+/* ===== INTRO ===== */
+#intro {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+#t1 {
+  font-size: 28px;
+  color: white;
+}
+
+#t2 {
+  font-size: 26px;
+  color: gold;
+  margin-top: 10px;
+}
+
+/* ===== CURTAIN ===== */
+#curtain {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 9000;
+}
+
+.panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: black;
+  transition: transform 4s ease-in-out;
+}
+
+.left { left: 0; }
+.right { right: 0; }
+
+#curtain.open .left {
+  transform: translateX(-100%);
+}
+
+#curtain.open .right {
+  transform: translateX(100%);
+}
+
+/* ===== BUDDHA IMAGE ===== */
+#buddha {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  z-index: 8000;
+  transition: transform 2.5s ease, opacity 2s;
+}
+
+/* hide main scroll during intro */
+body {
+  overflow: hidden;
+}
+
+</style>
 
 </head>
 <body>
+<body>
+
+<!-- 🎭 INTRO + CURTAIN -->
+<div id="intro">
+  <div id="t1">veheravihara.lk</div>
+  <div id="t2">ඔබ සාදරයෙන් පිළිගනිමු</div>
+</div>
+
+<div id="curtain">
+  <div class="panel left"></div>
+  <div class="panel right"></div>
+</div>
+
+<img id="buddha" src="a.webp">
 
     <!-- ------------------------------------top fixed band ------------------------------------------>
 <div class="top-band">
@@ -162,7 +248,39 @@ referrerPolicy="no-referrer-when-downgrade">
 </a>
 </div>
 </noscript>
-<!-- End of StatCounter Code -->
+<script>
+
+window.onload = function () {
+
+  // 1️⃣ show intro text
+  setTimeout(() => {
+    document.getElementById("intro").style.opacity = "1";
+  }, 500);
+
+  // 2️⃣ open curtain
+  setTimeout(() => {
+    document.getElementById("curtain").classList.add("open");
+  }, 2500);
+
+  // 3️⃣ hide intro text
+  setTimeout(() => {
+    document.getElementById("intro").style.display = "none";
+  }, 3000);
+
+  // 4️⃣ slide Buddha down
+  setTimeout(() => {
+    document.getElementById("buddha").style.transform = "translateY(100%)";
+  }, 3500);
+
+  // 5️⃣ show main page
+  setTimeout(() => {
+    document.getElementById("buddha").style.opacity = "0";
+    document.body.style.overflow = "auto";
+  }, 6000);
+
+};
+
+</script>
 
 
 </body>
