@@ -41,7 +41,7 @@
   width: 50%;
   height: 100%;
   background: black;
-  transition: transform 3s ease-in-out;
+  transition: transform 2.5s ease-in-out;
 }
 
 .left { left: 0; }
@@ -54,7 +54,6 @@
 #curtain.open .right {
   transform: translateX(100%);
 }
-
 /* BUDDHA IMAGE */
 #buddha {
   position: fixed;
@@ -66,9 +65,8 @@
 
   opacity: 0;
   transform: translateY(0);
-  transition: transform 3s ease, opacity 1.5s;
+  transition: transform 3s ease, opacity 1s;
 }
-
 /* MAIN PAGE hidden during intro */
 body {
   margin: 0;
@@ -150,15 +148,37 @@ body {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  console.log("JS WORKING ✔");
+  console.log("Animation start ✔");
 
+  // STEP 1 - curtain open
   setTimeout(() => {
-    alert("Step 1 OK - Script running");
+    document.getElementById("curtain").classList.add("open");
+    console.log("Curtain open");
   }, 2000);
+
+  // STEP 2 - show Buddha
+  setTimeout(() => {
+    let img = document.getElementById("buddha");
+    img.style.opacity = "1";
+    console.log("Buddha visible");
+  }, 4500);
+
+  // STEP 3 - slide Buddha down
+  setTimeout(() => {
+    let img = document.getElementById("buddha");
+    img.style.transform = "translateY(100%)";
+    console.log("Buddha sliding");
+  }, 6500);
+
+  // STEP 4 - show main page
+  setTimeout(() => {
+    document.body.style.overflow = "auto";
+    document.getElementById("intro").style.display = "none";
+    console.log("Main page shown");
+  }, 8500);
 
 });
 
 </script>
-
 </body>
 </html>
