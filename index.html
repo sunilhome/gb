@@ -252,36 +252,35 @@ referrerPolicy="no-referrer-when-downgrade">
 
 window.onload = function () {
 
-  // 1️⃣ show intro text
+  // 1️⃣ SHOW BLACK TEXT ONLY
   setTimeout(() => {
     document.getElementById("intro").style.opacity = "1";
   }, 500);
 
-  // 2️⃣ open curtain
+  // 2️⃣ OPEN CURTAIN (ONLY AFTER INTRO)
   setTimeout(() => {
     document.getElementById("curtain").classList.add("open");
   }, 2500);
 
-  // 3️⃣ hide intro text
+  // 3️⃣ SHOW BUDDHA IMAGE AFTER CURTAIN OPENS
   setTimeout(() => {
-    document.getElementById("intro").style.display = "none";
-  }, 3000);
+    document.getElementById("buddha").style.opacity = "1";
+  }, 5000);
 
-  // 4️⃣ slide Buddha down
+  // 4️⃣ SLIDE IMAGE DOWN (ONLY AFTER IT IS VISIBLE)
   setTimeout(() => {
     document.getElementById("buddha").style.transform = "translateY(100%)";
-  }, 3500);
+  }, 7000);
 
-  // 5️⃣ show main page
+  // 5️⃣ SHOW PROVINCE PAGE LAST
   setTimeout(() => {
-    document.getElementById("buddha").style.opacity = "0";
     document.body.style.overflow = "auto";
-  }, 6000);
+    document.getElementById("buddha").style.opacity = "0";
+  }, 9000);
 
 };
 
 </script>
-
 
 </body>
 </html>
