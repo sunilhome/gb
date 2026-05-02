@@ -148,26 +148,15 @@ body {
 
 <script>
 
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function () {
+
+  console.log("JS WORKING ✔");
 
   setTimeout(() => {
-    document.getElementById("curtain").classList.add("open");
+    alert("Step 1 OK - Script running");
   }, 2000);
 
-  setTimeout(() => {
-    document.getElementById("buddha").style.opacity = "1";
-  }, 5000);
-
-  setTimeout(() => {
-    document.getElementById("buddha").style.transform = "translateY(100%)";
-  }, 7000);
-
-  setTimeout(() => {
-    document.getElementById("buddha").style.opacity = "0";
-    document.body.style.overflow = "auto";
-  }, 9000);
-
-};
+});
 
 </script>
 
