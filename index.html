@@ -25,18 +25,7 @@
   z-index: 10000;
 }
 
-#t1 {
-  font-size: 28px;
-  color: white;
-}
-
-#t2 {
-  font-size: 26px;
-  color: gold;
-  margin-top: 10px;
-}
-
-/* ===== CURTAIN ===== */
+/* CURTAIN */
 #curtain {
   position: fixed;
   width: 100%;
@@ -50,7 +39,7 @@
   width: 50%;
   height: 100%;
   background: black;
-  transition: transform 4s ease-in-out;
+  transition: transform 3s ease-in-out;
 }
 
 .left { left: 0; }
@@ -64,7 +53,7 @@
   transform: translateX(100%);
 }
 
-/* ===== BUDDHA IMAGE ===== */
+/* BUDDHA IMAGE */
 #buddha {
   position: fixed;
   width: 100%;
@@ -72,15 +61,11 @@
   object-fit: cover;
   top: 0;
   z-index: 8000;
-  transition: transform 2.5s ease, opacity 2s;
-}
 
-/* hide main scroll during intro */
-body {
-  overflow: hidden;
+  opacity: 0;
+  transform: translateY(0);
+  transition: transform 3s ease, opacity 1.5s;
 }
-
-</style>
 
 </head>
 <body>
@@ -88,8 +73,8 @@ body {
 
 <!-- 🎭 INTRO + CURTAIN -->
 <div id="intro">
-  <div id="t1">veheravihara.lk</div>
-  <div id="t2">ඔබ සාදරයෙන් පිළිගනිමු</div>
+  <div>veheravihara.lk</div>
+  <div>ඔබ සාදරයෙන් පිළිගනිමු</div>
 </div>
 
 <div id="curtain">
@@ -252,36 +237,35 @@ referrerPolicy="no-referrer-when-downgrade">
 
 window.onload = function () {
 
-  // 1️⃣ SHOW BLACK TEXT ONLY
+  // 1️⃣ show intro text (already visible by default)
   setTimeout(() => {
     document.getElementById("intro").style.opacity = "1";
-  }, 500);
+  }, 300);
 
-  // 2️⃣ OPEN CURTAIN (ONLY AFTER INTRO)
+  // 2️⃣ open curtain
   setTimeout(() => {
     document.getElementById("curtain").classList.add("open");
-  }, 2500);
+  }, 2000);
 
-  // 3️⃣ SHOW BUDDHA IMAGE AFTER CURTAIN OPENS
+  // 3️⃣ show Buddha image
   setTimeout(() => {
     document.getElementById("buddha").style.opacity = "1";
   }, 5000);
 
-  // 4️⃣ SLIDE IMAGE DOWN (ONLY AFTER IT IS VISIBLE)
+  // 4️⃣ slide Buddha down
   setTimeout(() => {
     document.getElementById("buddha").style.transform = "translateY(100%)";
   }, 7000);
 
-  // 5️⃣ SHOW PROVINCE PAGE LAST
+  // 5️⃣ show main page
   setTimeout(() => {
-    document.body.style.overflow = "auto";
     document.getElementById("buddha").style.opacity = "0";
+    document.body.style.overflow = "auto";
   }, 9000);
 
 };
 
 </script>
-
 </body>
 </html>
 
