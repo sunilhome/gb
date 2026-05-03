@@ -101,7 +101,12 @@ body {
   position: relative;
   z-index: 1;
 }
-
+.main-content,
+.content,
+.box {
+  position: relative;
+  z-index: 1;
+}
 </style>
 
 </head>
@@ -168,11 +173,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 4000);
 
   // 4️⃣ slide image (DIRECT STYLE FIX)
-  setTimeout(() => {
-    buddha.style.transition = "transform 3s ease-in-out";
-    buddha.style.transform = "translateY(100%)";
-  }, 4500);
-
+setTimeout(() => {
+  buddha.style.transform = "translateY(100%)";
+  document.body.style.overflow = "auto";
+}, 4500 + 3000);
 });
 </script>
 </html>
