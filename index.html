@@ -5,14 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Temple Page</title>
-<meta name="description" id="metaDescription" content="">
-<meta name="theme-color" content="#000000">
 
 <link rel="stylesheet" href="provinces/dis_style.css">
 
 <style>
 
-/* ===== INTRO BLACK SCREEN ===== */
+/* ===== BODY ===== */
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* ===== INTRO TEXT ===== */
 #intro {
   position: fixed;
   top: 0;
@@ -25,7 +29,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 11000; /* top */
+  text-align: center;
+}
+
+#intro div:first-child {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+#intro div:last-child {
+  font-size: 22px;
+  color: gold;
 }
 
 /* ===== CURTAIN ===== */
@@ -35,7 +50,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 9000;
+  z-index: 10000;
+  pointer-events: none;
 }
 
 .panel {
@@ -49,6 +65,11 @@
 .left { left: 0; }
 .right { right: 0; }
 
+/* closed state (default visible) */
+#curtain .left { transform: translateX(0); }
+#curtain .right { transform: translateX(0); }
+
+/* open animation */
 #curtain.open .left {
   transform: translateX(-100%);
 }
@@ -65,14 +86,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 8000;
-  opacity: 1; /* already visible behind curtain */
+  z-index: 5000; /* behind curtain */
 }
 
-/* hide scroll during intro */
-body {
-  margin: 0;
-  overflow: hidden;
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  position: relative;
+  z-index: 1;
 }
 
 </style>
@@ -93,10 +113,11 @@ body {
   <div class="panel right"></div>
 </div>
 
-<!-- ===== BUDDHA IMAGE ===== -->
+<!-- ===== BACKGROUND IMAGE ===== -->
 <img id="buddha" src="a.webp">
 
-<!-- ================= MAIN PAGE ================= -->
+<!-- ===== MAIN PAGE ===== -->
+<div class="main-content">
 
 <div class="top-band">
   <span class="top-band-text">veheravihara.lk</span>
@@ -104,37 +125,17 @@ body {
 
 <div class="content">
 <div class="sub-band">
-  <img src="provinces/1.png" class="sub-band-icon" alt="Icon">
-
+  <img src="provinces/1.png" class="sub-band-icon">
   <div class="sub-band-text1">
     <p>ශ්‍රී ලංකාවේ බෞද්ධ සිද්ධස්ථාන</p>
   </div>
-
   <div class="sub-band-text en-text">
     <p>Buddhist Temples In Sri Lanka</p>
   </div>
-</div>  
+</div>
 </div>
 
-<!-- provinces -->
-<div class="box"><a href="provinces/basnahira/" class="title-link"><div class="title-box1"><h2>බස්නාහිර පළාත</h2><h2>Western Province</h2></div></a></div>
-<div class="box"><a href="provinces/dakuna/" class="title-link"><div class="title-box1"><h2>දකුණු පළාත</h2><h2>Southern Province</h2></div></a></div>
-<div class="box"><a href="provinces/meda/" class="title-link"><div class="title-box1"><h2>මධ්‍යම පළාත</h2><h2>Central Province</h2></div></a></div>
-<div class="box"><a href="provinces/uthurumeda/" class="title-link"><div class="title-box1"><h2>උතුරුමැද පළාත</h2><h2>North-Central Province</h2></div></a></div>
-<div class="box"><a href="provinces/sabaragamuwa/" class="title-link"><div class="title-box1"><h2>සබරගමුව පළාත</h2><h2>Sabaragamuwa Province</h2></div></a></div>
-<div class="box"><a href="provinces/uva/" class="title-link"><div class="title-box1"><h2>ඌව පළාත</h2><h2>Uwa Province</h2></div></a></div>
-<div class="box"><a href="provinces/wayaba/" class="title-link"><div class="title-box1"><h2>වයඹ පළාත</h2><h2>Wayaba Province</h2></div></a></div>
-<div class="box"><a href="provinces/negenahira/" class="title-link"><div class="title-box1"><h2>නැගෙනහිර පළාත</h2><h2>Eastern Province</h2></div></a></div>
-<div class="box"><a href="provinces/uthura/" class="title-link"><div class="title-box1"><h2>උතුරු පළාත</h2><h2>Northern Province</h2></div></a></div>
-
-<footer>
-<div class="footer-content">
-© ව්‍යාපෘතිය: සුනිල් රණසිංහ <br>
-සංකල්පය: දේශ කීර්ති ශ්‍රී දේශබන්දු<br>
-සම්පත් රණසිංහ<br>
-දත්ත: ධනේශ් රණසිංහ
 </div>
-</footer>
 
 <!-- ===== SCRIPT ===== -->
 <script>
@@ -143,16 +144,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const curtain = document.getElementById("curtain");
   const intro = document.getElementById("intro");
 
-  // ⏱ stay on black screen (text visible)
+  // ⭐ Step 1: show text (2 seconds)
+  setTimeout(() => {
+    intro.style.display = "none";  // remove black text screen
+  }, 2000);
+
+  // ⭐ Step 2: open curtain AFTER intro removed
   setTimeout(() => {
     curtain.classList.add("open");
-  }, 2000); // ⭐ 2 seconds (you can change)
+  }, 2100);
 
-  // ⏱ remove intro after curtain animation finishes
+  // ⭐ Step 3: allow scrolling
   setTimeout(() => {
-    intro.style.display = "none";
     document.body.style.overflow = "auto";
-  }, 4000); // ⭐ must be bigger than above
+  }, 4000);
 
 });
 </script>
