@@ -152,27 +152,27 @@ document.addEventListener("DOMContentLoaded", function () {
   const intro = document.getElementById("intro");
   const buddha = document.getElementById("buddha");
 
-  // ⭐ curtain start
+  // 1️⃣ curtain open
   setTimeout(() => {
     curtain.classList.add("open");
   }, 2000);
 
-  // ⭐ remove intro
+  // 2️⃣ hide intro
   setTimeout(() => {
     intro.style.display = "none";
   }, 2200);
 
-  // ⭐ enable scroll
+  // 3️⃣ allow scroll
   setTimeout(() => {
     document.body.style.overflow = "auto";
   }, 4000);
 
-  // ⭐ NOW ADD THIS (image slide)
+  // 4️⃣ slide image (DIRECT STYLE FIX)
   setTimeout(() => {
-    buddha.classList.add("slide-down");
+    buddha.style.transition = "transform 3s ease-in-out";
+    buddha.style.transform = "translateY(100%)";
   }, 4500);
 
 });
 </script>
-
 </html>
