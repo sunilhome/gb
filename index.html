@@ -16,11 +16,9 @@ body {
   overflow: hidden;
 }
 
-/* ===== INTRO TEXT ===== */
+/* ===== INTRO ===== */
 #intro {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background: black;
@@ -29,27 +27,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 11000; /* top */
+  z-index: 11000;
   text-align: center;
-}
-
-#intro div:first-child {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-#intro div:last-child {
-  font-size: 22px;
-  color: gold;
 }
 
 /* ===== CURTAIN ===== */
 #curtain {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  top: 0;
   z-index: 10000;
   pointer-events: none;
 }
@@ -65,11 +52,9 @@ body {
 .left { left: 0; }
 .right { right: 0; }
 
-/* closed state (default visible) */
 #curtain .left { transform: translateX(0); }
 #curtain .right { transform: translateX(0); }
 
-/* open animation */
 #curtain.open .left {
   transform: translateX(-100%);
 }
@@ -78,57 +63,51 @@ body {
   transform: translateX(100%);
 }
 
-/* ===== BUDDHA IMAGE ===== */
+/* ===== BUDDHA ===== */
 #buddha {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 5000; /* behind curtain */
-}
-#buddha {
+  z-index: 5000;
   transition: transform 3s ease-in-out;
 }
 
-/* slide down */
+/* slide */
 #buddha.slide-down {
   transform: translateY(100%);
 }
+
 /* ===== MAIN CONTENT ===== */
-.main-content {
-  position: relative;
-  z-index: 1;
-}
 .main-content,
 .content,
 .box {
   position: relative;
   z-index: 1;
 }
+
 </style>
 
 </head>
 
 <body>
 
-<!-- ===== INTRO TEXT ===== -->
+<!-- INTRO -->
 <div id="intro">
   <div>veheravihara.lk</div>
   <div>ඔබ සාදරයෙන් පිළිගනිමු</div>
 </div>
 
-<!-- ===== CURTAIN ===== -->
+<!-- CURTAIN -->
 <div id="curtain">
   <div class="panel left"></div>
   <div class="panel right"></div>
 </div>
 
-<!-- ===== BACKGROUND IMAGE ===== -->
+<!-- BUDDHA -->
 <img id="buddha" src="a.webp">
 
-<!-- ===== MAIN PAGE ===== -->
+<!-- MAIN -->
 <div class="main-content">
 
 <div class="top-band">
@@ -149,7 +128,6 @@ body {
 
 </div>
 
-<!-- ===== SCRIPT ===== -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -157,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const intro = document.getElementById("intro");
   const buddha = document.getElementById("buddha");
 
-  // 1️⃣ curtain open
+  // 1️⃣ curtain opens
   setTimeout(() => {
     curtain.classList.add("open");
   }, 2000);
@@ -167,16 +145,18 @@ document.addEventListener("DOMContentLoaded", function () {
     intro.style.display = "none";
   }, 2200);
 
-  // 3️⃣ allow scroll
+  // 3️⃣ enable scroll AFTER everything stable
   setTimeout(() => {
     document.body.style.overflow = "auto";
-  }, 4000);
+  }, 5000);
 
-  // 4️⃣ slide image (DIRECT STYLE FIX)
-setTimeout(() => {
-  buddha.style.transform = "translateY(100%)";
-  document.body.style.overflow = "auto";
-}, 4500 + 3000);
+  // 4️⃣ slide image (FIXED TIMING)
+  setTimeout(() => {
+    buddha.classList.add("slide-down");
+  }, 4500);
+
 });
 </script>
+
+</body>
 </html>
