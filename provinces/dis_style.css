@@ -69,13 +69,13 @@ main.content {
   background: black;
 }               
 .box {
-  background: black;
+
+  background: red !important;
+
   color: white;   /* 🔴 THIS LINE WAS MISSING */
   padding: 8px 10px;
 }
-.box {
-  background: white !important;
-}
+
 /* ===== SUB-BAND ===== */
 .sub-band {
   width: 100%;
