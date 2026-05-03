@@ -69,7 +69,9 @@ main.content {
   background: black;
 }               
 .box {
-  width: 100%;
+  background: black;
+  color: white;   /* 🔴 THIS LINE WAS MISSING */
+  padding: 8px 10px;
 }
 .box {
   background: white !important;
