@@ -152,16 +152,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const curtain = document.getElementById("curtain");
   const buddha = document.getElementById("buddha");
+  const intro = document.getElementById("intro");
 
-  // ✅ Pre-show Buddha (behind curtain)
+  // Show Buddha behind
   buddha.style.opacity = "1";
 
-  // ✅ After 500ms → open curtain
+  // 1️⃣ After 500ms → fade intro
+  setTimeout(() => {
+    intro.classList.add("fade");
+    console.log("Intro fade");
+  }, 500);
+
+  // 2️⃣ After fade → open curtain
   setTimeout(() => {
     curtain.classList.add("open");
-    console.log("Curtain opening ✔");
-  }, 500);
+    console.log("Curtain open ✔");
+  }, 1200);
 
 });
 
-</script></html>
+</script>
