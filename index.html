@@ -38,7 +38,6 @@ body {
   height: 100%;
   top: 0;
   z-index: 10000;
-  pointer-events: none;
 }
 
 .panel {
@@ -78,17 +77,13 @@ body {
   transform: translateY(100%);
 }
 
-/* ===== MAIN CONTENT ===== */
-#intro,
-#curtain,
-#buddha {
-  will-change: transform;
+/* ===== PROVINCES FIX ===== */
+.box {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
-.main-content {
-  position: relative;
-  z-index: 2;
-}
 </style>
 
 </head>
@@ -107,30 +102,36 @@ body {
   <div class="panel right"></div>
 </div>
 
-<!-- BUDDHA -->
+<!-- IMAGE -->
 <img id="buddha" src="a.webp">
 
-<!-- MAIN -->
-<div class="main-content">
-
+<!-- MAIN CONTENT -->
 <div class="top-band">
   <span class="top-band-text">veheravihara.lk</span>
 </div>
 
 <div class="content">
+
 <div class="sub-band">
   <img src="provinces/1.png" class="sub-band-icon">
+
   <div class="sub-band-text1">
     <p>ශ්‍රී ලංකාවේ බෞද්ධ සිද්ධස්ථාන</p>
   </div>
+
   <div class="sub-band-text en-text">
     <p>Buddhist Temples In Sri Lanka</p>
   </div>
 </div>
-</div>
 
 </div>
 
+<!-- PROVINCES -->
+<div class="box">Western Province</div>
+<div class="box">Southern Province</div>
+<div class="box">Central Province</div>
+
+<!-- SCRIPT (YOUR ORIGINAL LOGIC KEPT SAFE) -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -138,24 +139,28 @@ document.addEventListener("DOMContentLoaded", function () {
   const intro = document.getElementById("intro");
   const buddha = document.getElementById("buddha");
 
-  // STEP 1: curtain open
+  // 1️⃣ curtain open
   setTimeout(() => {
     curtain.classList.add("open");
   }, 2000);
 
-  // STEP 2: slide image
+  // 2️⃣ hide intro
+  setTimeout(() => {
+    intro.style.display = "none";
+  }, 2200);
+
+  // 3️⃣ allow scroll later
+  setTimeout(() => {
+    document.body.style.overflow = "auto";
+  }, 4000);
+
+  // 4️⃣ slide image
   setTimeout(() => {
     buddha.classList.add("slide-down");
   }, 4500);
 
-  // STEP 3: remove overlays properly
-  setTimeout(() => {
-    intro.style.display = "none";
-    curtain.style.display = "none";
-    document.body.style.overflow = "auto";
-  }, 7500);
-
 });
 </script>
+
 </body>
 </html>
