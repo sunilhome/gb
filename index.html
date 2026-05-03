@@ -150,34 +150,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const curtain = document.getElementById("curtain");
   const intro = document.getElementById("intro");
+  const buddha = document.getElementById("buddha");
 
-  // ⭐ Step 1: start curtain (while black screen still visible)
+  // ⭐ curtain start
   setTimeout(() => {
     curtain.classList.add("open");
   }, 2000);
 
-  // ⭐ Step 2: remove black AFTER curtain starts
+  // ⭐ remove intro
   setTimeout(() => {
     intro.style.display = "none";
   }, 2200);
 
-  // ⭐ Step 3: enable scroll later
+  // ⭐ enable scroll
   setTimeout(() => {
     document.body.style.overflow = "auto";
   }, 4000);
 
-});
-</script>
-  <script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const buddha = document.getElementById("buddha");
-
-  // ⭐ wait after curtain opens → then slide image
+  // ⭐ NOW ADD THIS (image slide)
   setTimeout(() => {
     buddha.classList.add("slide-down");
-  }, 4500); // adjust timing if needed
+  }, 4500);
 
 });
 </script>
+
 </html>
