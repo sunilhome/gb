@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Temple Page</title>
-
 <meta name="description" id="metaDescription" content="">
 <meta name="theme-color" content="#000000">
 
@@ -13,9 +12,11 @@
 
 <style>
 
-/* ===== INTRO ===== */
+/* ===== INTRO BLACK SCREEN ===== */
 #intro {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: black;
@@ -24,15 +25,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 10000;
+  z-index: 9999;
 }
 
-/* CURTAIN */
+/* ===== CURTAIN ===== */
 #curtain {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  top: 0;
   z-index: 9000;
 }
 
@@ -41,7 +43,7 @@
   width: 50%;
   height: 100%;
   background: black;
-  transition: transform 2.5s ease-in-out;
+  transition: transform 2s ease-in-out;
 }
 
 .left { left: 0; }
@@ -54,20 +56,20 @@
 #curtain.open .right {
   transform: translateX(100%);
 }
-/* BUDDHA IMAGE */
+
+/* ===== BUDDHA IMAGE ===== */
 #buddha {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  top: 0;
   z-index: 8000;
-
-  opacity: 0;
-  transform: translateY(0);
-  transition: transform 3s ease, opacity 1s;
+  opacity: 1; /* already visible behind curtain */
 }
-/* MAIN PAGE hidden during intro */
+
+/* hide scroll during intro */
 body {
   margin: 0;
   overflow: hidden;
@@ -79,19 +81,19 @@ body {
 
 <body>
 
-<!-- 🎭 INTRO -->
+<!-- ===== INTRO TEXT ===== -->
 <div id="intro">
   <div>veheravihara.lk</div>
   <div>ඔබ සාදරයෙන් පිළිගනිමු</div>
 </div>
 
-<!-- 🎭 CURTAIN -->
+<!-- ===== CURTAIN ===== -->
 <div id="curtain">
   <div class="panel left"></div>
   <div class="panel right"></div>
 </div>
 
-<!-- 🖼 BUDDHA IMAGE -->
+<!-- ===== BUDDHA IMAGE ===== -->
 <img id="buddha" src="a.webp">
 
 <!-- ================= MAIN PAGE ================= -->
@@ -101,7 +103,6 @@ body {
 </div>
 
 <div class="content">
-
 <div class="sub-band">
   <img src="provinces/1.png" class="sub-band-icon" alt="Icon">
 
@@ -112,27 +113,18 @@ body {
   <div class="sub-band-text en-text">
     <p>Buddhist Temples In Sri Lanka</p>
   </div>
-</div>
-
+</div>  
 </div>
 
 <!-- provinces -->
 <div class="box"><a href="provinces/basnahira/" class="title-link"><div class="title-box1"><h2>බස්නාහිර පළාත</h2><h2>Western Province</h2></div></a></div>
-
 <div class="box"><a href="provinces/dakuna/" class="title-link"><div class="title-box1"><h2>දකුණු පළාත</h2><h2>Southern Province</h2></div></a></div>
-
 <div class="box"><a href="provinces/meda/" class="title-link"><div class="title-box1"><h2>මධ්‍යම පළාත</h2><h2>Central Province</h2></div></a></div>
-
 <div class="box"><a href="provinces/uthurumeda/" class="title-link"><div class="title-box1"><h2>උතුරුමැද පළාත</h2><h2>North-Central Province</h2></div></a></div>
-
 <div class="box"><a href="provinces/sabaragamuwa/" class="title-link"><div class="title-box1"><h2>සබරගමුව පළාත</h2><h2>Sabaragamuwa Province</h2></div></a></div>
-
 <div class="box"><a href="provinces/uva/" class="title-link"><div class="title-box1"><h2>ඌව පළාත</h2><h2>Uwa Province</h2></div></a></div>
-
 <div class="box"><a href="provinces/wayaba/" class="title-link"><div class="title-box1"><h2>වයඹ පළාත</h2><h2>Wayaba Province</h2></div></a></div>
-
 <div class="box"><a href="provinces/negenahira/" class="title-link"><div class="title-box1"><h2>නැගෙනහිර පළාත</h2><h2>Eastern Province</h2></div></a></div>
-
 <div class="box"><a href="provinces/uthura/" class="title-link"><div class="title-box1"><h2>උතුරු පළාත</h2><h2>Northern Province</h2></div></a></div>
 
 <footer>
@@ -144,31 +136,28 @@ body {
 </div>
 </footer>
 
+<!-- ===== SCRIPT ===== -->
 <script>
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  console.log("Start ✔");
-
   const curtain = document.getElementById("curtain");
-  const buddha = document.getElementById("buddha");
   const intro = document.getElementById("intro");
 
-  // Show Buddha behind
-  buddha.style.opacity = "1";
-
-  // 1️⃣ After 500ms → fade intro
-  setTimeout(() => {
-    intro.classList.add("fade");
-    console.log("Intro fade");
-  }, 500);
-
-  // 2️⃣ After fade → open curtain
+  // wait 500ms → open curtain
   setTimeout(() => {
     curtain.classList.add("open");
-    console.log("Curtain open ✔");
-  }, 1200);
+  }, 500);
+
+  // remove intro after curtain opens
+  setTimeout(() => {
+    intro.style.display = "none";
+    document.body.style.overflow = "auto";
+  }, 2500);
 
 });
 
 </script>
+
+</body>
+</html>
