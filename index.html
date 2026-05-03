@@ -148,37 +148,20 @@ body {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  console.log("Animation start ✔");
+  console.log("Start ✔");
 
-  // STEP 1 - curtain open
-  setTimeout(() => {
-    document.getElementById("curtain").classList.add("open");
-    console.log("Curtain open");
-  }, 2000);
+  const curtain = document.getElementById("curtain");
+  const buddha = document.getElementById("buddha");
 
-  // STEP 2 - show Buddha
-  setTimeout(() => {
-    let img = document.getElementById("buddha");
-    img.style.opacity = "1";
-    console.log("Buddha visible");
-  }, 4500);
+  // ✅ Pre-show Buddha (behind curtain)
+  buddha.style.opacity = "1";
 
-  // STEP 3 - slide Buddha down
+  // ✅ After 500ms → open curtain
   setTimeout(() => {
-    let img = document.getElementById("buddha");
-    img.style.transform = "translateY(100%)";
-    console.log("Buddha sliding");
-  }, 6500);
-
-  // STEP 4 - show main page
-  setTimeout(() => {
-    document.body.style.overflow = "auto";
-    document.getElementById("intro").style.display = "none";
-    console.log("Main page shown");
-  }, 8500);
+    curtain.classList.add("open");
+    console.log("Curtain opening ✔");
+  }, 500);
 
 });
 
-</script>
-</body>
-</html>
+</script></html>
