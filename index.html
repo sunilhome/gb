@@ -15,6 +15,11 @@ body {
   margin: 0;
   overflow: hidden;
 }
+  .content,
+.box {
+  position: relative;
+  z-index: 10;
+}
 
 /* ===== INTRO ===== */
 #intro {
@@ -160,6 +165,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 4500);
 
 });
+  setTimeout(() => {
+  document.getElementById("curtain").style.display = "none";
+  document.getElementById("intro").style.display = "none";
+}, 6000);
 </script>
 
 </body>
