@@ -144,23 +144,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const curtain = document.getElementById("curtain");
   const intro = document.getElementById("intro");
 
-  // ⭐ Step 1: show text (2 seconds)
-  setTimeout(() => {
-    intro.style.display = "none";  // remove black text screen
-  }, 2000);
-
-  // ⭐ Step 2: open curtain AFTER intro removed
+  // ⭐ Step 1: start curtain (while black screen still visible)
   setTimeout(() => {
     curtain.classList.add("open");
-  }, 2100);
+  }, 2000);
 
-  // ⭐ Step 3: allow scrolling
+  // ⭐ Step 2: remove black AFTER curtain starts
+  setTimeout(() => {
+    intro.style.display = "none";
+  }, 2200);
+
+  // ⭐ Step 3: enable scroll later
   setTimeout(() => {
     document.body.style.overflow = "auto";
   }, 4000);
 
 });
 </script>
-
-</body>
 </html>
