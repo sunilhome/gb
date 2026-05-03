@@ -88,7 +88,14 @@ body {
   object-fit: cover;
   z-index: 5000; /* behind curtain */
 }
+#buddha {
+  transition: transform 3s ease-in-out;
+}
 
+/* slide down */
+#buddha.slide-down {
+  transform: translateY(100%);
+}
 /* ===== MAIN CONTENT ===== */
 .main-content {
   position: relative;
@@ -158,6 +165,18 @@ document.addEventListener("DOMContentLoaded", function () {
   setTimeout(() => {
     document.body.style.overflow = "auto";
   }, 4000);
+
+});
+</script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const buddha = document.getElementById("buddha");
+
+  // ⭐ wait after curtain opens → then slide image
+  setTimeout(() => {
+    buddha.classList.add("slide-down");
+  }, 4500); // adjust timing if needed
 
 });
 </script>
