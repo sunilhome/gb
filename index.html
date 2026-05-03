@@ -79,13 +79,16 @@ body {
 }
 
 /* ===== MAIN CONTENT ===== */
-.main-content,
-.content,
-.box {
-  position: relative;
-  z-index: 1;
+#intro,
+#curtain,
+#buddha {
+  will-change: transform;
 }
 
+.main-content {
+  position: relative;
+  z-index: 2;
+}
 </style>
 
 </head>
@@ -135,28 +138,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const intro = document.getElementById("intro");
   const buddha = document.getElementById("buddha");
 
-  // 1️⃣ curtain opens
+  // STEP 1: curtain open
   setTimeout(() => {
     curtain.classList.add("open");
   }, 2000);
 
-  // 2️⃣ hide intro
-  setTimeout(() => {
-    intro.style.display = "none";
-  }, 2200);
-
-  // 3️⃣ enable scroll AFTER everything stable
-  setTimeout(() => {
-    document.body.style.overflow = "auto";
-  }, 5000);
-
-  // 4️⃣ slide image (FIXED TIMING)
+  // STEP 2: slide image
   setTimeout(() => {
     buddha.classList.add("slide-down");
   }, 4500);
 
+  // STEP 3: remove overlays properly
+  setTimeout(() => {
+    intro.style.display = "none";
+    curtain.style.display = "none";
+    document.body.style.overflow = "auto";
+  }, 7500);
+
 });
 </script>
-
 </body>
 </html>
