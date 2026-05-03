@@ -138,25 +138,23 @@ body {
 
 <!-- ===== SCRIPT ===== -->
 <script>
-
 document.addEventListener("DOMContentLoaded", function () {
 
   const curtain = document.getElementById("curtain");
   const intro = document.getElementById("intro");
 
-  // wait 500ms → open curtain
+  // ⏱ stay on black screen (text visible)
   setTimeout(() => {
     curtain.classList.add("open");
-  }, 1500);
+  }, 2000); // ⭐ 2 seconds (you can change)
 
-  // remove intro after curtain opens
+  // ⏱ remove intro after curtain animation finishes
   setTimeout(() => {
     intro.style.display = "none";
     document.body.style.overflow = "auto";
-  }, 2500);
+  }, 4000); // ⭐ must be bigger than above
 
 });
-
 </script>
 
 </body>
