@@ -71,6 +71,9 @@ main.content {
 .box {
   width: 100%;
 }
+.box {
+  background: white !important;
+}
 /* ===== SUB-BAND ===== */
 .sub-band {
   width: 100%;
