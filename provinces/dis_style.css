@@ -70,7 +70,7 @@ main.content {
 }               
 .box {
 
-  background: red !important;
+  background: black !important;
 
   color: white;   /* 🔴 THIS LINE WAS MISSING */
   padding: 8px 10px;
