@@ -81,7 +81,9 @@ body {
   z-index: 5000;
   transition: transform 3s ease-in-out;
 }
-
+#buddha {
+  pointer-events: none;
+}
 /* slide */
 #buddha.slide-down {
   transform: translateY(100%);
@@ -177,6 +179,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 4500);
 
 });
+	// 5️⃣ remove image completely
+setTimeout(() => {
+  buddha.style.display = "none";
+}, 7000);
 </script>
 
 </body>
