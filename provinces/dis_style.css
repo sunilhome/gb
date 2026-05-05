@@ -15,8 +15,9 @@ html, body {
 body {
 /*  background-image: url("white.jpg");*/
   padding-top: var(--top-band-h); /* push content below fixed top band */
+  display: flex;
+  flex-direction: column;
 }
- 
 
 /* ===== SAFE BOTTOM AREA ===== */
 .safe-bottom {
@@ -63,18 +64,10 @@ main.content {
   flex: 1;
 }
 .content {
-
-  margin-top: 0;
+  margin-top: calc(var(--top-band-h) - 60px); 
   padding: 0;
   background: black;
 }               
-.box {
-
-  background: black !important;
-
-  color: white;   /* 🔴 THIS LINE WAS MISSING */
-  padding: 8px 10px;
-}
 
 /* ===== SUB-BAND ===== */
 .sub-band {
