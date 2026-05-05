@@ -1,99 +1,164 @@
 <!DOCTYPE html>
-<html lang="si-LK">
+<html lang="si">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Title and SEO (dynamic) -->
 <title>Temple Page</title>
-<meta name="description" id="metaDescription" content="">
 
-<!-- Open Graph -->
-<meta property="og:title" id="ogTitle" content="">
-<meta property="og:description" id="ogDesc" content="">
-<meta property="og:url" id="ogURL" content="">
-<meta property="og:type" content="website">
-<meta property="og:image" id="ogImg" content="">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<link rel="stylesheet" href="provinces/dis_style.css">
 
-<!-- Canonical -->
-<link rel="canonical" id="canonicalLink" href="">
+<style>
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Buddhist Temple Sri Lanka">
-<meta name="twitter:description" content="Sri Lanka Buddhist temple information">
-<meta name="twitter:image" id="twitterImg" content="">
+/* ===== BODY ===== */
+body {
+  margin: 0;
+  overflow: hidden;
+}
 
-<!-- CSS -->
-<link rel="stylesheet" href="/provinces/new-style.css">
-  <script src="/provinces/common.js" defer></script>
+/* ===== INTRO TEXT ===== */
+#intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 11000; /* top */
+  text-align: center;
+}
+
+#intro div:first-child {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+#intro div:last-child {
+  font-size: 22px;
+  color: gold;
+}
+
+/* ===== CURTAIN ===== */
+#curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: black;
+  transition: transform 2s ease-in-out;
+}
+
+.left { left: 0; }
+.right { right: 0; }
+
+/* closed state (default visible) */
+#curtain .left { transform: translateX(0); }
+#curtain .right { transform: translateX(0); }
+
+/* open animation */
+#curtain.open .left {
+  transform: translateX(-100%);
+}
+
+#curtain.open .right {
+  transform: translateX(100%);
+}
+
+/* ===== BUDDHA IMAGE ===== */
+#buddha {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 5000; /* behind curtain */
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  position: relative;
+  z-index: 1;
+}
+
+</style>
+
 </head>
+
 <body>
 
-<!-- Top fixed band -->
+<!-- ===== INTRO TEXT ===== -->
+<div id="intro">
+  <div>veheravihara.lk</div>
+  <div>ඔබ සාදරයෙන් පිළිගනිමු</div>
+</div>
+
+<!-- ===== CURTAIN ===== -->
+<div id="curtain">
+  <div class="panel left"></div>
+  <div class="panel right"></div>
+</div>
+
+<!-- ===== BACKGROUND IMAGE ===== -->
+<img id="buddha" src="a.webp">
+
+<!-- ===== MAIN PAGE ===== -->
+<div class="main-content">
+
 <div class="top-band">
-  <a href="javascript:history.back()" class="top-icon">&#8592;</a>
-  <a href="/index.html" class="top-icon">&#127969;</a>
-  <a href="tel:+94766178102" class="top-icon">&#128222;</a>
-  <a href="contact.html" class="top-icon">&#128233;</a>
+  <span class="top-band-text">veheravihara.lk</span>
 </div>
 
-<!-- Main content -->
 <div class="content">
-
-  <div class="sub-band">
-     <img src="/provinces/1.png" class="sub-band-icon" alt="Buddhist temple icon">
-    
-    <div class="sub-band-text">
-      <p id="templeSI"></p>
-    </div>
-    <div class="sub-band-text1">
-      <p id="templeEN"></p>
-    </div>
+<div class="sub-band">
+  <img src="provinces/1.png" class="sub-band-icon">
+  <div class="sub-band-text1">
+    <p>ශ්‍රී ලංකාවේ බෞද්ධ සිද්ධස්ථාන</p>
   </div>
-
-  <!-- Slideshow only on index.html -->
-  <div class="slideshow">
-    <img id="slideImg" src="a.webp" alt="Buddhist temple Sri Lanka">
+  <div class="sub-band-text en-text">
+    <p>Buddhist Temples In Sri Lanka</p>
   </div>
-
-  <img src="x.webp" class="small-image" alt="chief thero image">
-
-  <div class="event-box">
-    <div class="event-text">
-      <h2>විහාරාධිපති</h2>
-     
-<p id="abbot-info"></p>
-<p id="note-si" class="event-note"></p>
 </div>
-<p id="note-en" class="event-note1"></p>
-    
-  </div>
+</div>
 
 </div>
 
-<!-- Buttons -->
-<div class="text-button-box">
-  <a href="history.html" class="icon-link" data-icon="📄">තොරතුරු / Information</a>
-  <a href="photo.html" class="icon-link" data-icon="📷">ඡායාරූප / Photos</a>
-  <a href="contact.html" class="icon-link" data-icon="🗺️">සිතියම / Maps</a>
-</div>
+<!-- ===== SCRIPT ===== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-<!-- Footer -->
-<footer>
-  <div class="footer-content">
-      © ව්‍යාපෘතිය: සුනිල් රණසිංහ <br>
-      සංකල්පය: ශාසන සුභ සාධන දේශ කීර්ති ශ්‍රී දේශබන්දු<br>
-      සම්පත් රණසිංහ<br>
-      දත්ත: ධනේශ් රණසිංහ
-  </div>
-</footer>
+  const curtain = document.getElementById("curtain");
+  const intro = document.getElementById("intro");
 
-<div class="safe-bottom"></div>
-  <!-- ✅ LOAD COMMON JS (REQUIRED) -->
+  // ⭐ Step 1: start curtain (while black screen still visible)
+  setTimeout(() => {
+    curtain.classList.add("open");
+  }, 2000);
 
+  // ⭐ Step 2: remove black AFTER curtain starts
+  setTimeout(() => {
+    intro.style.display = "none";
+  }, 2200);
 
-</body>
+  // ⭐ Step 3: enable scroll later
+  setTimeout(() => {
+    document.body.style.overflow = "auto";
+  }, 4000);
+
+});
+</script>
 </html>
