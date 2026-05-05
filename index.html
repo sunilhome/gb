@@ -218,6 +218,8 @@ body {
     </div>
   </a>
 
+	<audio id="welcomeAudio" src="welcome.mp3"></audio>
+
 <!-- SCRIPT (YOUR ORIGINAL LOGIC KEPT SAFE) -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -225,34 +227,43 @@ document.addEventListener("DOMContentLoaded", function () {
   const curtain = document.getElementById("curtain");
   const intro = document.getElementById("intro");
   const buddha = document.getElementById("buddha");
+  const audio = document.getElementById("welcomeAudio");
 
-  // 1️⃣ curtain open
-  setTimeout(() => {
-    curtain.classList.add("open");
-  }, 2000);
+  // ✅ WAIT FOR FIRST TAP
+  document.addEventListener("click", function () {
 
-  // 2️⃣ hide intro
-  setTimeout(() => {
-    intro.style.display = "none";
-  }, 2200);
+    // 🔊 play welcome voice
+    audio.volume = 0.7;
+    audio.play();
 
-  // 3️⃣ enable scroll
-  setTimeout(() => {
-    document.body.style.overflow = "auto";
-  }, 4000);
+    // 1️⃣ curtain open
+    setTimeout(() => {
+      curtain.classList.add("open");
+    }, 500);
 
-  // 4️⃣ slide image
-  setTimeout(() => {
-    buddha.classList.add("slide-down");
-  }, 4500);
+    // 2️⃣ hide intro
+    setTimeout(() => {
+      intro.style.display = "none";
+    }, 700);
 
-  // 5️⃣ remove elements AFTER animation finishes (IMPORTANT FIX)
-  setTimeout(() => {
-    curtain.style.display = "none";
-    buddha.style.display = "none";
-  }, 8000);
+    // 3️⃣ enable scroll
+    setTimeout(() => {
+      document.body.style.overflow = "auto";
+    }, 3000);
+
+    // 4️⃣ slide image
+    setTimeout(() => {
+      buddha.classList.add("slide-down");
+    }, 3500);
+
+    // 5️⃣ remove elements
+    setTimeout(() => {
+      curtain.style.display = "none";
+      buddha.style.display = "none";
+    }, 7500);
+
+  }, { once: true }); // VERY IMPORTANT
 
 });
-</script>
-</body>
+</script></body>
 </html>
