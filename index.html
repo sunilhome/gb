@@ -229,41 +229,46 @@ document.addEventListener("DOMContentLoaded", function () {
   const buddha = document.getElementById("buddha");
   const audio = document.getElementById("welcomeAudio");
 
-  // ✅ WAIT FOR FIRST TAP
   document.addEventListener("click", function () {
 
-    // 🔊 play welcome voice
+    // 🔒 KEEP PAGE LOCKED FIRST
+    document.body.style.overflow = "hidden";
+
+    // 🔊 play sound
     audio.volume = 0.7;
     audio.play();
 
-    // 1️⃣ curtain open
-    setTimeout(() => {
-      curtain.classList.add("open");
-    }, 500);
+    // 🎬 START CURTAIN ANIMATION
+    curtain.classList.add("open");
 
-    // 2️⃣ hide intro
+    // ⏳ DO NOT REMOVE INTRO IMMEDIATELY
+    setTimeout(() => {
+      intro.style.opacity = "0";
+    }, 200);
+
     setTimeout(() => {
       intro.style.display = "none";
-    }, 700);
+    }, 800);
 
-    // 3️⃣ enable scroll
-    setTimeout(() => {
-      document.body.style.overflow = "auto";
-    }, 3000);
-
-    // 4️⃣ slide image
+    // 🖼 SLIDE IMAGE
     setTimeout(() => {
       buddha.classList.add("slide-down");
-    }, 3500);
+    }, 4500);
 
-    // 5️⃣ remove elements
+    // 🔓 ENABLE CONTENT ONLY AFTER ANIMATION
+    setTimeout(() => {
+      document.body.style.overflow = "auto";
+    }, 5000);
+
+    // 🧹 CLEANUP
     setTimeout(() => {
       curtain.style.display = "none";
       buddha.style.display = "none";
-    }, 7500);
+    }, 8000);
 
-  }, { once: true }); // VERY IMPORTANT
+  }, { once: true });
 
 });
-</script></body>
+</script>
+</body>
 </html>
