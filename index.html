@@ -220,6 +220,13 @@ body {
 
 <!-- SCRIPT (YOUR ORIGINAL LOGIC KEPT SAFE) -->
 <script>
+buddha.addEventListener("transitionend", () => {
+  buddha.style.display = "none";
+  curtain.style.display = "none";
+});
+
+
+	
 document.addEventListener("DOMContentLoaded", function () {
 
   const curtain = document.getElementById("curtain");
