@@ -45,7 +45,14 @@ body {
 #buddha {
   pointer-events: none !important;
 }
+#intro {
+  pointer-events: all;
+  z-index: 999999;
+}
 
+body.intro-active a {
+  pointer-events: none;
+}
 /* ===== CURTAIN ===== */
 #curtain {
   position: fixed;
@@ -229,44 +236,49 @@ document.addEventListener("DOMContentLoaded", function () {
   const buddha = document.getElementById("buddha");
   const audio = document.getElementById("welcomeAudio");
 
-  document.addEventListener("click", function () {
+  // 🔒 LOCK PAGE ON START
+  document.body.classList.add("intro-active");
+  document.body.style.overflow = "hidden";
 
-    // 🔒 KEEP PAGE LOCKED FIRST
-    document.body.style.overflow = "hidden";
+  function startIntro() {
 
-    // 🔊 play sound
+    // prevent multiple triggers
+    document.removeEventListener("click", startIntro);
+
+    // 🔊 sound
     audio.volume = 0.7;
     audio.play();
 
-    // 🎬 START CURTAIN ANIMATION
+    // 🎬 curtain start
     curtain.classList.add("open");
 
-    // ⏳ DO NOT REMOVE INTRO IMMEDIATELY
-    setTimeout(() => {
-      intro.style.opacity = "0";
-    }, 200);
+    // hide intro slowly
+    intro.style.opacity = "0";
 
     setTimeout(() => {
       intro.style.display = "none";
-    }, 800);
+      document.body.classList.remove("intro-active");
+    }, 600);
 
-    // 🖼 SLIDE IMAGE
+    // 🖼 slide image
     setTimeout(() => {
       buddha.classList.add("slide-down");
     }, 4500);
 
-    // 🔓 ENABLE CONTENT ONLY AFTER ANIMATION
+    // 🔓 enable scroll ONLY after animation
     setTimeout(() => {
       document.body.style.overflow = "auto";
-    }, 5000);
+    }, 5200);
 
-    // 🧹 CLEANUP
+    // 🧹 cleanup
     setTimeout(() => {
       curtain.style.display = "none";
       buddha.style.display = "none";
     }, 8000);
+  }
 
-  }, { once: true });
+  // ONLY intro can trigger
+  document.addEventListener("click", startIntro);
 
 });
 </script>
