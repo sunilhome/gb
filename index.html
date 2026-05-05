@@ -1,255 +1,99 @@
 <!DOCTYPE html>
-<html lang="si">
+<html lang="si-LK">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Title and SEO (dynamic) -->
 <title>Temple Page</title>
+<meta name="description" id="metaDescription" content="">
 
-<link rel="stylesheet" href="provinces/dis_style.css">
+<!-- Open Graph -->
+<meta property="og:title" id="ogTitle" content="">
+<meta property="og:description" id="ogDesc" content="">
+<meta property="og:url" id="ogURL" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" id="ogImg" content="">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
-<style>
+<!-- Canonical -->
+<link rel="canonical" id="canonicalLink" href="">
 
-/* ===== BODY ===== */
-body {
-  margin: 0;
-  overflow: hidden;
-}
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Buddhist Temple Sri Lanka">
+<meta name="twitter:description" content="Sri Lanka Buddhist temple information">
+<meta name="twitter:image" id="twitterImg" content="">
 
-/* ===== INTRO ===== */
-#intro {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: black;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 11000;
-  text-align: center;
-}
-	#intro div:first-child {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-#intro div:last-child {
-  font-size: 22px;
-  color: gold;
-}
-#intro,
-#curtain,
-#curtain .panel,
-#buddha {
-  pointer-events: none !important;
-}
-
-/* ===== CURTAIN ===== */
-#curtain {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  z-index: 10000;
-}
-
-.panel {
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  background: black;
-  transition: transform 2s ease-in-out;
-}
-
-.left { left: 0; }
-.right { right: 0; }
-
-#curtain .left { transform: translateX(0); }
-#curtain .right { transform: translateX(0); }
-
-#curtain.open .left {
-  transform: translateX(-100%);
-}
-
-#curtain.open .right {
-  transform: translateX(100%);
-}
-
-/* ===== BUDDHA ===== */
-#buddha {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 5000;
-  transition: transform 3s ease-in-out;
-}
-#buddha {
-  pointer-events: none;
-}
-/* slide */
-#buddha.slide-down {
-  transform: translateY(100%);
-}
-
-/* ===== PROVINCES FIX ===== */
-.box {
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-</style>
-
+<!-- CSS -->
+<link rel="stylesheet" href="/provinces/new-style.css">
+  <script src="/provinces/common.js" defer></script>
 </head>
-
 <body>
 
-<!-- INTRO -->
-<div id="intro">
-  <div>veheravihara.lk</div>
-  <div>ඔබ සාදරයෙන් පිළිගනිමු</div>
-</div>
-
-<!-- CURTAIN -->
-<div id="curtain">
-  <div class="panel left"></div>
-  <div class="panel right"></div>
-</div>
-
-<!-- IMAGE -->
-<img id="buddha" src="a.webp">
-
-<!-- MAIN CONTENT -->
+<!-- Top fixed band -->
 <div class="top-band">
-  <span class="top-band-text">veheravihara.lk</span>
+  <a href="javascript:history.back()" class="top-icon">&#8592;</a>
+  <a href="/index.html" class="top-icon">&#127969;</a>
+  <a href="tel:+94766178102" class="top-icon">&#128222;</a>
+  <a href="contact.html" class="top-icon">&#128233;</a>
 </div>
 
+<!-- Main content -->
 <div class="content">
 
-<div class="sub-band">
-  <img src="provinces/1.png" class="sub-band-icon">
-
-  <div class="sub-band-text1">
-    <p>ශ්‍රී ලංකාවේ බෞද්ධ සිද්ධස්ථාන</p>
+  <div class="sub-band">
+     <img src="/provinces/1.png" class="sub-band-icon" alt="Buddhist temple icon">
+    
+    <div class="sub-band-text">
+      <p id="templeSI"></p>
+    </div>
+    <div class="sub-band-text1">
+      <p id="templeEN"></p>
+    </div>
   </div>
 
-  <div class="sub-band-text en-text">
-    <p>Buddhist Temples In Sri Lanka</p>
+  <!-- Slideshow only on index.html -->
+  <div class="slideshow">
+    <img id="slideImg" src="a.webp" alt="Buddhist temple Sri Lanka">
   </div>
+
+  <img src="x.webp" class="small-image" alt="chief thero image">
+
+  <div class="event-box">
+    <div class="event-text">
+      <h2>විහාරාධිපති</h2>
+     
+<p id="abbot-info"></p>
+<p id="note-si" class="event-note"></p>
+</div>
+<p id="note-en" class="event-note1"></p>
+    
+  </div>
+
 </div>
 
+<!-- Buttons -->
+<div class="text-button-box">
+  <a href="history.html" class="icon-link" data-icon="📄">තොරතුරු / Information</a>
+  <a href="photo.html" class="icon-link" data-icon="📷">ඡායාරූප / Photos</a>
+  <a href="contact.html" class="icon-link" data-icon="🗺️">සිතියම / Maps</a>
 </div>
 
-<!-- PROVINCES
-<div class="box">
-  <a href="provinces/basnahira/" class="title-link">
-    <div class="title-box1">
-      <h2>බස්නාහිර පළාත</h2>
-	       <h2>Western Province</h2>
- 
-    </div>
-  </a>
-</div> -->
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+      © ව්‍යාපෘතිය: සුනිල් රණසිංහ <br>
+      සංකල්පය: ශාසන සුභ සාධන දේශ කීර්ති ශ්‍රී දේශබන්දු<br>
+      සම්පත් රණසිංහ<br>
+      දත්ත: ධනේශ් රණසිංහ
+  </div>
+</footer>
 
+<div class="safe-bottom"></div>
+  <!-- ✅ LOAD COMMON JS (REQUIRED) -->
 
-  <a href="provinces/basnahira/index.html" class="title-link">
-    <div class="box">
-      <h2>බස්නාහිර පළාත</h2>
-      <h3>Western Province</h3>
-    </div>
-  </a>
-
-  <a href="provinces/dakunu/index.html" class="title-link">
-    <div class="box">
-      <h2>දකුණු පළාත</h2>
-      <h3>Southern Province</h3>
-    </div>
-  </a>
-	
-  <a href="provinces/meda/index.html" class="title-link">
-    <div class="box">
-      <h2>මධ්‍යම පළාත</h2>
-      <h3>Central Province</h3>
-    </div>
-  </a>
-  
-  <a href="provinces/uthurumeda/index.html" class="title-link">
-    <div class="box">
-      <h2>උතුරු මැද පළාත</h2>
-      <h3>North Central Province</h3>
-    </div>
-  </a>
-
-  <a href="provinces/sabaragamuwa/index.html" class="title-link">
-    <div class="box">
-      <h2>සබරගමුව පළාත</h2>
-      <h3>Sabaragamuwa Province</h3>
-    </div>
-  </a>
-
-  <a href="provinces/uva/index.html" class="title-link">
-    <div class="box">
-      <h2>ඌව පළාත</h2>
-      <h3>Uva Province</h3>
-    </div>
-  </a>
-
-  <a href="provinces/wayaba/index.html" class="title-link">
-    <div class="box">
-      <h2>වයඹ පළාත</h2>
-      <h3>North Western Province</h3>
-    </div>
-  </a>
-	
-	  <a href="provinces/negenahira/index.html" class="title-link">
-    <div class="box">
-      <h2>නැගෙනහිර පළාත</h2>
-      <h3>Eastern Province</h3>
-    </div>
-  </a>
-
-<a href="provinces/uthura/index.html" class="title-link">
-    <div class="box">
-      <h2>උතුරු පළාත</h2>
-      <h3>Northern Province</h3>
-    </div>
-  </a>
-
-<!-- SCRIPT (YOUR ORIGINAL LOGIC KEPT SAFE) -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const curtain = document.getElementById("curtain");
-  const intro = document.getElementById("intro");
-  const buddha = document.getElementById("buddha");
-
-  setTimeout(() => {
-    curtain.classList.add("open");
-  }, 2000);
-
-  setTimeout(() => {
-    intro.style.display = "none";
-  }, 2200);
-
-  setTimeout(() => {
-    document.body.style.overflow = "auto";
-  }, 4000);
-
-  setTimeout(() => {
-    buddha.classList.add("slide-down");
-  }, 4500);
-
-  // ✅ ADD THIS PART (CRITICAL)
-  setTimeout(() => {
-    curtain.style.display = "none";
-    buddha.style.display = "none";
-  }, 6000);
-
-});
-</script>
 
 </body>
 </html>
