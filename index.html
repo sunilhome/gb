@@ -220,43 +220,39 @@ body {
 
 <!-- SCRIPT (YOUR ORIGINAL LOGIC KEPT SAFE) -->
 <script>
-buddha.addEventListener("transitionend", () => {
-  buddha.style.display = "none";
-  curtain.style.display = "none";
-});
-
-
-	
 document.addEventListener("DOMContentLoaded", function () {
 
   const curtain = document.getElementById("curtain");
   const intro = document.getElementById("intro");
   const buddha = document.getElementById("buddha");
 
+  // 1️⃣ curtain open
   setTimeout(() => {
     curtain.classList.add("open");
   }, 2000);
 
+  // 2️⃣ hide intro
   setTimeout(() => {
     intro.style.display = "none";
   }, 2200);
 
+  // 3️⃣ enable scroll
   setTimeout(() => {
     document.body.style.overflow = "auto";
   }, 4000);
 
+  // 4️⃣ slide image
   setTimeout(() => {
     buddha.classList.add("slide-down");
   }, 4500);
 
-  // ✅ ADD THIS PART (CRITICAL)
+  // 5️⃣ remove elements AFTER animation finishes (IMPORTANT FIX)
   setTimeout(() => {
     curtain.style.display = "none";
     buddha.style.display = "none";
-  }, 6000);
+  }, 8000);
 
 });
 </script>
-
 </body>
 </html>
