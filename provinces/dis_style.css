@@ -232,7 +232,7 @@ main.content {
 .box {
   background: black;
   padding:  8px 0;
-  margin-bottom: 15px;   /* 🔑 this removes black lines */
+  margin-bottom: 25px;   /* 🔑 this removes black lines */
 }
 .grid {
     display: flex;
@@ -352,7 +352,7 @@ footer {
 .title-box1::before {
   content: "●";
   position: absolute;
-  left: 10px;
+  left: 20px;
   top: 14px;            /* aligns with first (Sinhala) line */
   font-size: 28px;
   color: blue;
