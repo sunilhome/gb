@@ -341,7 +341,7 @@ footer {
 							
 .title-box1 {
   position: relative;
-  padding-left: 30px;   /* creates space between dot and text */
+  padding-left: 45px;   /* creates space between dot and text */
 }
 
 .title-box1::before {
