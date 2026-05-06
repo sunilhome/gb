@@ -232,7 +232,7 @@ main.content {
 .box {
   background: black;
   padding:  8px 0;
-  margin-bottom: 25px;   /* 🔑 this removes black lines */
+  margin-bottom: 45px;   /* 🔑 this removes black lines */
 }
 .grid {
     display: flex;
@@ -339,24 +339,20 @@ footer {
                             }
 							
 .title-box1 {
-    width: 95%;
-    margin-top: 10px;
-    align-self: flex-start;
-    text-align: left;
-    padding-left: 28px;
-   background: black; 
-   position: relative;  /* needed for ::before */
-
+  position: relative;
+  padding-left: 60px;   /* creates space between dot and text */
 }
 
 .title-box1::before {
   content: "●";
   position: absolute;
   left: 20px;
-  top: 14px;            /* aligns with first (Sinhala) line */
+  top: 6px;             /* fine-tuned for first Sinhala line */
   font-size: 28px;
   color: blue;
+  line-height: 1;       /* important for precise alignment */
 }
+
 .title-box1 h2 {
   font-size: 20px;
   line-height: 24px;
