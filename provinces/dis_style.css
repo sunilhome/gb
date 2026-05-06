@@ -233,7 +233,7 @@ main.content {
   background: black;
   padding:  8px 0;
   margin-bottom: 45px;   /* 🔑 this removes black lines */
-	gap: 25px;
+	gap: 20px;
 }
 .grid {
     display: flex;
