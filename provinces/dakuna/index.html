@@ -1,104 +1,54 @@
-     <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="si">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Temple Page</title>
-<meta name="description" id="metaDescription" content="">
+<title>බස්නාහිර පළාත | Western Province</title>
 
-<link rel="stylesheet" href="../dis_style.css">
+<link rel="stylesheet" href="../../provinces/new-style.css">
 
 </head>
+
 <body>
 
-    <!-- ------------------------------------top fixed band ------------------------------------------>
+<!-- 🔵 TOP BAR -->
 <div class="top-band">
-  <span class="top-band-text">veheravihara.lk</span>
+  <a href="../../index.html" class="top-icon">&#8592;</a>
+  <span>බස්නාහිර පළාත</span>
 </div>
 
+<!-- 🔶 DISTRICT LIST -->
+<div class="container">
 
+  <div class="box">
+    <a href="colombo/" class="title-link">
+      <div class="title-box1">
+        <h2>කොළඹ දිස්ත්‍රික්කය</h2>
+        <h2>Colombo District</h2>
+      </div>
+    </a>
+  </div>
 
-  <!-- content -->
-  <div class="content">
+  <div class="box">
+    <a href="gampaha/" class="title-link">
+      <div class="title-box1">
+        <h2>ගම්පහ දිස්ත්‍රික්කය</h2>
+        <h2>Gampaha District</h2>
+      </div>
+    </a>
+  </div>
 
-    <!-- full-width sub-band inside content -->
-<div class="sub-band">
-  <!-- icon centered on top -->
-  <img src="1.png" class="sub-band-icon" alt="Icon">
-
-  <!-- Sinhala text below icon -->
-<div class="sub-band-text">
-  <p class="si-text">දකුණු පළාතේ බෞද්ධ සිද්ධස්ථාන</p>
-  <p class="en-text1">Buddhist Temples In Southern Province</p>
-</div>
-</div>  
-</div>
-
-  <!-- 🔹 MAIN CONTENT -->
-  <main class="content">
-
-    <!-- 🔹 TEMPLE LIST -->
-    <div id="templeGrid" class="temple-grid"></div>
-
-    <!-- Back Button -->
-    <button onclick="history.back()" class="back-button">පෙර පිටුවට</button>
-
-  </main>
-
-  <!-- 🔹 FOOTER -->
-  <footer>
-    <div class="footer-content">
-      © ව්‍යාපෘතිය: සුනිල් රණසිංහ <br>
-      සංකල්පය: දේශ කීර්ති ශ්‍රී දේශබන්දු<br>
-      සම්පත් රණසිංහ<br>
-      දත්ත: ධනේශ් රණසිංහ
-    </div>
-  </footer>
+  <div class="box">
+    <a href="kalutara/" class="title-link">
+      <div class="title-box1">
+        <h2>කළුතර දිස්ත්‍රික්කය</h2>
+        <h2>Kalutara District</h2>
+      </div>
+    </a>
+  </div>
 
 </div>
-<script>
-fetch("temples.txt")
-.then(response => response.text())
-.then(data => {
-    const grid = document.getElementById("templeGrid");
 
-    data.trim().split("\n").forEach(line => {
-const parts = line.split("|");
-if (parts.length !== 3) return;
-
-const folder = parts[0].trim();
-const siName = parts[1].trim();
-const enName = parts[2].trim();
-
-        // Create box
-        const box = document.createElement("div");
-        box.className = "box";
-
-const a = document.createElement("a");
-a.href = "../../" + folder + "/";
-a.className = "title-link";
-
-        // Create title box for styling
-        const titleBox = document.createElement("div");
-        titleBox.className = "title-box2";
-
-        // Temple name text
-const si = document.createElement("p");
-si.className = "temple-si";
-si.textContent = siName;
-
-const en = document.createElement("p");
-en.className = "temple-en";
-en.textContent = enName;
-
-titleBox.appendChild(si);
-titleBox.appendChild(en);
-        a.appendChild(titleBox);
-        box.appendChild(a);
-        grid.appendChild(box);
-    });
-});
-</script>
 </body>
 </html>
