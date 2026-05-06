@@ -232,8 +232,8 @@ main.content {
 .box {
   background: black;
   padding:  8px 0;
-  margin-bottom: 45px;   /* 🔑 this removes black lines */
-	gap: 10px;
+  margin-bottom: 25px;   /* 🔑 this removes black lines */
+	
 }
 .grid {
     display: flex;
