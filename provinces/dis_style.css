@@ -233,6 +233,7 @@ main.content {
   background: black;
   padding:  8px 0;
   margin-bottom: 45px;   /* 🔑 this removes black lines */
+	gap: 15px;
 }
 .grid {
     display: flex;
@@ -340,7 +341,7 @@ footer {
 							
 .title-box1 {
   position: relative;
-  padding-left: 60px;   /* creates space between dot and text */
+  padding-left: 30px;   /* creates space between dot and text */
 }
 
 .title-box1::before {
