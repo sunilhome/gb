@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Temple Page</title>
+
+<link rel="stylesheet" href="provinces/dis_style.css">
+
+<style>
+
+/* ===== BODY ===== */
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* ===== INTRO ===== */
+#intro {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 11000;
+  text-align: center;
+}
+#intro div:first-child {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+#intro div:last-child {
+  font-size: 22px;
+  color: gold;
+}
+
+/* ===== CURTAIN ===== */
+#curtain {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 10000;
+}
+
+.panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: black;
+  transition: transform 2s ease-in-out;
+}
+
+.left { left: 0; }
+.right { right: 0; }
+
+#curtain .left { transform: translateX(0); }
+#curtain .right { transform: translateX(0); }
+
+#curtain.open .left {
+  transform: translateX(-100%);
+}
+
+#curtain.open .right {
+  transform: translateX(100%);
+}
+
+/* ===== BUDDHA ===== */
+#buddha {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 5000;
+  transition: transform 3s ease-in-out;
+}
+
+/* slide */
+#buddha.slide-down {
+  transform: translateY(100%);
+}
+
+/* ===== PROVINCES FIX ===== */
+.box {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div id="intro">
+  <div>veheravihara.lk</div>
+  <div>ඔබ සාදරයෙන් පිළිගනිමු</div>
+</div>
+
+<!-- CURTAIN -->
+<div id="curtain">
+  <div class="panel left"></div>
+  <div class="panel right"></div>
+</div>
+
+<!-- IMAGE -->
+<img id="buddha" src="a.webp">
+
+<!-- MAIN CONTENT -->
+<div class="top-band">
+  <span class="top-band-text">veheravihara.lk</span>
+</div>
+
+<div class="content">
+
+<div class="sub-band">
+  <img src="provinces/1.png" class="sub-band-icon">
+
+  <div class="sub-band-text1">
+    <p>ශ්‍රී ලංකාවේ බෞද්ධ සිද්ධස්ථාන</p>
+  </div>
+
+  <div class="sub-band-text en-text">
+    <p>Buddhist Temples In Sri Lanka</p>
+  </div>
+</div>
+
+</div>
+
+<!-- PROVINCES -->
+<div class="box">Western Province</div>
+<div class="box">Southern Province</div>
+<div class="box">Central Province</div>
+
+<!-- SCRIPT (YOUR ORIGINAL LOGIC KEPT SAFE) -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const curtain = document.getElementById("curtain");
+  const intro = document.getElementById("intro");
+  const buddha = document.getElementById("buddha");
+
+  // 1️⃣ curtain open
+  setTimeout(() => {
+    curtain.classList.add("open");
+  }, 2000);
+
+  // 2️⃣ hide intro
+  setTimeout(() => {
+    intro.style.display = "none";
+  }, 2200);
+
+  // 3️⃣ allow scroll later
+  setTimeout(() => {
+    document.body.style.overflow = "auto";
+  }, 4000);
+
+  // 4️⃣ slide image
+  setTimeout(() => {
+    buddha.classList.add("slide-down");
+  }, 4500);
+
+});
+</script>
+
+</body>
+</html>
