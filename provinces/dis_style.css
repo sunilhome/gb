@@ -311,7 +311,22 @@ footer {
 .district:hover::before {
     background: #084298;
 }
+/* 🔽 Page enter animation */
+.page-slide-up {
+  position: relative;
+  animation: slideUp 0.5s ease-out;
+}
 
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 700px) {
