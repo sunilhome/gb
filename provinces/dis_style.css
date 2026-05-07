@@ -314,7 +314,8 @@ footer {
 /* 🔽 Page enter animation */
 .page-slide-up {
   position: relative;
-  animation: slideUp 0.5s ease-out;
+/*  animation: slideUp 0.5s ease-out;  */
+	animation: slideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @keyframes slideUp {
