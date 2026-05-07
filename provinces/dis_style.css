@@ -146,7 +146,7 @@ main.content {
 }
 .page-2 .title-box1 {
   position: relative;
-  padding-left: 28px;   /* space for single dot */
+  padding-left: 55px;   /* space for single dot */
 }
 
 .page-2 .title-box1::before {
@@ -157,6 +157,8 @@ main.content {
   font-size: 28px;
   color: blue;
 }
+
+
 .page-2 .title-box1 h2 {
   margin: 2px 0;
   line-height: 24px;
