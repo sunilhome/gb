@@ -14,7 +14,8 @@ html, body {
 body {
   background-image: url("white.jpg");
   padding-top: var(--top-band-h);
-  animation: slideUp 1.8s ease-out;
+  /*animation: slideUp 1.8s ease-out;*/
+  animation: slideUp 1.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* ===== SAFE BOTTOM AREA ===== */
