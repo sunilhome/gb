@@ -153,8 +153,8 @@ body.intro-active a {
 <!-- PROVINCES -->
 
 <div class="box">
-  <a href="provinces/basnahira/" class="title-link">
-    <div class="title-box1">
+	<a href="provinces/basnahira/" class="title-link" onclick="playBasnahira()">
+     <div class="title-box1">
       <h2>බස්නාහිර පළාත</h2>
 	       <h2>Western Province</h2>
      </div>
@@ -237,6 +237,7 @@ body.intro-active a {
     </div>
   </a>
 </div>
+	
   <footer>
     <div class="footer-content">
       © ව්‍යාපෘතිය: සුනිල් රණසිංහ <br>
@@ -246,7 +247,7 @@ body.intro-active a {
     </div>
   </footer>
 	<audio id="welcomeAudio" src="welcome.mp3"></audio>
-
+<audio id="basnahiraSound" src="basnahira.mp3"></audio>
 <!-- SCRIPT (YOUR ORIGINAL LOGIC KEPT SAFE) -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -301,6 +302,12 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("click", startIntro);
 
 });
+</script>
+	<script>
+function playBasnahira() {
+  const audio = document.getElementById("basnahiraSound");
+  audio.play();
+}
 </script>
 </body>
 </html>
