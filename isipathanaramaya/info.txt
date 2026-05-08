@@ -1,10 +1,10 @@
-name_si= නාවින්න ඉසිපතනාරමය, මහරගම
+name_si= නාවින්න ඉසිපතනාරාමය, මහරගම
 name_en=Nawinna Isipathanaramaya
 
 district_si=කොළඹ
 district_en=Colombo
 
-address_si=ඉසිපතනාරමය, නාවින්න මහරගම
+address_si=ඉසිපතනාරාමය, නාවින්න මහරගම
 telephone=+94 
 
 email=
