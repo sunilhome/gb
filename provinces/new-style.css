@@ -442,7 +442,7 @@ footer {
   }
 }
 /* 🌟 SLIDE FROM BOTTOM */
-.page {
+body {
   animation: slideUp 0.6s ease;
 }
 
