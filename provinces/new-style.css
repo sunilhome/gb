@@ -443,7 +443,9 @@ footer {
 }
 /* 🌟 SLIDE FROM BOTTOM */
 body {
-  animation: slideUp 0.6s ease;
+ 
+  animation: slideUp 1.2s ease-out;
+
 }
 
 @keyframes slideUp {
