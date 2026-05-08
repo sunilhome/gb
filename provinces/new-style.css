@@ -442,7 +442,103 @@ footer {
   }
 }
 
+/*----------------------------------------------------------*/
+/* 🌟 PAGE FADE */
+body {
+  animation: pageFade 1s ease;
+}
 
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌟 SUB BAND (Temple Name) */
+.sub-band {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* 🌟 SLIDESHOW ZOOM */
+.slideshow {
+  overflow: hidden;
+}
+
+.slideshow img {
+  width: 100%;
+  animation: zoomSlow 8s ease forwards;
+}
+
+@keyframes zoomSlow {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+/* 🌟 SMALL IMAGE (ABBOT) */
+.small-image {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 1s;
+}
+
+/* 🌟 EVENT BOX */
+.event-box {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+/* 🌟 BUTTONS */
+.text-button-box {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 2s;
+}
+
+.icon-link {
+  transition: all 0.3s ease;
+}
+
+.icon-link:hover {
+  transform: scale(1.05);
+  background: #fff3d6;
+  box-shadow: 0 0 10px rgba(255, 200, 0, 0.6);
+}
+
+/* 🌟 FOOTER */
+footer {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 2.5s;
+}
+
+/* 🌟 COMMON ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌟 GOLDEN TOUCH */
+.event-box h2 {
+  color: #b8860b;
+}
+
+body {
+  background: #fffaf3;
+}
 
 
 
