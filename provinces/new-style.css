@@ -441,7 +441,21 @@ footer {
     text-align: center;
   }
 }
+/* 🌟 SLIDE FROM BOTTOM */
+.page {
+  animation: slideUp 0.6s ease;
+}
 
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 
 
