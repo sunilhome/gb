@@ -1,5 +1,5 @@
-name_si=ඉසිපතනාරමය, නාවින්න මහරගම
-name_en=Isipathanaramaya
+name_si= නාවින්න ඉසිපතනාරමය, මහරගම
+name_en=Nawinna Isipathanaramaya
 
 district_si=කොළඹ
 district_en=Colombo
