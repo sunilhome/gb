@@ -146,7 +146,7 @@ main.content {
 }
 .page-2 .title-box1 {
   position: relative;
-  padding-left: 25px;   /* space for single dot */
+  padding-left: 35px;   /* space for single dot */
 }
 
 .page-2 .title-box1::before {
