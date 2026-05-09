@@ -253,28 +253,39 @@ body.intro-active a {
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
+  /* =========================
+     INTRO SYSTEM (CURTAIN + BUDDHA)
+  ========================= */
+
   const curtain = document.getElementById("curtain");
   const intro = document.getElementById("intro");
   const buddha = document.getElementById("buddha");
   const audio = document.getElementById("welcomeAudio");
 
-  // 🔒 LOCK PAGE ON START
+  let introDone = false;
+
+  // lock scroll at start
   document.body.classList.add("intro-active");
   document.body.style.overflow = "hidden";
 
   function startIntro() {
 
-    // prevent multiple triggers
+    if (introDone) return;
+    introDone = true;
+
+    // remove listener so it runs only once
     document.removeEventListener("click", startIntro);
 
-    // 🔊 sound
-    audio.volume = 0.7;
-    audio.play();
+    // 🔊 play welcome sound
+    if (audio) {
+      audio.volume = 0.7;
+      audio.play().catch(() => {});
+    }
 
-    // 🎬 curtain start
+    // 🎬 curtain open
     curtain.classList.add("open");
 
-    // hide intro slowly
+    // fade intro
     intro.style.opacity = "0";
 
     setTimeout(() => {
@@ -282,71 +293,49 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.classList.remove("intro-active");
     }, 600);
 
-    // 🖼 slide image
+    // 🖼 Buddha slide
     setTimeout(() => {
       buddha.classList.add("slide-down");
     }, 4500);
 
-    // 🔓 enable scroll ONLY after animation
+    // unlock scroll after animation
     setTimeout(() => {
       document.body.style.overflow = "auto";
     }, 5200);
 
-    // 🧹 cleanup
+    // cleanup
     setTimeout(() => {
       curtain.style.display = "none";
       buddha.style.display = "none";
     }, 8000);
   }
 
-  // ONLY intro can trigger
   document.addEventListener("click", startIntro);
 
-});
-</script>
-<script>
-function playBasnahira(e) {
 
-  e.preventDefault(); // 🚫 stop link
+  /* =========================
+     BASNAHIRA CLICK SOUND SYSTEM
+  ========================= */
 
-  const audio = new Audio("provinces/basnahira/basnahira.mp3");
+  const basnahiraLink = document.getElementById("basnahiraLink");
 
-  audio.play();
+  if (basnahiraLink) {
+    basnahiraLink.addEventListener("click", function (e) {
 
-  // 👉 after sound finishes → go to page
-  audio.onended = function () {
-    window.location.href = "provinces/basnahira/index.html";
-  };
+      e.preventDefault();
 
-  return false;
-}
-</script>
-	<script>
-document.addEventListener("DOMContentLoaded", function () {
+      const audio = new Audio("provinces/basnahira/basnahira.mp3");
 
-  const link = document.getElementById("basnahiraLink");
+      audio.play();
 
-  link.addEventListener("click", function (e) {
+      audio.onended = function () {
+        window.location.href = basnahiraLink.href;
+      };
 
-    e.preventDefault(); // stop navigation
-
-    const audio = new Audio("provinces/basnahira/basnahira.mp3");
-
-    audio.play();
-
-    audio.onended = function () {
-      window.location.href = link.href;
-    };
-
-  });
+    });
+  }
 
 });
-</script>
-	<script>
-function playBasnahira() {
-  const audio = document.getElementById("basnahiraSound");
-  audio.play();
-}
 </script>
 </body>
 </html>
