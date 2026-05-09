@@ -303,30 +303,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
-	<script>
+<script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  let isAnimating = false; // 🔒 lock variable
+  let isAnimating = false;
 
-  const intro = document.getElementById("intro");
-  const curtain = document.getElementById("curtain");
+  document.addEventListener("click", function (e) {
 
-  intro.addEventListener("click", function () {
+    if (isAnimating) {
+      e.stopPropagation(); // 🚫 stop other clicks
+      e.preventDefault();
+      return;
+    }
 
-    // 🚫 If already running, ignore touch
-    if (isAnimating) return;
-
-    // 🔒 lock
     isAnimating = true;
 
-    // 👉 start curtain animation
+    const curtain = document.getElementById("curtain");
     curtain.classList.add("open");
-
-    // ⏳ wait until animation ends (adjust time to your CSS)
-    setTimeout(() => {
-      // you can unlock later if needed
-      // isAnimating = false;
-    }, 3000); // match your animation duration
 
   });
 
