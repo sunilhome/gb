@@ -308,18 +308,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let isAnimating = false;
 
-  document.addEventListener("click", function (e) {
+  const curtain = document.getElementById("curtain");
+  const intro = document.getElementById("intro");
 
-    if (isAnimating) {
-      e.stopPropagation(); // 🚫 stop other clicks
-      e.preventDefault();
-      return;
-    }
+  // 👉 INTRO CLICK
+  intro.addEventListener("click", function () {
+
+    if (isAnimating) return;
 
     isAnimating = true;
 
-    const curtain = document.getElementById("curtain");
     curtain.classList.add("open");
+
+    // ⏳ After animation finishes → unlock
+    setTimeout(() => {
+      isAnimating = false; // 🔓 unlock
+    }, 3000); // match your animation time
 
   });
 
