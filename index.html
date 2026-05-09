@@ -15,9 +15,7 @@ body {
   margin: 0;
   overflow: hidden;
 }
-body.anim-lock {
-  pointer-events: none !important;
-}
+
 /* ===== INTRO ===== */
 #intro {
   position: fixed;
@@ -319,24 +317,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const link = document.getElementById("basnahiraLink");
 
-  if (!link) return;
-
-  let locked = false;
-
   link.addEventListener("click", function (e) {
 
-    e.preventDefault();
-
-    // 🚫 prevent double click
-    if (locked) return;
-    locked = true;
+    e.preventDefault(); // stop navigation
 
     const audio = new Audio("provinces/basnahira/basnahira.mp3");
 
-    audio.play().catch(() => {
-      // if autoplay blocked → still go after short delay
-      window.location.href = link.href;
-    });
+    audio.play();
 
     audio.onended = function () {
       window.location.href = link.href;
