@@ -15,7 +15,9 @@ body {
   margin: 0;
   overflow: hidden;
 }
-
+body.anim-lock {
+  pointer-events: none !important;
+}
 /* ===== INTRO ===== */
 #intro {
   position: fixed;
@@ -253,10 +255,6 @@ body.intro-active a {
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* =========================
-     INTRO SYSTEM (CURTAIN + BUDDHA)
-  ========================= */
-
   const curtain = document.getElementById("curtain");
   const intro = document.getElementById("intro");
   const buddha = document.getElementById("buddha");
@@ -264,7 +262,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let introDone = false;
 
-  // lock scroll at start
   document.body.classList.add("intro-active");
   document.body.style.overflow = "hidden";
 
@@ -273,19 +270,20 @@ document.addEventListener("DOMContentLoaded", function () {
     if (introDone) return;
     introDone = true;
 
-    // remove listener so it runs only once
+    // 🚫 HARD LOCK ALL CLICKS (IMPORTANT FIX)
+    document.body.classList.add("anim-lock");
+
     document.removeEventListener("click", startIntro);
 
-    // 🔊 play welcome sound
+    // 🔊 sound
     if (audio) {
       audio.volume = 0.7;
       audio.play().catch(() => {});
     }
 
-    // 🎬 curtain open
+    // 🎬 curtain
     curtain.classList.add("open");
 
-    // fade intro
     intro.style.opacity = "0";
 
     setTimeout(() => {
@@ -298,8 +296,9 @@ document.addEventListener("DOMContentLoaded", function () {
       buddha.classList.add("slide-down");
     }, 4500);
 
-    // unlock scroll after animation
+    // 🔓 unlock ONLY AFTER everything finishes
     setTimeout(() => {
+      document.body.classList.remove("anim-lock");
       document.body.style.overflow = "auto";
     }, 5200);
 
@@ -311,29 +310,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   document.addEventListener("click", startIntro);
-
-
-  /* =========================
-     BASNAHIRA CLICK SOUND SYSTEM
-  ========================= */
-
-  const basnahiraLink = document.getElementById("basnahiraLink");
-
-  if (basnahiraLink) {
-    basnahiraLink.addEventListener("click", function (e) {
-
-      e.preventDefault();
-
-      const audio = new Audio("provinces/basnahira/basnahira.mp3");
-
-      audio.play();
-
-      audio.onended = function () {
-        window.location.href = basnahiraLink.href;
-      };
-
-    });
-  }
 
 });
 </script>
