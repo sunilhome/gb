@@ -304,6 +304,35 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 	<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  let isAnimating = false; // 🔒 lock variable
+
+  const intro = document.getElementById("intro");
+  const curtain = document.getElementById("curtain");
+
+  intro.addEventListener("click", function () {
+
+    // 🚫 If already running, ignore touch
+    if (isAnimating) return;
+
+    // 🔒 lock
+    isAnimating = true;
+
+    // 👉 start curtain animation
+    curtain.classList.add("open");
+
+    // ⏳ wait until animation ends (adjust time to your CSS)
+    setTimeout(() => {
+      // you can unlock later if needed
+      // isAnimating = false;
+    }, 3000); // match your animation duration
+
+  });
+
+});
+</script>
+	<script>
 function playBasnahira() {
   const audio = document.getElementById("basnahiraSound");
   audio.play();
