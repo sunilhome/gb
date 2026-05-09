@@ -258,80 +258,89 @@ document.addEventListener("DOMContentLoaded", function () {
   const buddha = document.getElementById("buddha");
   const audio = document.getElementById("welcomeAudio");
 
-  let introDone = false;
+  const basnahiraLink = document.getElementById("basnahiraLink");
 
-  document.body.classList.add("intro-active");
-  document.body.style.overflow = "hidden";
+  let phase = "intro"; // intro → anim → ready
+
+  // 🔒 start locked
+  document.body.classList.add("locked");
 
   /* =========================
-     INTRO SYSTEM
+     PHASE 1 + 2: INTRO SYSTEM
   ========================= */
 
   function startIntro() {
 
-    if (introDone) return;
-    introDone = true;
+    if (phase !== "intro") return;
+
+    phase = "anim";
 
     document.removeEventListener("click", startIntro);
 
-    // 🔊 sound
+    // sound
     if (audio) {
       audio.volume = 0.7;
       audio.play().catch(() => {});
     }
 
-    // 🎬 curtain
+    // curtain open
     curtain.classList.add("open");
 
     intro.style.opacity = "0";
 
     setTimeout(() => {
       intro.style.display = "none";
-      document.body.classList.remove("intro-active");
     }, 600);
 
-    // 🖼 Buddha slide
+    // buddha slide
     setTimeout(() => {
       buddha.classList.add("slide-down");
-    }, 4500);
+    }, 2500);
 
-    // 🔓 unlock
+    // unlock AFTER animation complete
     setTimeout(() => {
-      document.body.style.overflow = "auto";
-    }, 5200);
+      phase = "ready";
+      document.body.classList.remove("locked");
+      document.body.classList.add("ready");
 
-    setTimeout(() => {
       curtain.style.display = "none";
       buddha.style.display = "none";
-    }, 8000);
+
+    }, 5000);
   }
 
   document.addEventListener("click", startIntro);
 
 
   /* =========================
-     BASNAHIRA AUDIO → THEN NAVIGATE
+     PHASE 4: BASNAHIRA CLICK
   ========================= */
-<script>
-document.addEventListener("DOMContentLoaded", function () {
 
-  const link = document.getElementById("basnahiraLink");
+  if (basnahiraLink) {
 
-  link.addEventListener("click", function (e) {
+    basnahiraLink.addEventListener("click", function (e) {
 
-    e.preventDefault(); // stop navigation
+      if (phase !== "ready") {
+        e.preventDefault();
+        return;
+      }
 
-    const audio = new Audio("provinces/basnahira/basnahira.mp3");
+      e.preventDefault();
 
-    audio.play();
+      const audio = new Audio("provinces/basnahira/basnahira.mp3");
 
-    audio.onended = function () {
-      window.location.href = link.href;
-    };
+      audio.play().catch(() => {
+        window.location.href = basnahiraLink.href;
+      });
 
-  });
+      audio.onended = function () {
+        window.location.href = basnahiraLink.href;
+      };
+
+    });
+
+  }
 
 });
-</script>
-</body>
+</script></body>
 </html>
