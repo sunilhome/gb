@@ -315,25 +315,38 @@ document.addEventListener("DOMContentLoaded", function () {
      BASNAHIRA AUDIO → THEN NAVIGATE
   ========================= */
 
-  const basnahiraLink = document.getElementById("basnahiraLink");
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
 
-  if (basnahiraLink) {
+  const link = document.getElementById("basnahiraLink");
 
-    basnahiraLink.addEventListener("click", function (e) {
+  if (!link) return;
 
-      e.preventDefault(); // 🚫 stop immediate page load
+  let isPlaying = false; // 🔒 prevent double trigger
 
-      const audio = new Audio("provinces/basnahira/basnahira.mp3");
+  link.addEventListener("click", function (e) {
 
-      audio.play();
+    e.preventDefault();
 
-      audio.onended = function () {
-        window.location.href = basnahiraLink.href;
-      };
+    // 🚫 BLOCK SECOND CLICK IMMEDIATELY
+    if (isPlaying) return;
 
-    });
+    isPlaying = true;
 
-  }
+    const audio = new Audio("provinces/basnahira/basnahira.mp3");
+
+    audio.play();
+
+    audio.onended = function () {
+      window.location.href = link.href;
+    };
+
+    // 🧠 extra safety: if audio fails, still allow navigation after delay
+    setTimeout(() => {
+      window.location.href = link.href;
+    }, 10000);
+
+  });
 
 });
 </script>
