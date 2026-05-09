@@ -153,7 +153,8 @@ body.intro-active a {
 <!-- PROVINCES -->
 
 <div class="box">
-	<a href="provinces/basnahira/" class="title-link" onclick="playBasnahira()">
+
+<a href="provinces/basnahira/index.html" class="title-link" onclick="return playBasnahira(event)">
      <div class="title-box1">
       <h2>බස්නාහිර පළාත</h2>
 	       <h2>Western Province</h2>
@@ -304,30 +305,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+function playBasnahira(e) {
 
-  let isAnimating = false;
+  e.preventDefault(); // 🚫 stop link
 
-  const curtain = document.getElementById("curtain");
-  const intro = document.getElementById("intro");
+  const audio = new Audio("provinces/basnahira/basnahira.mp3");
 
-  // 👉 INTRO CLICK
-  intro.addEventListener("click", function () {
+  audio.play();
 
-    if (isAnimating) return;
+  // 👉 after sound finishes → go to page
+  audio.onended = function () {
+    window.location.href = "provinces/basnahira/index.html";
+  };
 
-    isAnimating = true;
-
-    curtain.classList.add("open");
-
-    // ⏳ After animation finishes → unlock
-    setTimeout(() => {
-      isAnimating = false; // 🔓 unlock
-    }, 3000); // match your animation time
-
-  });
-
-});
+  return false;
+}
 </script>
 	<script>
 function playBasnahira() {
