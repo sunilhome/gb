@@ -154,7 +154,7 @@ body.intro-active a {
 
 <div class="box">
 
-<a href="provinces/basnahira/index.html" class="title-link" onclick="return playBasnahira(event)">
+<a href="provinces/basnahira/index.html" class="title-link" id="basnahiraLink">
      <div class="title-box1">
       <h2>බස්නාහිර පළාත</h2>
 	       <h2>Western Province</h2>
@@ -320,6 +320,27 @@ function playBasnahira(e) {
 
   return false;
 }
+</script>
+	<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const link = document.getElementById("basnahiraLink");
+
+  link.addEventListener("click", function (e) {
+
+    e.preventDefault(); // stop navigation
+
+    const audio = new Audio("provinces/basnahira/basnahira.mp3");
+
+    audio.play();
+
+    audio.onended = function () {
+      window.location.href = link.href;
+    };
+
+  });
+
+});
 </script>
 	<script>
 function playBasnahira() {
