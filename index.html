@@ -156,7 +156,7 @@ body.intro-active a {
 
 <div class="box">
 
-<a href="provinces/basnahira/index.html" class="title-link" id="basnahiraLink">
+<a href="provinces/basnahira/index.html" id="basnahiraLink" class="title-link">
      <div class="title-box1">
       <h2>බස්නාහිර පළාත</h2>
 	       <h2>Western Province</h2>
@@ -265,13 +265,14 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.classList.add("intro-active");
   document.body.style.overflow = "hidden";
 
+  /* =========================
+     INTRO SYSTEM
+  ========================= */
+
   function startIntro() {
 
     if (introDone) return;
     introDone = true;
-
-    // 🚫 HARD LOCK ALL CLICKS (IMPORTANT FIX)
-    document.body.classList.add("anim-lock");
 
     document.removeEventListener("click", startIntro);
 
@@ -296,13 +297,11 @@ document.addEventListener("DOMContentLoaded", function () {
       buddha.classList.add("slide-down");
     }, 4500);
 
-    // 🔓 unlock ONLY AFTER everything finishes
+    // 🔓 unlock
     setTimeout(() => {
-      document.body.classList.remove("anim-lock");
       document.body.style.overflow = "auto";
     }, 5200);
 
-    // cleanup
     setTimeout(() => {
       curtain.style.display = "none";
       buddha.style.display = "none";
@@ -310,6 +309,31 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   document.addEventListener("click", startIntro);
+
+
+  /* =========================
+     BASNAHIRA AUDIO → THEN NAVIGATE
+  ========================= */
+
+  const basnahiraLink = document.getElementById("basnahiraLink");
+
+  if (basnahiraLink) {
+
+    basnahiraLink.addEventListener("click", function (e) {
+
+      e.preventDefault(); // 🚫 stop immediate page load
+
+      const audio = new Audio("provinces/basnahira/basnahira.mp3");
+
+      audio.play();
+
+      audio.onended = function () {
+        window.location.href = basnahiraLink.href;
+      };
+
+    });
+
+  }
 
 });
 </script>
