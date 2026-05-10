@@ -75,6 +75,33 @@
       දත්ත: ධනේශ් රණසිංහ
     </div>
   </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+  const links = document.querySelectorAll(".district-link");
+
+  links.forEach(link => {
+
+    link.addEventListener("click", function (e) {
+
+      e.preventDefault();
+
+      const audioFile = link.dataset.audio;
+      const audio = new Audio(audioFile);
+
+      audio.play().catch(() => {
+        window.location.href = link.href;
+      });
+
+      audio.onended = function () {
+        window.location.href = link.href;
+      };
+
+    });
+
+  });
+
+});
+</script>
 </body>
 </html>
