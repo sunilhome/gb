@@ -329,25 +329,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (basnahiraLink) {
 
-    basnahiraLink.addEventListener("click", function (e) {
+    let clicked = false;
 
-      // ❌ block if animation not finished
-      if (phase !== "ready") {
-        e.preventDefault();
-        return;
-      }
+basnahiraLink.addEventListener("click", function (e) {
+
+if (clicked) return;
+
+// ❌ block if animation not finished
+if (phase !== "ready") {
+  e.preventDefault();
+  return;
+}
+
+clicked = true; // ✅ only lock after ready
 
       e.preventDefault();
 
-      const audio = new Audio("provinces/basnahira/basnahira.mp3");
+ const sound = document.getElementById("basnahiraSound");
 
-      audio.play().catch(() => {
-        window.location.href = basnahiraLink.dataset.href;
-      });
+if (sound) {
+  sound.currentTime = 0;
+sound.play().catch(() => {
+  window.location.href = basnahiraLink.href;
+});
 
-      audio.onended = function () {
-        window.location.href = basnahiraLink.dataset.href;
-      };
+sound.onended = function () {
+  window.location.href = basnahiraLink.href;
+};
+
+// ⏱ backup (3 seconds max wait)
+setTimeout(() => {
+  window.location.href = basnahiraLink.href;
+}, 3000);
+}
 
     });
 
