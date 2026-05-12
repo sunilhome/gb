@@ -72,6 +72,8 @@ main.content {
 }               
 .box {
 
+  border: 2px solid red;
+
   background: black !important;
 
   color: white;   /* 🔴 THIS LINE WAS MISSING */
