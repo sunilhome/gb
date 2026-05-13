@@ -360,7 +360,7 @@ footer {
 
 .title-box1::before {
   content: "●";
-/*  position: absolute;*/
+  position: absolute;
   left: 10px;
 /*  top: 0;    */     /* fine-tuned for first Sinhala line */
   font-size: 28px;
