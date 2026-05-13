@@ -361,15 +361,15 @@ footer {
 }
 
 .title-box1::before {
+
   content: "●";
   position: absolute;
   left: 10px;
   top: 0;
-  height: 24px;              /* same as first line height */
-  display: flex;
-  align-items: center;       /* 👈 THIS fixes alignment */
   font-size: 20px;
   color: blue;
+  line-height: 1;   /* 👈 IMPORTANT (not 24px) */
+
 }
 .title-box1 h2 {
   font-size: 20px;
