@@ -364,13 +364,12 @@ footer {
 }
 
 .title-box1::before {
-
   content: "●";
   position: absolute;
   left: 10px;
   top: 0;
   font-size: 28px;
-  color: blue;
+  color: white;
   line-height: 1;   /* 👈 IMPORTANT (not 24px) */
 
 }
