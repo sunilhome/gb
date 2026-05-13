@@ -70,15 +70,14 @@ main.content {
   padding: 0;
   background: black;
 }               
-/*.box {
+.box {
 
-  border: 2px solid yellow;
 
   background: black !important;
 
   color: white;  
   padding: 8px 10px;
-}   */
+} 
 
 /* ===== SUB-BAND ===== */
 .sub-band {
