@@ -369,7 +369,7 @@ footer {
   left: 10px;
   top: 0;
   font-size: 28px;
-  color: white !important;
+  color: blue;
   line-height: 1;   /* 👈 IMPORTANT (not 24px) */
 
 }
