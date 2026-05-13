@@ -70,14 +70,6 @@ main.content {
   padding: 0;
   background: black;
 }               
-.box {
-
-
-  background: black !important;
-
-  color: white;  
-  padding: 8px 10px;
-} 
 
 /* ===== SUB-BAND ===== */
 .sub-band {
@@ -236,9 +228,10 @@ main.content {
 
 .box {
   background: black;
-  padding:  8px 0;
-  margin-bottom: 25px;   /* 🔑 this removes black lines */
-	
+  color: white;
+  padding: 10px 0;
+  margin: 0 0 18px 0;   /* spacing between boxes */
+  box-sizing: border-box;
 }
 .grid {
     display: flex;
