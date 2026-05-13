@@ -72,13 +72,13 @@ main.content {
 }               
 .box {
 
-  border: 2px solid yellow;
+/*  border: 2px solid yellow;
 
   background: black !important;
 
-  color: white;   /* 🔴 THIS LINE WAS MISSING */
+  color: white;  
   padding: 8px 10px;
-}
+}   */
 
 /* ===== SUB-BAND ===== */
 .sub-band {
