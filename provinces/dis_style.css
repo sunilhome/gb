@@ -146,7 +146,7 @@ main.content {
   content: "●";
   position: absolute;
   left: 10px;
-  top: 14px;            /* aligns with Sinhala line */
+  top: 4px;            /* aligns with Sinhala line */
   font-size: 28px;
   color: blue;
 }
@@ -362,7 +362,7 @@ footer {
   content: "●";
   position: absolute;
   left: 10px;
-  top: 14px;             /* fine-tuned for first Sinhala line */
+  top: 4px;             /* fine-tuned for first Sinhala line */
   font-size: 28px;
   color: blue;
   line-height: 1;       /* important for precise alignment */
