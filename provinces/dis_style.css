@@ -173,9 +173,9 @@ main.content {
 .page-2 .title-box2::before {
   content: "●";
   position: absolute;
-  left: 10px;           /* 👈 dot position from left edge */
+  left: 15px;           /* 👈 dot position from left edge */
   top: 0;
-  font-size: 22px;      /* 👈 dot size */
+  font-size: 28px;      /* 👈 dot size */
   color: blue;
   line-height: 1;
 }
