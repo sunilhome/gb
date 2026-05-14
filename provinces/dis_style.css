@@ -144,7 +144,6 @@ main.content {
 
 
 .title-box1::before {
-
   content: "●";
   position: absolute;
   left: 10px;
@@ -164,22 +163,22 @@ main.content {
   margin-top: 0;
 }
 /* Page 2 only */
+/* TEXT container */
 .page-2 .title-box2 {
   position: relative;
-  padding-left: 22px;   /* space for the dot */
+  padding-left: 34px;   /* 👈 controls space between dot & text */
 }
 
-/* Single dot for each temple box */
+/* DOT */
 .page-2 .title-box2::before {
   content: "●";
   position: absolute;
-  left: 10;
-  top: 4px;             /* aligns vertically with Sinhala line */
-  font-size: 28px;      /* adjust dot size as needed */
+  left: 10px;           /* 👈 dot position from left edge */
+  top: 0;
+  font-size: 22px;      /* 👈 dot size */
   color: blue;
   line-height: 1;
 }
-
 .en-text {
   margin-top: 14px;   /* space between languages */
   font-size: 10px;    /* optional: slightly smaller */
