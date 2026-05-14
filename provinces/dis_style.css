@@ -177,10 +177,8 @@ main.content {
   top: 4px;             /* aligns vertically with Sinhala line */
   font-size: 28px;      /* adjust dot size as needed */
   color: blue;
+  line-height: 1;
 }
-
-
-
 
 .en-text {
   margin-top: 14px;   /* space between languages */
@@ -388,7 +386,7 @@ footer {
 .title-box2 h2 {
   font-family: "Noto Serif Sinhala", "Noto Sans Sinhala", sans-serif;
   font-size: 18px;     
-  line-height: 26px;   /* ↑ increase spacing between lines */
+  line-height: 24px;   /* ↑ increase spacing between lines */
   font-weight: 500;
   color: #0b5ed7;
   margin: 0;
@@ -403,7 +401,7 @@ footer {
   left: 0;
   top: 0;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1;
   color: #0b5ed7;
 }
 
@@ -422,7 +420,6 @@ footer {
   }
 
  .grid {
-
     display: grid !important;
     grid-template-columns: 1fr;
     justify-items: start !important;
