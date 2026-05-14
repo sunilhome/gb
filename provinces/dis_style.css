@@ -173,10 +173,10 @@ main.content {
 .page-2 .title-box2::before {
   content: "●";
   position: absolute;
-  left: 15px;           /* 👈 dot position from left edge */
+  left: 20px;           /* 👈 dot position from left edge */
   top: 0;
   font-size: 28px;      /* 👈 dot size */
-  color: blue;
+  color: red;
   line-height: 1;
 }
 .en-text {
