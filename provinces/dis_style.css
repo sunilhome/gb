@@ -176,7 +176,7 @@ main.content {
   left: 20px;           /* 👈 dot position from left edge */
   top: 0;
   font-size: 28px;      /* 👈 dot size */
-  color: red;
+  color: blue;
   line-height: 1;
 }
 .en-text {
