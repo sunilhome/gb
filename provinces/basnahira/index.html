@@ -8,19 +8,43 @@
 
 <link rel="stylesheet" href="../../provinces/dis_style.css">
 
-</head>
 <style>
+/* prevent scroll during animation */
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+/* smooth wrapper animation */
 .page-slide-up {
   animation: slideUp 2.3s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: transform;
   transform: translateZ(0);
 }
-body.page-slide-up {
-  overflow: hidden;
+
+/* animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* after animation scroll allowed */
+body.ready {
+  overflow: auto;
 }
 </style>
-<body class="page-2 page-slide-up">
- 
+
+</head>
+
+<body class="page-2">
+
+<!-- WRAPPER (IMPORTANT) -->
+<div class="page-slide-up">
+
 <div class="top-band">
   <span class="top-band-text">veheravihara.lk</span>
 </div>
@@ -41,16 +65,9 @@ body.page-slide-up {
 
 </main>
 
-<!-- 🔵 TOP BAR
-<div class="top-band">
-  <a href="../../index.html" class="top-icon">&#8592;</a>
-  <span>බස්නාහිර පළාත</span>
-</div>      -->
+<!-- DISTRICTS -->
 
-<!-- 🔶 DISTRICT LIST -->
-
-
-  <div class="box">
+<div class="box">
   <a href="colombo/" class="title-link district-link" data-audio="colombo.mp3">
     <div class="title-box1">
       <h2>කොළඹ දිස්ත්‍රික්කය</h2>
@@ -59,31 +76,35 @@ body.page-slide-up {
   </a>
 </div>
 
-  <div class="box">
-    <a href="gampaha/" class="title-link district-link" data-audio="gampaha.mp3">
-      <div class="title-box1">
-        <h2>ගම්පහ දිස්ත්‍රික්කය</h2>
-        <h2>Gampaha District</h2>
-      </div>
-    </a>
-  </div>
-
-  <div class="box">
-    <a href="kaluthara/"  class="title-link district-link" data-audio="kaluthara.mp3">
-      <div class="title-box1">
-        <h2>කළුතර දිස්ත්‍රික්කය</h2>
-        <h2>Kalutara District</h2>
-      </div>
-    </a>
-  </div>
-  <footer>
-    <div class="footer-content">
-      © ව්‍යාපෘතිය: සුනිල් රණසිංහ <br>
-      සංකල්පය: දේශ කීර්ති ශ්‍රී දේශබන්දු<br>
-      සම්පත් රණසිංහ<br>
-      දත්ත: ධනේශ් රණසිංහ
+<div class="box">
+  <a href="gampaha/" class="title-link district-link" data-audio="gampaha.mp3">
+    <div class="title-box1">
+      <h2>ගම්පහ දිස්ත්‍රික්කය</h2>
+      <h2>Gampaha District</h2>
     </div>
-  </footer>
+  </a>
+</div>
+
+<div class="box">
+  <a href="kaluthara/" class="title-link district-link" data-audio="kaluthara.mp3">
+    <div class="title-box1">
+      <h2>කළුතර දිස්ත්‍රික්කය</h2>
+      <h2>Kalutara District</h2>
+    </div>
+  </a>
+</div>
+
+<footer>
+  <div class="footer-content">
+    © ව්‍යාපෘතිය: සුනිල් රණසිංහ <br>
+    සංකල්පය: දේශ කීර්ති ශ්‍රී දේශබන්දු<br>
+    සම්පත් රණසිංහ<br>
+    දත්ත: ධනේශ් රණසිංහ
+  </div>
+</footer>
+
+</div> <!-- END wrapper -->
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -111,13 +132,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
-</script>
- <script>
+
+/* unlock scroll after animation */
 window.addEventListener("load", function () {
   setTimeout(() => {
-    document.body.style.overflow = "auto";
-  }, 1200); // match your animation time
+    document.body.classList.add("ready");
+  }, 2300);
 });
 </script>
+
 </body>
 </html>
