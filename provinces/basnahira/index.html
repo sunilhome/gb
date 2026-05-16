@@ -9,7 +9,11 @@
 <link rel="stylesheet" href="../../provinces/dis_style.css">
 
 </head>
-
+<style>
+body.page-slide-up {
+  overflow: hidden;
+}
+</style>
 <body class="page-2 page-slide-up">
  
 <div class="top-band">
@@ -101,6 +105,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 
+});
+</script>
+ <script>
+window.addEventListener("load", function () {
+  setTimeout(() => {
+    document.body.style.overflow = "auto";
+  }, 1200); // match your animation time
 });
 </script>
 </body>
