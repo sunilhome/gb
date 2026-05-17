@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="../../dis_style.css">
 </head>
 
-<body class="page-2 page-slide-up">
+<body class="page-2">
 
 <!-- TOP BAND -->
 <div class="top-band">
@@ -47,7 +47,6 @@
     දත්ත: ධනේශ් රණසිංහ
   </div>
 </footer>
-
 <script>
 fetch("temples.txt")
 .then(response => response.text())
@@ -86,6 +85,10 @@ fetch("temples.txt")
         box.appendChild(a);
         grid.appendChild(box);
     });
+
+    // ✅ START animation AFTER content is ready
+    document.body.classList.add("page-slide-up");
+
 });
 </script>
 
