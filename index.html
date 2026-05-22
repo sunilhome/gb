@@ -382,8 +382,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalImages = 2;
 
   const changeTimes = [
-    {h: 22, m: 38},
-    {h: 22, m: 40}
+    {h: 22, m: 48},
+    {h: 22, m: 52}
   ];
 
   let currentIndex = localStorage.getItem("buddhaIndex");
@@ -410,31 +410,32 @@ document.addEventListener("DOMContentLoaded", function () {
     return now.toDateString() + "-" + h + ":" + m;
   }
 
-  function checkTime() {
-    const now = new Date();
+function checkTime() {
+  const now = new Date();
 
-    changeTimes.forEach(t => {
+  changeTimes.forEach(t => {
 
-      const target = new Date();
-      target.setHours(t.h, t.m, 0, 0);
+    const target = new Date();
+    target.setHours(t.h, t.m, 0, 0);
 
-      // ⏱ allow 2-minute window
-      const diff = Math.abs(now - target);
+    // ✅ Only AFTER target time (not before)
+    const diff = now - target;
 
-      if (diff < 120000) { // 2 minutes
+    if (diff >= 0 && diff < 60000) { // only 1 minute AFTER
 
-        const key = getTodayKey(t.h, t.m);
-        const lastRun = localStorage.getItem("lastRun");
+      const key = getTodayKey(t.h, t.m);
+      const lastRun = localStorage.getItem("lastRun");
 
-        if (lastRun !== key) {
-          nextImage();
-          localStorage.setItem("lastRun", key);
-        }
-
+      if (lastRun !== key) {
+        nextImage();
+        localStorage.setItem("lastRun", key);
       }
 
-    });
-  }
+    }
+
+  });
+}
+
 
   // ✅ show image first
   showImage();
