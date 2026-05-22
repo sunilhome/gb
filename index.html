@@ -129,8 +129,7 @@ body.intro-active a {
 </div>
 
 <!-- IMAGE -->
-<img id="buddha" src="a.webp">
-
+<img id="buddha" src="images/b1.webp">
 <!-- MAIN CONTENT -->
 <div class="top-band">
   <span class="top-band-text">veheravihara.lk</span>
@@ -372,6 +371,79 @@ setTimeout(() => {
     });
 
   }
+
+});
+</script>
+	<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const buddha = document.getElementById("buddha");
+
+  // ✅ SETTINGS (YOU CAN CHANGE THESE)
+  const totalImages = 2; // 👉 change when you add new images
+
+  const changeTimes = [
+    {h: 9, m: 0},   // 9:00 AM
+    {h: 22, m: 0}   // 9:00 PM
+  ];
+
+  // ✅ LOAD LAST IMAGE INDEX
+  let currentIndex = localStorage.getItem("buddhaIndex");
+  if (currentIndex === null) {
+    currentIndex = 1;
+  } else {
+    currentIndex = parseInt(currentIndex);
+  }
+
+  // ✅ SHOW CURRENT IMAGE
+  function showImage() {
+    buddha.src = "b" + currentIndex + ".webp";
+  }
+
+  showImage();
+
+  // ✅ CHANGE TO NEXT IMAGE
+  function nextImage() {
+    currentIndex++;
+
+    if (currentIndex > totalImages) {
+      currentIndex = 1;
+    }
+
+    localStorage.setItem("buddhaIndex", currentIndex);
+    showImage();
+  }
+
+  // ✅ PREVENT MULTIPLE TRIGGERS
+  function getTodayKey(h, m) {
+    const now = new Date();
+    return now.toDateString() + "-" + h + ":" + m;
+  }
+
+  // ✅ CHECK TIME EVERY MINUTE
+  setInterval(() => {
+
+    const now = new Date();
+    const hour = now.getHours();
+    const minute = now.getMinutes();
+
+    changeTimes.forEach(t => {
+
+      if (hour === t.h && minute === t.m) {
+
+        const key = getTodayKey(t.h, t.m);
+        const lastRun = localStorage.getItem("lastRun");
+
+        if (lastRun !== key) {
+          nextImage();
+          localStorage.setItem("lastRun", key);
+        }
+
+      }
+
+    });
+
+  }, 60000); // check every 1 minute
 
 });
 </script>
