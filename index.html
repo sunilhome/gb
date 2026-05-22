@@ -384,7 +384,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const changeTimes = [
     {h: 9, m: 0},   // 9:00 AM
-    {h: 22, m: 0}   // 9:00 PM
+    {h: 22, m: 10} 
   ];
 
   // ✅ LOAD LAST IMAGE INDEX
@@ -397,7 +397,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ✅ SHOW CURRENT IMAGE
   function showImage() {
-    buddha.src = "b" + currentIndex + ".webp";
+   
+	  buddha.src = "images/b" + currentIndex + ".webp";
   }
 
   showImage();
