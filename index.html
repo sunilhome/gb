@@ -417,21 +417,17 @@ function checkTime() {
 
   changeTimes.forEach(t => {
 
+    const key = now.toDateString() + "-" + t.h + ":" + t.m;
+    const lastRun = localStorage.getItem("lastRun");
+
     const target = new Date();
     target.setHours(t.h, t.m, 0, 0);
 
-    // ✅ Only AFTER target time (not before)
-    const diff = now - target;
+    // ✅ IMPORTANT: run if time already passed
+    if (now >= target && lastRun !== key) {
 
-    if (diff >= 0 && diff < 60000) { // only 1 minute AFTER
-
-      const key = getTodayKey(t.h, t.m);
-      const lastRun = localStorage.getItem("lastRun");
-
-      if (lastRun !== key) {
-        nextImage();
-        localStorage.setItem("lastRun", key);
-      }
+      nextImage();
+      localStorage.setItem("lastRun", key);
 
     }
 
