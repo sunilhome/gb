@@ -418,23 +418,22 @@ function checkTime() {
   changeTimes.forEach(t => {
 
     const key = now.toDateString() + "-" + t.h + ":" + t.m;
-    const lastRun = localStorage.getItem("lastRun");
+    const lastRun = localStorage.getItem(key);
 
     const target = new Date();
     target.setHours(t.h, t.m, 0, 0);
 
-    // ✅ IMPORTANT: run if time already passed
-    if (now >= target && lastRun !== key) {
+    // ✅ run only if time passed AND not yet executed
+    if (now >= target && lastRun !== "done") {
 
       nextImage();
-      localStorage.setItem("lastRun", key);
 
+      // mark THIS specific time as done
+      localStorage.setItem(key, "done");
     }
 
   });
 }
-
-
   // ✅ show image first
   showImage();
 
