@@ -379,70 +379,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const buddha = document.getElementById("buddha");
 
-  const totalImages = 4;
-
-  const changeTimes = [
- 
-	{h: 23, m: 27},
-    {h: 23, m: 58}  
-  ];
-
-  let currentIndex = localStorage.getItem("buddhaIndex");
-  if (currentIndex === null) {
-    currentIndex = 1;
-  } else {
-    currentIndex = parseInt(currentIndex);
-  }
+  const totalImages = 3; // 3 images (b1.webp, b2.webp, b3.webp)
 
   function showImage() {
-    buddha.src = "images/b" + currentIndex + ".webp";
-  }
-
-  function nextImage() {
-    currentIndex++;
-    if (currentIndex > totalImages) currentIndex = 1;
-
-    localStorage.setItem("buddhaIndex", currentIndex);
-    showImage();
-  }
-
-  function getTodayKey(h, m) {
     const now = new Date();
-    return now.toDateString() + "-" + h + ":" + m;
+    const hour = now.getHours();
+
+    // divide day into 3 parts (8 hours each)
+    let index = Math.floor(hour / 8) + 1;
+
+    // safety (if more images later)
+    if (index > totalImages) index = totalImages;
+
+    buddha.src = "images/b" + index + ".webp";
   }
 
-function checkTime() {
-  const now = new Date();
-
-  changeTimes.forEach(t => {
-
-    const key = now.toDateString() + "-" + t.h + ":" + t.m;
-    const lastRun = localStorage.getItem(key);
-
-    const target = new Date();
-    target.setHours(t.h, t.m, 0, 0);
-
-    // ✅ run only if time passed AND not yet executed
-    if (now >= target && lastRun !== "done") {
-
-      nextImage();
-
-      // mark THIS specific time as done
-      localStorage.setItem(key, "done");
-    }
-
-  });
-}
-  // ✅ show image first
+  // ✅ show immediately
   showImage();
 
-  // ✅ check immediately (IMPORTANT FIX)
-  checkTime();
-
-  // ✅ check every minute
-  setInterval(checkTime, 60000);
+  // ✅ update every minute (in case time crosses boundary)
+  setInterval(showImage, 60000);
 
 });
-</script>
-</body>
+</script></body>
 </html>
