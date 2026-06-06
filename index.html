@@ -379,15 +379,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const buddha = document.getElementById("buddha");
 
-  const totalImages = 3; // 3 images (b1.webp, b2.webp, b3.webp)
+  const totalImages = 24; // 3 images (b1.webp, b2.webp, b3.webp)
 
   function showImage() {
     const now = new Date();
     const hour = now.getHours();
 
     // divide day into 3 parts (8 hours each)
-    let index = Math.floor(hour / 8) + 1;
-
+    let index = hour + 1;
     // safety (if more images later)
     if (index > totalImages) index = totalImages;
 
