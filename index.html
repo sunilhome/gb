@@ -279,15 +279,14 @@ document.addEventListener("DOMContentLoaded", function () {
   /* =========================
      🖼 IMAGE ROTATION (24 IMAGES)
   ========================= */
-  function updateImage() {
-    const hour = new Date().getHours();
+ function updateImage() {
+  const hour = new Date().getHours();
 
-    let index = hour + 1; // b1 → b24
-    if (index > 24) index = 24;
+  let index = hour + 1;
+  if (index > 24) index = 24;
 
-    buddha.src = "images/b" + index + ".webp";
-  }
-
+  buddha.src = "./images/b" + index + ".webp";
+}
   updateImage();
   setInterval(updateImage, 60000);
 
@@ -323,21 +322,23 @@ document.addEventListener("DOMContentLoaded", function () {
     /* =========================
        AFTER ANIMATION COMPLETE
     ========================= */
-    setTimeout(() => {
+ setTimeout(() => {
 
-      phase = "ready";
+  phase = "ready";
 
-      document.body.style.overflow = "auto";
+  document.body.style.overflow = "auto";
 
-      // 🔓 restore links
-      links.forEach(link => {
-        link.href = link.dataset.href;
-      });
+  links.forEach(link => {
+    link.href = link.dataset.href;
+  });
 
-      // hide only overlays (NOT buddha)
-      curtain.style.display = "none";
+  curtain.style.display = "none";
 
-    }, 5000);
+  // ✅ START IMAGE SYSTEM HERE
+  updateImage();
+  setInterval(updateImage, 60000);
+
+}, 5000);
   }
 
   document.addEventListener("click", startIntro);
