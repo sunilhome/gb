@@ -272,9 +272,6 @@ body.intro-active a {
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* =========================
-     ELEMENTS
-  ========================= */
   const curtain = document.getElementById("curtain");
   const intro = document.getElementById("intro");
   const buddha = document.getElementById("buddha");
@@ -284,32 +281,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let phase = "intro";
 
-  /* =========================
-     🔒 LOCK LINKS UNTIL READY
-  ========================= */
+  // LOCK LINKS
   links.forEach(link => {
     link.dataset.href = link.href;
     link.removeAttribute("href");
   });
 
-  /* =========================
-     🖼 IMAGE ROTATION SYSTEM (24 images)
-  ========================= */
+  // IMAGE ROTATION
   function updateImage() {
     const hour = new Date().getHours();
-
     let index = hour + 1;
     if (index > 24) index = 24;
-
     buddha.src = "./images/b" + index + ".webp";
   }
 
   updateImage();
   setInterval(updateImage, 60000);
 
-  /* =========================
-     🎬 INTRO START
-  ========================= */
+  // INTRO START
   function startIntro() {
 
     if (phase !== "intro") return;
@@ -317,6 +306,7 @@ document.addEventListener("DOMContentLoaded", function () {
     phase = "anim";
 
     document.removeEventListener("click", startIntro);
+    document.removeEventListener("touchstart", startIntro);
 
     if (welcomeAudio) {
       welcomeAudio.play().catch(() => {});
@@ -334,13 +324,9 @@ document.addEventListener("DOMContentLoaded", function () {
       buddha.classList.add("slide-down");
     }, 2500);
 
-    /* =========================
-       UNLOCK SYSTEM
-    ========================= */
     setTimeout(() => {
 
       phase = "ready";
-
       document.body.style.overflow = "auto";
 
       links.forEach(link => {
@@ -352,70 +338,61 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 5000);
   }
 
+  // ✅ IMPORTANT: BOTH EVENTS
   document.addEventListener("click", startIntro);
+  document.addEventListener("touchstart", startIntro);
 
-  /* =========================
-     🧭 UNIVERSAL CLICK SYSTEM
-     (province + district)
-  ========================= */
-document.querySelectorAll(".province-link, .district-link").forEach(link => {
+  // CLICK SYSTEM
+  document.querySelectorAll(".province-link, .district-link").forEach(link => {
 
-  let clicked = false;
+    let clicked = false;
 
-  link.addEventListener("click", function (e) {
+    link.addEventListener("click", function (e) {
 
-    // 🔒 block before ready
-    if (phase !== "ready") {
+      if (phase !== "ready") {
+        e.preventDefault();
+        return;
+      }
+
+      if (clicked) return;
+
+      clicked = true;
       e.preventDefault();
-      return;
-    }
 
-    if (clicked) return;
+      // RIPPLE
+      const ripple = document.createElement("span");
 
-    clicked = true;
-    e.preventDefault();
+      const rect = link.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
 
-    // 🌊 RIPPLE EFFECT
-    const ripple = document.createElement("span");
+      ripple.className = "ripple";
+      ripple.style.width = ripple.style.height = size + "px";
+      ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+      ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
 
-    const rect = link.getBoundingClientRect();
-    const size = Math.max(rect.width, rect.height);
+      link.appendChild(ripple);
 
-    ripple.className = "ripple";
+      setTimeout(() => ripple.remove(), 600);
 
-    ripple.style.width = ripple.style.height = size + "px";
-    ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
-    ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
+      const audioFile = link.dataset.audio;
 
-    link.appendChild(ripple);
+      const go = () => {
+        window.location.href = link.href;
+      };
 
-    setTimeout(() => {
-      ripple.remove();
-    }, 600);
+      if (audioFile) {
+        const audio = new Audio(audioFile);
+        audio.play().catch(go);
+        audio.onended = go;
+        setTimeout(go, 3000);
+      } else {
+        setTimeout(go, 400);
+      }
 
-    const audioFile = link.dataset.audio;
-
-    const go = () => {
-      window.location.href = link.href;
-    };
-
-    if (audioFile) {
-
-      const audio = new Audio(audioFile);
-
-      audio.play().catch(go);
-
-      audio.onended = go;
-
-      setTimeout(go, 3000);
-
-    } else {
-      setTimeout(go, 400);
-    }
+    });
 
   });
 
-});   // ✅ ONLY ONE CLOSE HERE
-</script>
-</body>
+});
+</script></body>
 </html>
