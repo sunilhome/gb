@@ -362,38 +362,59 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let clicked = false;
 
-    link.addEventListener("click", function (e) {
+   link.addEventListener("click", function (e) {
 
-      if (phase !== "ready") {
-        e.preventDefault();
-        return;
-      }
+  // 🔒 block before ready
+  if (phase !== "ready") {
+    e.preventDefault();
+    return;
+  }
 
-      if (clicked) return;
+  if (clicked) return;
 
-      clicked = true;
-      e.preventDefault();
+  clicked = true;
+  e.preventDefault();
 
-      const audioFile = link.dataset.audio;
+  // 🌊 RIPPLE EFFECT START
+  const ripple = document.createElement("span");
 
-      const go = () => {
-        window.location.href = link.href;
-      };
+  const rect = link.getBoundingClientRect();
+  const size = Math.max(rect.width, rect.height);
 
-      if (audioFile) {
+  ripple.className = "ripple";
 
-        const audio = new Audio(audioFile);
+  ripple.style.width = ripple.style.height = size + "px";
+  ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+  ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
 
-        audio.play().catch(go);
+  link.appendChild(ripple);
 
-        audio.onended = go;
+  setTimeout(() => {
+    ripple.remove();
+  }, 600);
+  // 🌊 RIPPLE END
 
-        setTimeout(go, 3000);
+  const audioFile = link.dataset.audio;
 
-      } else {
-        go();
-      }
+  const go = () => {
+    window.location.href = link.href;
+  };
 
+  if (audioFile) {
+
+    const audio = new Audio(audioFile);
+
+    audio.play().catch(go);
+
+    audio.onended = go;
+
+    setTimeout(go, 3000);
+
+  } else {
+    setTimeout(go, 400); // small delay so ripple is visible
+  }
+
+});
     });
 
   });
