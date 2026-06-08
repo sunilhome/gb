@@ -156,7 +156,9 @@ body.intro-active a {
 
 
 <div class="box">
-  <a href="provinces/basnahira/index.html" id="basnahiraLink" class="title-link">
+  <a href="provinces/basnahira/index.html"
+     class="title-link province-link"
+     data-audio="basnahira.mp3">
     <div class="title-box1">
       <h2>බස්නාහිර පළාත</h2>
       <h2>Western Province</h2>
@@ -164,83 +166,97 @@ body.intro-active a {
   </a>
 </div>
 
+	
+  <div class="box">
+  <a href="provinces/dakuna/index.html"
+     class="title-link province-link"
+        <div class="title-box1">
+       <h2>දකුණු පළාත</h2>
+      <h2>Southern Province</h2>
+    </div>
+  </a>
+</div>
 
 	<div class="box">
-  <a href="provinces/dakuna/" class="title-link">
-     <div class="title-box1">
-      <h2>දකුණු පළාත</h2>
-      <h2>Southern Province</h2>
-		</div> 
-    </a>
- </div>
-  
-		
- <div class="box">
-  <a href="provinces/meda/" class="title-link">
+  <a href="provinces/meda/index.html"
+     class="title-link province-link"
+    
     <div class="title-box1">
-      <h2>මධ්‍යම පළාත</h2>
-      <h2>Central Province</h2>
-		</div>
-	 </a>	
-    </div>
- 
-  
-  <div class="box">
-    <a href="provinces/uthurumeda/" class="title-link">
-  <div class="title-box1">
-      <h2>උතුරු මැද පළාත</h2>
-      <h2>North Central Province</h2>
+       <h2>මධ්‍යම පළාත</h2>
+     <h2>Central Province</h2>
     </div>
   </a>
 </div>
-	
-	  <div class="box">
-  <a href="provinces/sabaragamuwa/" class="title-link">
-     <div class="title-box1">
-      <h2>සබරගමුව පළාත</h2>
-      <h2>Sabaragamuwa Province</h2>
+		
+
+	<div class="box">
+  <a href="provinces/uthurumeda/index.html"
+     class="title-link province-link"
+    
+    <div class="title-box1">
+       <h2>උතුරු මැද පළාත</h2>
+     <h2>North Central Province</h2>
     </div>
   </a>
 </div>
 
-		  
-    <div class="box">
-  <a href="provinces/uva/index.html" class="title-link">
-   		 <div class="title-box1">
+	
+ 	<div class="box">
+  <a href="provinces/sabaragamuwa/index.html"
+     class="title-link province-link"
+    
+    <div class="title-box1">
+       <h2>සබරගමුව පළාත</h2>
+     <h2>Sabaragamuwa Province</h2>
+    </div>
+  </a>
+</div>
+	
+	<div class="box">
+  <a href="provinces/Uva/index.html"
+     class="title-link province-link"
+    
+    <div class="title-box1">
        <h2>ඌව පළාත</h2>
-      <h2>Uva Province</h2>
+     <h2>Uva Province</h2>
+    </div>
+  </a>
+</div>
+		  
+	<div class="box">
+  <a href="provinces/wayaba/index.html"
+     class="title-link province-link"
+    
+    <div class="title-box1">
+       <h2>වයඹ පළාත</h2>
+     <h2>North Western Province</h2>
     </div>
   </a>
 </div>
 
 	
-<div class="box">
-  <a href="provinces/wayaba/index.html" class="title-link">
-		 <div class="title-box1">
-       <h2>වයඹ පළාත</h2>
-      <h2>North Western Province</h2>
+	<div class="box">
+  <a href="provinces/negenahira/index.html"
+     class="title-link province-link"
+    
+    <div class="title-box1">
+       <h2>නැගෙනහිර පළාත</h2>
+     <h2>Negenahira Province</h2>
     </div>
   </a>
 </div>
 
-
-<div class="box">
-	  <a href="provinces/negenahira/" class="title-link">
-    		 <div class="title-box1">
-          <h2>නැගෙනහිර පළාත</h2>
-      <h2>Eastern Province</h2>
+	<div class="box">
+  <a href="provinces/uthura/index.html"
+     class="title-link province-link"
+    
+    <div class="title-box1">
+       <h2>උතුරු පළාත</h2>
+     <h2>Northern Province</h2>
     </div>
   </a>
 </div>
     
-<div class="box">
-<a href="provinces/uthura/" class="title-link">
-   	 <div class="title-box1">
-       <h2>උතුරු පළාත</h2>
-      <h2>Northern Province</h2>
-    </div>
-  </a>
-</div>
 	
   <footer>
     <div class="footer-content">
@@ -266,10 +282,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const links = document.querySelectorAll("a");
 
-  let phase = "intro"; // intro → anim → ready
+  let phase = "intro";
 
   /* =========================
-     🔒 DISABLE LINKS FIRST
+     🔒 LOCK LINKS UNTIL READY
   ========================= */
   links.forEach(link => {
     link.dataset.href = link.href;
@@ -277,21 +293,22 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /* =========================
-     🖼 IMAGE ROTATION (24 IMAGES)
+     🖼 IMAGE ROTATION SYSTEM (24 images)
   ========================= */
- function updateImage() {
-  const hour = new Date().getHours();
+  function updateImage() {
+    const hour = new Date().getHours();
 
-  let index = hour + 1;
-  if (index > 24) index = 24;
+    let index = hour + 1;
+    if (index > 24) index = 24;
 
-  buddha.src = "./images/b" + index + ".webp";
-}
+    buddha.src = "./images/b" + index + ".webp";
+  }
+
   updateImage();
   setInterval(updateImage, 60000);
 
   /* =========================
-     🎬 INTRO START ON CLICK
+     🎬 INTRO START
   ========================= */
   function startIntro() {
 
@@ -301,12 +318,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.removeEventListener("click", startIntro);
 
-    // 🔊 welcome sound
     if (welcomeAudio) {
       welcomeAudio.play().catch(() => {});
     }
 
-    // 🎭 curtain animation
     curtain.classList.add("open");
 
     intro.style.opacity = "0";
@@ -320,39 +335,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 2500);
 
     /* =========================
-       AFTER ANIMATION COMPLETE
+       UNLOCK SYSTEM
     ========================= */
- setTimeout(() => {
+    setTimeout(() => {
 
-  phase = "ready";
+      phase = "ready";
 
-  document.body.style.overflow = "auto";
+      document.body.style.overflow = "auto";
 
-  links.forEach(link => {
-    link.href = link.dataset.href;
-  });
+      links.forEach(link => {
+        link.href = link.dataset.href;
+      });
 
-  curtain.style.display = "none";
+      curtain.style.display = "none";
 
-  // ✅ START IMAGE SYSTEM HERE
-  updateImage();
-  setInterval(updateImage, 60000);
-
-}, 5000);
+    }, 5000);
   }
 
   document.addEventListener("click", startIntro);
 
   /* =========================
-     🎵 BASNAHIRA SOUND LINK
+     🧭 UNIVERSAL CLICK SYSTEM
+     (province + district)
   ========================= */
-  const basnahiraLink = document.getElementById("basnahiraLink");
-
-  if (basnahiraLink) {
+  document.querySelectorAll(".province-link, .district-link").forEach(link => {
 
     let clicked = false;
 
-    basnahiraLink.addEventListener("click", function (e) {
+    link.addEventListener("click", function (e) {
 
       if (phase !== "ready") {
         e.preventDefault();
@@ -364,31 +374,31 @@ document.addEventListener("DOMContentLoaded", function () {
       clicked = true;
       e.preventDefault();
 
-      const sound = document.getElementById("basnahiraSound");
+      const audioFile = link.dataset.audio;
 
-      if (sound) {
+      const go = () => {
+        window.location.href = link.href;
+      };
 
-        sound.currentTime = 0;
+      if (audioFile) {
 
-        sound.play().catch(() => {
-          window.location.href = basnahiraLink.href;
-        });
+        const audio = new Audio(audioFile);
 
-        sound.onended = function () {
-          window.location.href = basnahiraLink.href;
-        };
+        audio.play().catch(go);
 
-        setTimeout(() => {
-          window.location.href = basnahiraLink.href;
-        }, 3000);
+        audio.onended = go;
+
+        setTimeout(go, 3000);
 
       } else {
-        window.location.href = basnahiraLink.href;
+        go();
       }
 
     });
-  }
+
+  });
 
 });
-</script></body>
+</script>
+</body>
 </html>
