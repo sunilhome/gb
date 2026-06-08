@@ -315,6 +315,29 @@ footer {
 /*  animation: slideUp 0.5s ease-out;  */
 	animation: slideUp 1.2s ease-out;
 }
+/* =========================
+   🌊 RIPPLE EFFECT
+========================= */
+.province-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.province-link span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-animation 600ms linear;
+  background: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
 
 @keyframes slideUp {
   from {
