@@ -116,16 +116,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
       e.preventDefault();
 
+      /* =========================
+         🌊 RIPPLE EFFECT
+      ========================= */
+      const ripple = document.createElement("span");
+
+      const rect = link.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+
+      ripple.style.width = ripple.style.height = size + "px";
+      ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+      ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
+
+      ripple.classList.add("ripple");
+
+      const old = link.querySelector(".ripple");
+      if (old) old.remove();
+
+      link.appendChild(ripple);
+
+      /* =========================
+         🎵 AUDIO SYSTEM
+      ========================= */
       const audioFile = link.dataset.audio;
-      const audio = new Audio(audioFile);
 
-      audio.play().catch(() => {
-        window.location.href = link.href;
-      });
+      if (audioFile) {
 
-      audio.onended = function () {
+        const audio = new Audio(audioFile);
+
+        audio.play().catch(() => {
+          window.location.href = link.href;
+        });
+
+        audio.onended = function () {
+          window.location.href = link.href;
+        };
+
+        // backup navigation
+        setTimeout(() => {
+          window.location.href = link.href;
+        }, 3000);
+
+      } else {
         window.location.href = link.href;
-      };
+      }
 
     });
 
@@ -140,6 +174,5 @@ window.addEventListener("load", function () {
   }, 2300);
 });
 </script>
-
 </body>
 </html>
