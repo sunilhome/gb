@@ -281,6 +281,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll("a");
 
   let phase = "intro";
+  let introStarted = false;
 
   // LOCK LINKS
   links.forEach(link => {
@@ -299,15 +300,13 @@ document.addEventListener("DOMContentLoaded", function () {
   updateImage();
   setInterval(updateImage, 60000);
 
-  // INTRO START
-  function startIntro() {
+  // INTRO START (FIXED TOUCH SYSTEM)
+  function startIntro(e) {
 
-    if (phase !== "intro") return;
+    if (introStarted) return;
+    introStarted = true;
 
     phase = "anim";
-
-    document.removeEventListener("click", startIntro);
-    document.removeEventListener("touchstart", startIntro);
 
     if (welcomeAudio) {
       welcomeAudio.play().catch(() => {});
@@ -337,13 +336,14 @@ document.addEventListener("DOMContentLoaded", function () {
       curtain.style.display = "none";
 
     }, 5000);
+
   }
 
-  // ✅ IMPORTANT: BOTH EVENTS
-  document.addEventListener("click", startIntro);
-  document.addEventListener("touchstart", startIntro);
+  // ✅ FIX: use BOTH properly
+  document.addEventListener("click", startIntro, { passive: true });
+  document.addEventListener("touchstart", startIntro, { passive: true });
 
-  // CLICK SYSTEM
+  // CLICK SYSTEM (ripple + navigation)
   document.querySelectorAll(".province-link, .district-link").forEach(link => {
 
     let clicked = false;
@@ -366,7 +366,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const rect = link.getBoundingClientRect();
       const size = Math.max(rect.width, rect.height);
 
-     ripple.className = "ripple";
+      ripple.className = "ripple";
       ripple.style.width = ripple.style.height = size + "px";
       ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
       ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
@@ -395,5 +395,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
-</script></body>
+</script>
+</body>
 </html>
