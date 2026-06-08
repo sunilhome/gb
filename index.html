@@ -358,68 +358,64 @@ document.addEventListener("DOMContentLoaded", function () {
      🧭 UNIVERSAL CLICK SYSTEM
      (province + district)
   ========================= */
-  document.querySelectorAll(".province-link, .district-link").forEach(link => {
+document.querySelectorAll(".province-link, .district-link").forEach(link => {
 
-    let clicked = false;
+  let clicked = false;
 
-   link.addEventListener("click", function (e) {
+  link.addEventListener("click", function (e) {
 
-  // 🔒 block before ready
-  if (phase !== "ready") {
+    // 🔒 block before ready
+    if (phase !== "ready") {
+      e.preventDefault();
+      return;
+    }
+
+    if (clicked) return;
+
+    clicked = true;
     e.preventDefault();
-    return;
-  }
 
-  if (clicked) return;
+    // 🌊 RIPPLE EFFECT
+    const ripple = document.createElement("span");
 
-  clicked = true;
-  e.preventDefault();
+    const rect = link.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
 
-  // 🌊 RIPPLE EFFECT START
-  const ripple = document.createElement("span");
+    ripple.className = "ripple";
 
-  const rect = link.getBoundingClientRect();
-  const size = Math.max(rect.width, rect.height);
+    ripple.style.width = ripple.style.height = size + "px";
+    ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+    ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
 
-  ripple.className = "ripple";
+    link.appendChild(ripple);
 
-  ripple.style.width = ripple.style.height = size + "px";
-  ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
-  ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
+    setTimeout(() => {
+      ripple.remove();
+    }, 600);
 
-  link.appendChild(ripple);
+    const audioFile = link.dataset.audio;
 
-  setTimeout(() => {
-    ripple.remove();
-  }, 600);
-  // 🌊 RIPPLE END
+    const go = () => {
+      window.location.href = link.href;
+    };
 
-  const audioFile = link.dataset.audio;
+    if (audioFile) {
 
-  const go = () => {
-    window.location.href = link.href;
-  };
+      const audio = new Audio(audioFile);
 
-  if (audioFile) {
+      audio.play().catch(go);
 
-    const audio = new Audio(audioFile);
+      audio.onended = go;
 
-    audio.play().catch(go);
+      setTimeout(go, 3000);
 
-    audio.onended = go;
-
-    setTimeout(go, 3000);
-
-  } else {
-    setTimeout(go, 400); // small delay so ripple is visible
-  }
-
-});
-    });
+    } else {
+      setTimeout(go, 400);
+    }
 
   });
 
-});
+});   // ✅ ONLY ONE CLOSE HERE
 </script>
 </body>
 </html>
