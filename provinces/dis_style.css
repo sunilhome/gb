@@ -321,18 +321,22 @@ footer {
 .district-link {
   position: relative;
   overflow: hidden;
-  display: block;
 }
 
 .district-link .ripple {
   position: absolute;
   border-radius: 50%;
   transform: scale(0);
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255,255,255,0.4);
   animation: rippleAnim 500ms ease-out;
-  pointer-events: none;
 }
 
+@keyframes rippleAnim {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
 @keyframes rippleAnim {
   to {
     transform: scale(4);
