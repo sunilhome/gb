@@ -300,40 +300,26 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(updateImage, 60000);
 
   // INTRO START (CLICK + TOUCH FIXED)
-  function startIntro() {
+function startIntro() {
 
-    if (phase !== "intro") return;
+  if (phase !== "intro") return;
 
-    phase = "anim";
+  phase = "anim";
 
-    intro.removeEventListener("click", startIntro);
-    intro.removeEventListener("touchstart", startIntro);
+  document.removeEventListener("click", startIntro);
 
-    // AUDIO FIX (IMPORTANT)
-   if (welcomeAudio) {
+  // 🔥 AUDIO FIRST (IMPORTANT)
+  if (welcomeAudio) {
 
-  try {
     welcomeAudio.pause();
     welcomeAudio.currentTime = 0;
 
-    // 🔥 clone trick (fixes mobile blocking)
-    const sound = welcomeAudio.cloneNode(true);
-    sound.currentTime = 0;
-
-    const playPromise = sound.play();
-
-    if (playPromise !== undefined) {
-      playPromise.catch(err => {
-        console.log("Audio blocked:", err);
-      });
+    const playPromise = welcomeAudio.play();
+    if (playPromise) {
+      playPromise.catch(() => {});
     }
 
-  } catch (e) {
-    console.log("Audio error:", e);
   }
-
-}
-
     curtain.classList.add("open");
     intro.style.opacity = "0";
 
