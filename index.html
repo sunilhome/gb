@@ -310,18 +310,10 @@ document.addEventListener("DOMContentLoaded", function () {
     intro.removeEventListener("pointerdown", startIntro);
 
     // 🔥 AUDIO FIRST (MOST IMPORTANT FIX)
-    if (welcomeAudio) {
-      welcomeAudio.pause();
-      welcomeAudio.currentTime = 0;
-
-      const playPromise = welcomeAudio.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          console.log("Welcome audio blocked");
-        });
-      }
-    }
-
+  if (welcomeAudio) {
+  welcomeAudio.currentTime = 0;
+  welcomeAudio.play().catch(() => {});
+}
     // ANIMATION
     curtain.classList.add("open");
     intro.style.opacity = "0";
@@ -349,7 +341,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // TOUCH + CLICK (SAFE + MODERN)
-  intro.addEventListener("pointerdown", startIntro, { once: true });
+intro.addEventListener("click", startIntro);
 
   // PROVINCE + DISTRICT CLICK SYSTEM
   document.querySelectorAll(".province-link, .district-link").forEach(link => {
