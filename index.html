@@ -299,21 +299,30 @@ document.addEventListener("DOMContentLoaded", function () {
   updateImage();
   setInterval(updateImage, 60000);
 
-  // INTRO START (CLICK + TOUCH FIXED)
-function startIntro() {
+  // INTRO START (FIXED AUDIO)
+  function startIntro() {
 
-  if (phase !== "intro") return;
+    if (phase !== "intro") return;
 
-  phase = "anim";
+    phase = "anim";
 
-  document.removeEventListener("click", startIntro);
+    // IMPORTANT: remove ONLY intro listener safely
+    intro.removeEventListener("pointerdown", startIntro);
 
-  // 🔥 AUDIO FIRST (IMPORTANT)
-if (welcomeAudio) {
-  welcomeAudio.pause();
-  welcomeAudio.currentTime = 0;
-  welcomeAudio.play().catch(() => {});
-}
+    // 🔥 AUDIO FIRST (MOST IMPORTANT FIX)
+    if (welcomeAudio) {
+      welcomeAudio.pause();
+      welcomeAudio.currentTime = 0;
+
+      const playPromise = welcomeAudio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          console.log("Welcome audio blocked");
+        });
+      }
+    }
+
+    // ANIMATION
     curtain.classList.add("open");
     intro.style.opacity = "0";
 
@@ -339,8 +348,8 @@ if (welcomeAudio) {
     }, 5000);
   }
 
-  // TOUCH + CLICK SUPPORT
-intro.addEventListener("pointerdown", startIntro, { once: true });
+  // TOUCH + CLICK (SAFE + MODERN)
+  intro.addEventListener("pointerdown", startIntro, { once: true });
 
   // PROVINCE + DISTRICT CLICK SYSTEM
   document.querySelectorAll(".province-link, .district-link").forEach(link => {
@@ -391,6 +400,7 @@ intro.addEventListener("pointerdown", startIntro, { once: true });
 
         audio.onended = go;
         setTimeout(go, 3000);
+
       } else {
         setTimeout(go, 400);
       }
