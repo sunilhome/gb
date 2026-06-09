@@ -281,7 +281,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll("a");
 
   let phase = "intro";
-  let introStarted = false;
 
   // LOCK LINKS
   links.forEach(link => {
@@ -300,18 +299,23 @@ document.addEventListener("DOMContentLoaded", function () {
   updateImage();
   setInterval(updateImage, 60000);
 
-  // INTRO START (FIXED TOUCH SYSTEM)
-  function startIntro(e) {
+  // INTRO START
+  function startIntro() {
 
-    if (introStarted) return;
-    introStarted = true;
+    if (phase !== "intro") return;
 
     phase = "anim";
 
+    // remove listeners
+    intro.removeEventListener("click", startIntro);
+    intro.removeEventListener("touchstart", startIntro);
+
+    // play audio
     if (welcomeAudio) {
       welcomeAudio.play().catch(() => {});
     }
 
+    // animation
     curtain.classList.add("open");
 
     intro.style.opacity = "0";
@@ -336,14 +340,15 @@ document.addEventListener("DOMContentLoaded", function () {
       curtain.style.display = "none";
 
     }, 5000);
-
   }
 
-  // ✅ FIX: use BOTH properly
-  document.addEventListener("click", startIntro, { passive: true });
-  document.addEventListener("touchstart", startIntro, { passive: true });
+  // ✅ FIX: attach to INTRO (not document)
+  if (intro) {
+    intro.addEventListener("click", startIntro);
+    intro.addEventListener("touchstart", startIntro);
+  }
 
-  // CLICK SYSTEM (ripple + navigation)
+  // CLICK SYSTEM
   document.querySelectorAll(".province-link, .district-link").forEach(link => {
 
     let clicked = false;
@@ -395,6 +400,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
-</script>
-</body>
+</script></body>
 </html>
