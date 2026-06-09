@@ -310,15 +310,29 @@ document.addEventListener("DOMContentLoaded", function () {
     intro.removeEventListener("touchstart", startIntro);
 
     // AUDIO FIX (IMPORTANT)
-    if (welcomeAudio) {
-      try {
-        welcomeAudio.currentTime = 0;
-        const p = welcomeAudio.play();
-        if (p !== undefined) {
-          p.catch(() => {});
-        }
-      } catch (e) {}
+   if (welcomeAudio) {
+
+  try {
+    welcomeAudio.pause();
+    welcomeAudio.currentTime = 0;
+
+    // 🔥 clone trick (fixes mobile blocking)
+    const sound = welcomeAudio.cloneNode(true);
+    sound.currentTime = 0;
+
+    const playPromise = sound.play();
+
+    if (playPromise !== undefined) {
+      playPromise.catch(err => {
+        console.log("Audio blocked:", err);
+      });
     }
+
+  } catch (e) {
+    console.log("Audio error:", e);
+  }
+
+}
 
     curtain.classList.add("open");
     intro.style.opacity = "0";
