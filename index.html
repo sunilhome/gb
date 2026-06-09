@@ -299,25 +299,28 @@ document.addEventListener("DOMContentLoaded", function () {
   updateImage();
   setInterval(updateImage, 60000);
 
-  // INTRO START
+  // INTRO START (CLICK + TOUCH FIXED)
   function startIntro() {
 
     if (phase !== "intro") return;
 
     phase = "anim";
 
-    // remove listeners
     intro.removeEventListener("click", startIntro);
     intro.removeEventListener("touchstart", startIntro);
 
-    // play audio
+    // AUDIO FIX (IMPORTANT)
     if (welcomeAudio) {
-      welcomeAudio.play().catch(() => {});
+      try {
+        welcomeAudio.currentTime = 0;
+        const p = welcomeAudio.play();
+        if (p !== undefined) {
+          p.catch(() => {});
+        }
+      } catch (e) {}
     }
 
-    // animation
     curtain.classList.add("open");
-
     intro.style.opacity = "0";
 
     setTimeout(() => {
@@ -342,13 +345,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 5000);
   }
 
-  // ✅ FIX: attach to INTRO (not document)
-  if (intro) {
-    intro.addEventListener("click", startIntro);
-    intro.addEventListener("touchstart", startIntro);
-  }
+  // TOUCH + CLICK SUPPORT
+  intro.addEventListener("click", startIntro);
+  intro.addEventListener("touchstart", startIntro, { passive: true });
 
-  // CLICK SYSTEM
+  // PROVINCE + DISTRICT CLICK SYSTEM
   document.querySelectorAll(".province-link, .district-link").forEach(link => {
 
     let clicked = false;
@@ -365,7 +366,7 @@ document.addEventListener("DOMContentLoaded", function () {
       clicked = true;
       e.preventDefault();
 
-      // RIPPLE
+      // RIPPLE EFFECT
       const ripple = document.createElement("span");
 
       const rect = link.getBoundingClientRect();
@@ -388,7 +389,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (audioFile) {
         const audio = new Audio(audioFile);
-        audio.play().catch(go);
+        audio.currentTime = 0;
+
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(go);
+        }
+
         audio.onended = go;
         setTimeout(go, 3000);
       } else {
@@ -400,5 +407,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
-</script></body>
+</script>
+</body>
 </html>
